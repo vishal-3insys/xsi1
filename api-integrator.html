@@ -1,0 +1,1169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>API Integrator | XSI</title>
+    <meta name="viewPort" content="width=device-width, initial-scale=1.0" />
+    <meta content="The Cross Integration Suite from 3Insys takes a 360-degree approach to SYSTEM, DATA, and SECURITY" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+
+    <!-- plugin css -->
+    <link href="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+    <!-- Sweet Alert-->
+    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- preloader css -->
+    <link rel="stylesheet" href="assets/css/preloader.min.css" type="text/css" />
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body data-topbar="dark">
+
+    <!-- <body data-layout="horizontal"> -->
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="home.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                <img src="assets/images/logo-icon.svg" alt="" height="42" />
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets/images/logo-sm-w.svg" alt="" height="45" />
+                            </span>
+                        </a>
+
+                        <a href="home.html" class="logo logo-light">
+                            <span class="logo-sm">
+                                <img src="assets/images/logo-icon.svg" alt="" height="42" />
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets/images/logo-sm-w.svg" alt="" height="45" />
+                            </span>
+                        </a>
+                    </div>
+
+
+                    <button type="button" class="btn px-3 font-size-16 header-item ms-3" id="vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+                    <!-- App Search-->
+
+                </div>
+
+               
+
+                <div class="d-flex">
+
+
+
+
+                    <div class="dropdown d-none d-sm-inline-block">
+                        <button type="button" class="btn header-item" id="mode-setting-btn">
+                            <i data-feather="moon" class="icon-lg layout-mode-dark"></i>
+                            <i data-feather="sun" class="icon-lg layout-mode-light"></i>
+                        </button>
+                    </div>
+                    <div class="dropdown d-lg-inline-block ms-1">
+                        <button type="button" class="btn header-item"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i data-feather="grid" class="icon-lg"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                            <div class="p-2">
+
+
+                                <div class="row g-0">
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="../xsm/home.html">
+                                            <img src="assets/images/1-xsm.svg" alt="dropbox" />
+                                            <span>XSM</span>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="../crossview/home.html">
+                                            <img src="assets/images/1-crossview.svg" alt="Crossv" />
+                                            <span>Crossview</span>
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <div class="row g-0">
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="home.html">
+                                            <img src="assets/images/1-xdi.svg" alt="XDI" />
+                                            <span>XDI</span>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="../xsi/home.html">
+                                            <img src="assets/images/1-xsi.svg" alt="XSI" />
+                                            <span>XSI</span>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown d-lg-inline-block ms-1">
+                        <button type="button" class="btn header-item"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i data-feather="grid" class="icon-lg"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                            <div class="p-2">
+
+
+                                <div class="row g-0">
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="xsm/home.html">
+                                            <img src="assets/images/1-xsm.svg" alt="dropbox" />
+                                            <span>XSM</span>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="crossview/home.html">
+                                            <img src="assets/images/1-crossview.svg" alt="Crossv" />
+                                            <span>Crossview</span>
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <div class="row g-0">
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="home.html">
+                                            <img src="assets/images/1-xdi.svg" alt="XDI" />
+                                            <span>XDI</span>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="xsi/home.html">
+                                            <img src="assets/images/1-xsi.svg" alt="XSI" />
+                                            <span>XSI</span>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" title="Notifications" class="btn header-item noti-icon position-relative" id="page-header-notifications-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i data-feather="bell" class="icon-lg"></i>
+                            <span class="badge bg-danger rounded-pill">2</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                             aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0"> Notifications </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#!" class="small text-reset text-decoration-underline"> Unread (2)</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar=data-simplebar style="max-height: 230px;">
+                                <a href="#!" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 me-3">
+                                            <img src="assets/svgicon/itron-logo.svg" class="rounded-circle avatar-sm" alt="user-pic" />
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Iton AMM</h6>
+                                            <div class="font-size-13 text-muted">
+                                                <p class="mb-1">Configuration Successfully.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="p-2 border-top d-grid">
+                                <a class="btnbtn-link font-size-14 text-center" href="javascript:void(0)">
+                                    <i class="mdi mdi-arrow-right-circle me-1"></i> <span>View More..</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-flex">
+                        <button type="button" class="btn header-item bg-soft-light border-start border-end" id="page-header-user-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                 alt="Header Avatar" />
+                            <span class="d-none d-xl-inline-block ms-1 fw-medium">Super Admin</span>
+                            <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+                            <!--<a class="dropdown-item" href="profile-mng.html"><i class="mdi mdi-clipboard-account-outline font-size-16 align-middle me-1"></i> My Account</a>
+                            <a class="dropdown-item" href="credentials-mng.html"><i class="mdi mdi-key-change font-size-16 align-middle me-1"></i> Manage Credentials</a>
+                            <a class="dropdown-item" href="account-rec.html"><i class="mdi mdi-ballot-recount font-size-16 align-middle me-1"></i> Manage Account Recovery</a>-->
+
+                            <a class="dropdown-item" href="index.html"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+
+            <div data-simplebar=data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+
+
+                        <li>
+                            <a href="home.html">
+                                <i data-feather="home"></i>
+                                <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                <span data-key="t-dashboard">Home</span>
+                            </a>
+                        </li> <!--Home-->
+                        <li>
+                            <a href="#" class="has-arrow">
+
+                                <?xml version="1.0" encoding="utf-8" ?>
+                                <!-- Generator: Adobe Illustrator 26.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+    .st0 {
+        fill: none;
+    }
+
+    .st1 {
+        fill: #5A6E7F;
+    }
+
+    .st2 {
+        fill: #97D5C9;
+    }
+
+    .st3 {
+        fill: #5CBFAB;
+    }
+
+    .st4 {
+        fill: #545A6D;
+    }
+</style>
+<path class="st0" d="M7.1,7c-1.7,0.1-2.9,1.6-2.7,3.3C4.5,11.9,6,13.1,7.6,13c1.7-0.1,2.9-1.6,2.7-3.3C10.2,8.1,8.8,6.8,7.1,7z" />
+<path class="st0" d="M17.3,13.9c-0.9,0.6-1.3,1.8-0.7,2.8c0.6,1,1.9,1.4,2.9,0.8c1-0.6,1.3-1.9,0.7-2.8
+	C19.6,13.7,18.3,13.3,17.3,13.9z" />
+<g>
+                                <path class="st4" d="M12.6,13.1c0.1-0.2,0.2-0.5,0.4-0.7l1.3-0.1c0.2-0.5,0.3-1.1,0.4-1.7L13.5,10c0-0.2,0-0.4,0-0.6
+		c0-0.1,0-0.1,0-0.2l1.1-0.7C14.4,8,14.2,7.4,14,6.9L12.7,7c-0.1-0.2-0.3-0.4-0.4-0.7l0.6-1.2C12.5,4.7,12,4.3,11.6,4l-1.1,0.7
+		C10.2,4.6,10,4.5,9.8,4.4L9.7,3.1C9.2,2.9,8.6,2.8,8,2.7L7.4,3.9c-0.2,0-0.4,0-0.6,0c-0.1,0-0.1,0-0.2,0L6,2.8
+		C5.4,3,4.8,3.1,4.3,3.4l0.1,1.3C4.2,4.8,3.9,5,3.7,5.1L2.6,4.5C2.1,4.9,1.7,5.3,1.4,5.8l0.7,1.1C2,7.1,1.9,7.4,1.8,7.6L0.5,7.6
+		C0.3,8.2,0.2,8.8,0.1,9.4l1.2,0.6c0,0.2,0,0.4,0,0.6c0,0.1,0,0.1,0,0.2l-1.1,0.7c0.1,0.6,0.3,1.1,0.5,1.7L2.1,13
+		c0.1,0.2,0.3,0.4,0.4,0.7l-0.6,1.2c0.4,0.4,0.8,0.8,1.3,1.2l1.1-0.7c0.2,0.1,0.5,0.3,0.7,0.4L5,16.9c0.5,0.2,1.1,0.3,1.7,0.4
+		l0.6-1.2c0.2,0,0.4,0,0.6,0C8,16,8,16,8.1,16l0.7,1.1c0.6-0.1,1.1-0.3,1.7-0.5l-0.1-1.3c0.2-0.1,0.4-0.3,0.7-0.4l1.2,0.6
+		c0.4-0.4,0.8-0.8,1.2-1.3L12.6,13.1z M7.4,14.3c-2.4,0-4.3-1.9-4.3-4.3c0-2.4,1.9-4.3,4.3-4.3c2.4,0,4.3,1.9,4.3,4.3
+		C11.7,12.3,9.7,14.3,7.4,14.3z" />
+                                <path class="st4" d="M7.4,6c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C11.4,7.8,9.6,6,7.4,6z M7.6,13
+		c-1.7,0.1-3.1-1.1-3.3-2.7C4.2,8.6,5.5,7.1,7.1,7c1.7-0.1,3.1,1.1,3.3,2.7C10.5,11.4,9.3,12.8,7.6,13z" />
+                                <path class="st4" d="M18.4,12.4c-1.9,0-3.4,1.5-3.5,3.3c0,1.9,1.5,3.4,3.3,3.5c1.9,0,3.4-1.5,3.5-3.3C21.8,14,20.3,12.4,18.4,12.4z
+		 M19.4,17.5c-1,0.6-2.3,0.2-2.9-0.8c-0.5-1-0.2-2.2,0.7-2.8c1-0.6,2.3-0.3,2.9,0.7C20.8,15.6,20.4,16.9,19.4,17.5z" />
+                                <path class="st4" d="M23.9,16.3c0-0.4,0-0.8,0-1.2l-0.9-0.2c0-0.2-0.1-0.5-0.2-0.7l0.7-0.7c-0.1-0.2-0.2-0.4-0.3-0.5
+		c-0.1-0.2-0.2-0.3-0.3-0.5l-0.9,0.3c-0.2-0.2-0.3-0.4-0.5-0.5l0.3-0.9c-0.3-0.2-0.7-0.4-1-0.6l-0.7,0.7c-0.2-0.1-0.5-0.1-0.7-0.2
+		l-0.2-0.9c-0.4,0-0.8,0-1.2,0l-0.2,0.9c-0.2,0-0.5,0.1-0.7,0.2l-0.7-0.7c-0.2,0.1-0.4,0.2-0.5,0.3c-0.2,0.1-0.3,0.2-0.5,0.3
+		l0.3,0.9c-0.2,0.2-0.4,0.3-0.5,0.5l-0.9-0.3c-0.2,0.3-0.4,0.7-0.6,1l0.7,0.7c-0.1,0.2-0.1,0.5-0.2,0.7l-0.9,0.2c0,0.4,0,0.8,0,1.2
+		l0.9,0.2c0,0.2,0.1,0.5,0.2,0.7L13.4,18c0.1,0.2,0.2,0.4,0.3,0.5c0.1,0.2,0.2,0.3,0.3,0.5l0.9-0.3c0.2,0.2,0.3,0.4,0.5,0.5
+		l-0.3,0.9c0.3,0.2,0.7,0.4,1,0.6l0.7-0.7c0.2,0.1,0.5,0.1,0.7,0.2l0.2,0.9c0.4,0,0.8,0,1.2,0l0.2-0.9c0.2,0,0.5-0.1,0.7-0.2
+		l0.7,0.7c0.2-0.1,0.4-0.2,0.5-0.3c0.2-0.1,0.3-0.2,0.5-0.3l-0.3-0.9c0.2-0.2,0.4-0.3,0.5-0.5l0.9,0.3c0.2-0.3,0.4-0.7,0.6-1
+		l-0.7-0.7c0.1-0.2,0.1-0.5,0.2-0.7L23.9,16.3z M18.3,19.3c-2,0-3.5-1.7-3.5-3.6c0-2,1.7-3.5,3.6-3.5c2,0,3.5,1.7,3.5,3.6
+		C21.9,17.8,20.3,19.4,18.3,19.3z" />
+</g>
+</svg>
+
+                                <span data-key="t-dashboard" style="font-size:12px;">
+                                    Advanced Integration Manager
+                                </span>
+                            </a>
+
+                            <ul class="sub-menu mm-collapse" aria-expanded="false" style="">
+                                <li><a data-key="adaptershtml" href="https://xsi.3insys.com:90/workflow-definitions">Process Integrator</a></li>
+                                <li><a data-key="adapters-viewhtml" href="api-integrator.html">API Integrator</a></li>
+                                <li><a data-key="adapters-viewhtml" href="#">Microservice Integrator</a></li>
+                            </ul>
+
+                        </li>  <!--Business Process Automation-->
+                        <li>
+                            <a href="#" class="has-arrow">
+
+                                <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <defs>
+                                        <style type="text/css; ">
+                                            .b {
+                                                fill: #545a6d;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <rect class="b" x="8.9" y=".81" width="7.28" height=".37" />
+                                    <path class="b" d="M8.15,2.81V1.18h-2.92c-.32,0-.63,.13-.86,.36-.23,.23-.35,.54-.35,.86V22.72c0,.32,.13,.63,.35,.86,.23,.23,.54,.36,.86,.36h14.43c.32,0,.63-.13,.86-.36,.23-.23,.36-.54,.36-.86V2.4c0-.32-.13-.63-.36-.86-.22-.23-.54-.36-.86-.36h-2.75v1.62h2.75V22.09H5.23V2.81h2.92Z" />
+                                    <rect class="b" x="8.9" y="1.18" width="7.28" height="1.62" />
+                                    <rect class="b" x="8.9" y="2.81" width="7.28" height=".78" />
+                                    <path class="b" d="M16.18,1.18V3.59h-7.28V.81h7.28v.37Z" />
+                                    <rect class="b" x="6.45" y="5.54" width="12.01" height="1.29" />
+                                    <rect class="b" x="6.45" y="8.46" width="12.01" height="1.29" />
+                                    <rect class="b" x="6.45" y="11.38" width="12.01" height="1.29" />
+                                    <rect class="b" x="6.45" y="14.3" width="12.01" height="1.29" />
+                                    <rect class="b" x="6.45" y="17.22" width="12.01" height="1.29" />
+                                </svg>
+                                <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                <span data-key="t-dashboard" style="font-size:12px;">Tasks</span>
+                            </a>
+                            <ul class="sub-menu mm-collapse" aria-expanded="false" style="">
+                                <li><a data-key="adaptershtml" href="#">Create New Task</a></li>
+                                <li><a data-key="adapters-viewhtml" href="#">View Tasks</a></li>
+                            </ul>
+                        </li>   <!--Tasks-->
+
+                        <li>
+                            <a href="#" class="has-arrow">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" width="14px" style="fill:#545a6d;"><path d="M19,6H16V3a1,1,0,0,0-2,0V6H10V3A1,1,0,0,0,8,3V6H5A1,1,0,0,0,5,8H6v5a1,1,0,0,0,.29.71L9,16.41V21a1,1,0,0,0,2,0V17h2v4a1,1,0,0,0,2,0V16.41l2.71-2.7A1,1,0,0,0,18,13V8h1a1,1,0,0,0,0-2Zm-3,6.59L13.59,15H10.41L8,12.59V8h8ZM11,13h2a1,1,0,0,0,0-2H11a1,1,0,0,0,0,2Z" /></svg>
+                                <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                <span data-key="t-dashboard" style="font-size:12px;">Adapters</span>
+                            </a>
+                            <ul class="sub-menu mm-collapse" aria-expanded="false" style="">
+                                <li><a data-key="adaptershtml" href="adapters.html">Configure Adapters</a></li>
+                                <li><a data-key="adapters-viewhtml" href="adapters-view.html">View Adapters</a></li>
+                            </ul>
+                        </li>  <!--Adapters-->
+                        <!--<li>
+                    <a href="#" class="has-arrow">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14px" style="fill:#545a6d;"><path d="M8,16.5a1,1,0,1,0,1,1A1,1,0,0,0,8,16.5ZM12,2C8,2,4,3.37,4,6V18c0,2.63,4,4,8,4s8-1.37,8-4V6C20,3.37,16,2,12,2Zm6,16c0,.71-2.28,2-6,2s-6-1.29-6-2V14.73A13.16,13.16,0,0,0,12,16a13.16,13.16,0,0,0,6-1.27Zm0-6c0,.71-2.28,2-6,2s-6-1.29-6-2V8.73A13.16,13.16,0,0,0,12,10a13.16,13.16,0,0,0,6-1.27ZM12,8C8.28,8,6,6.71,6,6s2.28-2,6-2,6,1.29,6,2S15.72,8,12,8ZM8,10.5a1,1,0,1,0,1,1A1,1,0,0,0,8,10.5Z" /></svg>
+                        <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                        <span data-key="t-dashboard" style="font-size:12px;">
+                            Data Sources
+                        </span>
+                    </a>
+
+
+                </li>-->
+
+                        <li>
+                            <a href="#" class="has-arrow">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" style="fill:#545a6d;"><path d="M18,13.18V10a6,6,0,0,0-5-5.91V3a1,1,0,0,0-2,0V4.09A6,6,0,0,0,6,10v3.18A3,3,0,0,0,4,16v2a1,1,0,0,0,1,1H8.14a4,4,0,0,0,7.72,0H19a1,1,0,0,0,1-1V16A3,3,0,0,0,18,13.18ZM8,10a4,4,0,0,1,8,0v3H8Zm4,10a2,2,0,0,1-1.72-1h3.44A2,2,0,0,1,12,20Zm6-3H6V16a1,1,0,0,1,1-1H17a1,1,0,0,1,1,1Z" /></svg>
+                                <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                <span data-key="t-dashboard" style="font-size:12px;">
+                                    Alerts
+                                </span>
+                            </a>
+                            <ul class="sub-menu mm-collapse" aria-expanded="false" style="">
+                                <li><a data-key="adaptershtml" href="#">Create New Alert</a></li>
+                                <li><a data-key="adapters-viewhtml" href="#">Manage Alerts</a></li>
+                            </ul>
+                        </li>  <!--Alerts-->
+
+                    </ul>
+
+
+                </div>
+            </div>
+            <!-- Sidebar -->
+        </div>
+
+
+
+
+        <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+
+                                    <li class="breadcrumb-item active">Integrator</li>
+                                </ol>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-header pb-2">
+
+                                    <div class="d-flex justify-content-between">
+                                        <h4 class="card-title">API Integrator</h4>
+                                        <div><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#apicreate">Create</button></div>
+                                    </div>
+
+
+                                </div>
+                                <div class="card-body">
+
+
+                                    <div class="row py-1 my-1">
+                                        <div class="col-md-12 py-1 my-1">
+                                            <div class="card py-1 my-0">
+                                                <div class="card-body py-1 my-0">
+                                                    <div class="my-2 mt-0 d-flex justify-content-start align-items-center">
+
+                                                        <div class="mx-1 input-group w-80">
+
+                                                            <input type="text" class="form-control flex-grow-1" style="width:80%" placeholder="Search..." />
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class=" my-2">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <div class="card">
+                                                    <div class="card-body" role="button">
+                                                        <h5>CCB Management API</h5>
+                                                        <p class="mb-0"><a href="">aras@dwp.com</a></p>
+                                                        <p class="font-size-10 text-muted mb-3">Provider</p>
+
+                                                        <p class="mb-0">v1.0.0</p>
+                                                        <p class="font-size-10 text-muted mb-3">Version</p>
+                                                        <p class="mb-0">/t/dwp.com/ccb-management </p><p class="font-size-10 text-muted mb-3">Context</p>
+                                                        <p class="mb-0">Published</p><p class="font-size-10 text-muted">State</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="card">
+                                                    <div class="card-body" role="button">
+                                                        <h5>GIS Location API</h5>
+                                                        <p class="mb-0"><a href="">aras@dwp.com</a></p>
+                                                        <p class="font-size-10 text-muted mb-3">Provider</p>
+
+                                                        <p class="mb-0">v1.0.0</p>
+                                                        <p class="font-size-10 text-muted mb-3">Version</p>
+                                                        <p class="mb-0">/t/dwp.com/gis-location</p><p class="font-size-10 text-muted mb-3">Context</p>
+                                                        <p class="mb-0">Published</p><p class="font-size-10 text-muted">State</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div>
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination float-end">
+                                                <li class="page-item mx-1">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item mx-1"><a class="page-link active" href="#">1</a></li>
+                                                <li class="page-item mx-1"><a class="page-link " href="#">2</a></li>
+                                                <li class="page-item mx-1"><a class="page-link " href="#">3</a></li>
+                                                <li class="page-item mx-1">
+                                                    <a class="page-link mx-1" href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end card -->
+                        </div> <!-- end col -->
+                        <!-- end col -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>2022 © XSI.</p><p>
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="text-sm-end d-none d-sm-block">
+                        Design & Develop by <a href="https://www.3insys.com/" target="_blank" class="text-decoration-underline">3Insys</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="rightbar-overlay"></div>
+    <div class="modal fade" id="apicreate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">API Create</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <div class="card">
+                            <!--<div class="card-header ">
+                                <div class="alert alert-warning" role="alert">
+                                    Network setup required. Please make sure to allow incoming connection to your server from <strong>52.17.68.150, 52.30.37.137, 52.214.115.147.</strong>
+                                </div>
+                            </div>-->
+                            <div class="card-body">
+
+                                <div class="row">
+
+                                    
+
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="validationCustom01" placeholder="URL" required="required" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">API endpoint</label>
+                                            <input type="text" class="form-control" id="validationCustom01" placeholder="URL" required="required" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-xl-12">
+
+
+
+                                        <div class="card-body ">
+                                            <!-- Nav tabs -->
+                                            <ul class="nav nav-pills nav-justified mb-3" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-bs-toggle="tab" href="#authentication" role="tab" aria-selected="true">
+                                                        <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                                        <span class="d-none d-sm-block">Authentication</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#headers" role="tab" aria-selected="false">
+                                                        <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                                        <span class="d-none d-sm-block">Headers</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#queryparams" role="tab" aria-selected="false">
+                                                        <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                                        <span class="d-none d-sm-block">Query Params</span>
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+
+                                            <!-- Tab panes -->
+                                            <div class="tab-content p-3 text-muted border border-1">
+                                                <div class="tab-pane active" id="authentication" role="tabpanel">
+                                                    <div class="row mb-3">
+                                                        <h5 class="mb-2">General Connection Settings</h5>
+                                                        <div class="col-md-3">
+                                                            <div class="mb-3">
+                                                                <div class="form-check mb-3">
+                                                                    <input class="form-check-input" type="radio" name="formRadios" id="formRadios1" checked="checked" data-generalconnectionsettings="basicauth" />
+                                                                    <label class="form-check-label" for="formRadios1">
+                                                                        Basic Auth
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-3">
+                                                            <div class="mb-3">
+                                                                <div class="form-check mb-3">
+                                                                    <input class="form-check-input" type="radio" name="formRadios" id="formRadios1" data-generalconnectionsettings="oauth" />
+                                                                    <label class="form-check-label" for="formRadios1">
+                                                                        0Auth 2.0
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row" data-generalconnectionsettings="showbasicauth">
+                                                        <div class="row ">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="mb-3">
+                                                                        <!--<label class="form-label" for="validationCustom02">Database</label>-->
+                                                                        <input type="text" class="form-control" id="validationCustom02" placeholder="Basic Auth User" required="" fdprocessedid="pzmy" />
+
+                                                                        <div class="invalid-feedback">
+                                                                            Please enter the Connection String URL.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="mb-3">
+                                                                        <!--<label class="form-label" for="validationCustom02">Database</label>-->
+                                                                        <input type="text" class="form-control" id="validationCustom02" placeholder="Basic Auth Password" required="" fdprocessedid="egu7oq" />
+
+                                                                        <div class="invalid-feedback">
+                                                                            Please enter the Connection String URL.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="row d-none" data-generalconnectionsettings="showoauth">
+                                                        <div class="col-md-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="validationCustom02">Redirect URL</label>
+                                                                <input type="text" class="form-control" id="validationCustom02" placeholder="https://test.com/rest-api/oauth" required="" />
+                                                                <span>Please use this redirect URL for generating client ID and secret.<a href="#">Read More</a></span>
+                                                                <div class="invalid-feedback">
+                                                                    Please enter the URL.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="mb-3">
+                                                                <!--<label class="form-label">Select Access Token</label>-->
+                                                                <select class="form-select">
+                                                                    <option>Select Access Token</option>
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 2</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div><!--tab-pane--- end-->
+
+                                                <div class="tab-pane" id="headers" role="tabpanel">
+                                                    <div class="row my-2" data-headerdata="row1">
+
+
+                                                        <div class="col-md-5">
+                                                            <input type="text" class="inner form-control" placeholder="Key" />
+                                                        </div>
+
+                                                        <div class="col-md-5">
+                                                            <input type="text" class="inner form-control" placeholder="Value" />
+                                                        </div>
+
+                                                        <div class="col-md-2">
+                                                            <div class="mt-2 mt-md-0">
+                                                                <button class="btn btn-primary btn-sm font-size-18" data-headerdata-add=""><i class="mdi mdi-plus"></i></button>
+                                                                <button class="btn btn-danger btn-sm font-size-18" data-headerdata-remove=""><i class="mdi mdi-trash-can"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="queryparams" role="tabpanel">
+                                                    <div class="row my-2" data-repeater-item="data-repeater-item" data-queryparamsdata="row1">
+
+                                                        <div class="col-md-3">
+
+                                                            <select class="form-select">
+
+                                                                <option>Test</option>
+                                                                <option>Test1</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="col-md-3">
+                                                            <input type="text" class="inner form-control" placeholder="Key" />
+                                                        </div>
+
+                                                        <div class="col-md-3">
+                                                            <input type="text" class="inner form-control" placeholder="Value" />
+                                                        </div>
+
+                                                        <div class="col-md-2">
+                                                            <div class="mt-2 mt-md-0">
+                                                                <button class="btn btn-primary btn-sm font-size-18" data-queryparamsdata-add=""><i class="mdi mdi-plus"></i></button>
+                                                                <button class="btn btn-danger btn-sm font-size-18" data-queryparamsdata-remove=""><i class="mdi mdi-trash-can"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="my-2 border border-1 ">
+                                                        <div class="d-flex align-items-center  py-2 mt-3 mb-2">
+                                                            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" data-dataroot="active" />
+                                                                <label class="btn btn-sm btn-outline-primary border-0" for="btncheck1"><i class="mdi mdi-compass-outline font-size-24"></i></label>
+
+
+                                                            </div>
+                                                            <div class="m-1">
+                                                                <p class="my-0 py-0 text-black">Data Root</p>
+                                                                <p class="my-0 py-0 font-size-12 fw-bold">Specify what you wish to replicate from the APP'S response</p>
+                                                                <p class="my-0 py-0 font-size-12 text-secondary">
+                                                                    Data root is the path to the element in the response that you want to replicate.
+
+                                                                </p>
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class=" d-none" data-dataroot="show">
+                                                            <div class="my-2 mx-3">
+                                                                <label class="form-label" for="datarootinput">Data Root</label>
+                                                                <div class="input-group">
+
+                                                                    <input type="text" class="form-control" id="datarootinput" placeholder="Data Root" value="$.orders" />
+                                                                    <button class="btn btn-primary">Check Parsed Response</button>
+                                                                </div>
+                                                                <p class="mt-3">Path to the element from which you want to ingest the data. Retrieve this from the API reponse. Example.&amp;.data.<a href="#"> Need Help ?</a> </p>
+                                                            </div>
+                                                            <div class="my-2">
+                                                                <div class="card">
+                                                                    <div class="card-header my-2 py-2 shadow">
+                                                                        <p class="d-inline-flex">Sample Response form API</p>
+                                                                        <a class="d-inline-flex btn btn-link" href="#">Raw</a>
+                                                                        <a class="d-inline-flex btn btn-link" href="#">Parsed</a>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <div class="border-bottom-1">
+                                                                            <p class="text-muted">This is a full sample response from the API, Use this to identify your data root.</p>
+                                                                        </div>
+                                                                        <div class="accordion accordion-flush border " id="accordionFlushExample">
+                                                                            <div class="accordion-item">
+                                                                                <h2 class="accordion-header" id="flush-headingOne">
+                                                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                                                        id, customer, store_id, campaign_id, landing site, financial_status, fulfillment_status, currency_code, or...
+                                                                                    </button>
+                                                                                </h2>
+                                                                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                                                    <div class="accordion-body">id, customer, store_id, campaign_id, landing site, financial_status, fulfillment_status, currency_code, or...</div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="accordion-item">
+                                                                                <h2 class="accordion-header" id="flush-headingTwo">
+                                                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                                                        id, customer, store_id, campaign_id, landing site, financial_status, fulfillment_status, currency_code, or...
+                                                                                    </button>
+                                                                                </h2>
+                                                                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                                                                    <div class="accordion-body">id, customer, store_id, campaign_id, landing site, financial_status, fulfillment_status, currency_code, or...</div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="border ps-1">
+                                                        <div class=" d-flex align-items-centermb-2">
+                                                            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" />
+                                                                <label class="btn btn-sm btn-outline-primary border-0" for="btncheck2"><i class="mdi mdi-page-next font-size-24"></i></label>
+
+
+                                                            </div>
+
+                                                            <div class="m-1">
+                                                                <p class="my-0 py-0 text-black">Pagination</p>
+                                                                <p class="my-0 py-0 font-size-12 text-secondary">Set up how to read through the api's response'</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-12 my-3 mb-4 ms-2 d-flex justify-content-around ">
+                                                            <div class="form-check form-check-inline ">
+                                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" data-pagination="nopagination" />
+                                                                <label class="form-check-label" for="inlineRadio1">No Pagination</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" data-pagination="session" checked="checked" />
+                                                                <label class="form-check-label" for="inlineRadio1">Session</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" data-pagination="pagenumber" />
+                                                                <label class="form-check-label" for="inlineRadio1">Page Number</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" data-pagination="offsetandlimit" />
+                                                                <label class="form-check-label" for="inlineRadio1">Offset and limit</label>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="row d-none" data-pagination="showsession">
+                                                            <div class="col-12">
+                                                                <div class="mb-3">
+                                                                    <div class="form-check form-switch">
+                                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" data-nextpageurl="active" />
+                                                                        <label class="form-check-label" for="flexSwitchCheckDefault">Is the next page URl present in the response ?</label><p>If enabled , Hevo calls the next page URL from the mentioned parameter directly.</p>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-3 d-none" data-nextpageurl="show">
+
+
+                                                                    <input type="text" class="form-control" id="validationCustom01" placeholder="Paging.next.link" required="" />
+                                                                    <div class="valid-feedback">
+                                                                        Looks good!
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <div class="form-check form-switch">
+                                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" data-extractfromlastrecord="active" />
+                                                                        <label class="form-check-label" for="flexSwitchCheckDefault">Extract from last record in response</label><p>If enabled, hero extracts the next page number from the current page response.</p>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row d-none" data-extractfromlastrecord="show">
+                                                                    <div class="col-md-6">
+                                                                        <div class="mb-2">
+                                                                            <label class="form-label" for="validationCustom05">Session Query param*</label>
+                                                                            <input type="text" class="form-control" id="validationCustom05" placeholder="After" required="" /><p class="my-0 py-1 font-size-10 text-secondary">Query parameter to specify session</p>
+                                                                            <div class="invalid-feedback">
+                                                                                Please attach Client Key.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="mb-2">
+                                                                            <label class="form-label" for="validationCustom05">Session Risponse field*</label>
+                                                                            <input type="text" class="form-control" id="validationCustom05" placeholder="ID" required="" /><p class="my-0 py-1 font-size-10 text-secondary">JSON path to the session in each record</p>
+                                                                            <div class="invalid-feedback">
+                                                                                Please attach Client Key.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                        </div>
+
+                                                        <div class="row d-none" data-pagination="showpagenumber">
+                                                            <div class="col-md-6">
+                                                                <div class="mb-2">
+                                                                    <label class="form-label" for="validationCustom05">Page Number Query Param*</label>
+                                                                    <input type="text" class="form-control" id="validationCustom05" placeholder="Page" required="" /><p class="my-0 py-1 font-size-10 text-secondary">Query parameter to specify page number</p>
+                                                                    <div class="invalid-feedback">
+                                                                        Query parameter to specify page number.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="mb-2">
+                                                                    <label class="form-label" for="validationCustom05">Inital Page Number*</label>
+                                                                    <input type="text" class="form-control" id="validationCustom05" placeholder="1" required="" /><p class="my-0 py-1 font-size-10 text-secondary">Page number to start fatching the data from</p>
+                                                                    <div class="invalid-feedback">
+                                                                        Page number to start fatching the data from.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="mb-3">
+                                                                    <div class="form-check form-switch">
+                                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                                                                        <label class="form-check-label" for="flexSwitchCheckDefault">Extract Page Number from Respoonse</label>
+
+                                                                        <p class="my-0 py-1">If enabled, Hevo will extract next page number from current page response.</p>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-3">
+
+                                                                    <label class="form-label" for="validationCustom05">Page response field*</label>
+                                                                    <input type="text" class="form-control" id="validationCustom01" placeholder="next_page_token" required="" />
+                                                                    <div class="valid-feedback">
+                                                                        Looks good!
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <div class="form-check form-switch">
+
+                                                                        <input class="form-check-input" type="checkbox" id="Incrementfornextpage" />
+                                                                        <label class="form-check-label" for="Incrementfornextpage">Increment for next page</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row d-none" data-pagination="showoffsetandlimit">
+                                                            <div class="col-md-4">
+                                                                <div class="mb-3">
+
+                                                                    <label class="form-label" for="validationCustom05">Offset query param*</label>
+                                                                    <input type="text" class="form-control" id="validationCustom01" placeholder="offset" required="" /><p class="my-0 py-1 font-size-10 text-secondary">Query paramter to specify offset.</p>
+                                                                    <div class="valid-feedback">
+                                                                        Looks good!
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="mb-3">
+
+                                                                    <label class="form-label" for="validationCustom05">Offset starting value*</label>
+                                                                    <input type="text" class="form-control" id="validationCustom01" placeholder="0" required="" /><p class="my-0 py-1 font-size-10 text-secondary">Offset to start fetching the data from. </p>
+                                                                    <div class="valid-feedback">
+                                                                        Looks good!
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="mb-3">
+
+                                                                    <label class="form-label" for="validationCustom05">Offset increment value*</label>
+                                                                    <input type="text" class="form-control" id="validationCustom01" placeholder="15" required="" /> <p class="my-0 py-1 font-size-10 text-secondary">increment value for offset </p>
+                                                                    <div class="valid-feedback">
+                                                                        Looks good!
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="mb-3">
+
+                                                                    <label class="form-label" for="validationCustom05">Limit Query param*</label>
+                                                                    <input type="text" class="form-control" id="validationCustom01" placeholder="limit" required="" /> <p class="my-0 py-1 font-size-10 text-secondary">Query parameter to specify limit. </p>
+                                                                    <div class="valid-feedback">
+                                                                        Looks good!
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="mb-3">
+
+                                                                    <label class="form-label" for="validationCustom05">Offset increment value*</label>
+                                                                    <input type="text" class="form-control" id="validationCustom01" placeholder="15" required="" /> <p class="my-0 py-1 font-size-10 text-secondary">Starting value to limit the data from. </p>
+                                                                    <div class="valid-feedback">
+                                                                        Looks good!
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <button class="btn btn-primary float-end m-2" fdprocessedid="m0566m">TEST PAGINATION</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end card-body -->
+
+                                    </div><!-- end col -->
+
+
+
+
+
+                                </div>
+                                <div class="row my-2">
+                                    <div class="col">
+                                        <button class="btn btn-primary m-2" type="submit" >Test Connection</button>
+                                        <!--<button class="btn btn-primary btn-sm" type="submit">Test & Continue </button>-->
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <!-- pace js -->
+    <script src="assets/libs/pace-js/pace.min.js"></script>
+
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/js/pages/datatables.init.js"></script>
+    <script src="assets/libs/table-edits/build/table-edits.min.js"></script>
+    <!-- Plugins js-->
+    <script src="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- dashboard init -->
+    <script src="assets/js/pages/dashboard.init.js"></script>
+    <!-- Sweet Alerts js -->
+    <!--<script src="assets/libs/sweetalert2/sweetalert2.js"></script>-->
+    <script src="assets/libs/sweetalert2/sweetalert2.js"></script>
+    <!--<script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>-->
+    <!-- Sweet alert init js-->
+    <!--<script src="assets/js/pages/sweetalert.init.js"></script>-->
+    <script src="assets/js/app.js"></script>
+    <!--<script src="assets/js/pages/swalt.js"></script>-->
+    <script src="assets/js/pages/form-validation.init.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('[data-countt=follower]').text(`(${$("#datasetfollower > p").length})`);
+            $('[data-countt=shares]').text(`(${$("#datasetshares > p").length})`);
+
+            $('[data-PasteConnectionString=active]').click(function () {
+                if (this.checked) {
+                    $('[data-EnterConnectionFieldsManually=show').addClass('d-none')
+                    $('[data-PasteConnectionString=show]').removeClass('d-none')
+                }
+            });
+            $('[data-EnterConnectionFieldsManually=active]').click(function () {
+                if (this.checked) {
+                    $('[data-EnterConnectionFieldsManually=show').removeClass('d-none')
+                    $('[data-PasteConnectionString=show]').addClass('d-none')
+                }
+            });
+
+
+
+            $('[data-through-ssh=switch]').click(function () { if (this.checked) { $('[data-through-ssh=show]').removeClass('d-none') } else { $('[data-through-ssh=show]').addClass('d-none') } });
+            $('[data-through-ssl=switch]').click(function () { if (this.checked) { $('[data-through-ssl=show]').removeClass('d-none') } else { $('[data-through-ssl=show]').addClass('d-none') } });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+
+            $('[data-countt=follower]').text(`(${$("#datasetfollower > p").length})`);
+            $('[data-countt=shares]').text(`(${$("#datasetshares > p").length})`);
+
+            $('[data-through-ssh=switch]').click(function () { if (this.checked) { $('[data-through-ssh=show]').removeClass('d-none') } else { $('[data-through-ssh=show]').addClass('d-none') } });
+            $('[data-through-ssl=switch]').click(function () { if (this.checked) { $('[data-through-ssl=show]').removeClass('d-none') } else { $('[data-through-ssl=show]').addClass('d-none') } });
+
+            $('[data-nextpageurl=active]').click(function () { if (this.checked) { $('[data-nextpageurl=show]').removeClass('d-none') } else { $('[data-nextpageurl=show]').addClass('d-none') } });
+
+            $('[data-dataroot=active]').click(function () { if (this.checked) { $('[data-dataroot=show]').removeClass('d-none') } else { $('[ data-dataroot=show]').addClass('d-none') } });
+
+            $('[data-extractfromlastrecord=active]').click(function () { if (this.checked) { $('[data-extractfromlastrecord=show]').removeClass('d-none') } else { $('[data-extractfromlastrecord=show]').addClass('d-none') } });
+
+            $('[data-pagination=nopagination]').click(function () {
+                if (this.checked) {
+                    $('[data-pagination=showsession]').addClass('d-none');
+                    $('[data-pagination=showoffsetandlimit]').addClass('d-none');
+                    $('[data-pagination=showpagenumber]').addClass('d-none');
+                }
+            });
+            $('[data-pagination=session]').click(function () {
+                if (this.checked) {
+                    $('[data-pagination=showsession]').removeClass('d-none');
+                    $('[data-pagination=showoffsetandlimit]').addClass('d-none');
+                    $('[data-pagination=showpagenumber]').addClass('d-none');
+                }
+            });
+            $('[data-pagination=pagenumber]').click(function () {
+                if (this.checked) {
+                    $('[data-pagination=showpagenumber]').removeClass('d-none');
+                    $('[data-pagination=showoffsetandlimit]').addClass('d-none');
+                    $('[data-pagination=showsession]').addClass('d-none');
+
+                }
+            });
+            $('[data-pagination=offsetandlimit]').click(function () {
+                if (this.checked) {
+                    $('[data-pagination=showoffsetandlimit]').removeClass('d-none');
+                    $('[data-pagination=showpagenumber]').addClass('d-none');
+                    $('[data-pagination=showsession]').addClass('d-none');
+
+                }
+            });
+
+            $('[data-GeneralConnectionSettings=basicauth]').click(function () {
+                if (this.checked) {
+                    $('[data-GeneralConnectionSettings=showbasicauth]').removeClass('d-none');
+                    $('[data-GeneralConnectionSettings=showoauth]').addClass('d-none');
+
+                }
+            });
+
+            $('[data-GeneralConnectionSettings=oauth]').click(function () {
+                if (this.checked) {
+                    $('[data-GeneralConnectionSettings=showbasicauth]').addClass('d-none');
+                    $('[data-GeneralConnectionSettings=showoauth]').removeClass('d-none');
+
+                }
+            });
+
+            $('[data-headerdata-add]').click(function () {
+
+                $('[data-headerdata]').last().clone().appendTo('#headers').attr('data-headerdata', `row${$('[data-headerdata]').length}`)
+                $('[data-headerdata]').last().children().has('input[type=text]').children().val('');
+            })
+            $('[data-headerdata-remove]').click(function () {
+                ($('[data-headerdata]').length == 1) ? $('[data-headerdata-remove]').attr('disabled') : $('[data-headerdata]').last().remove();
+            })
+            $('[data-queryparamsdata-add]').click(function () {
+
+                $('[data-queryparamsdata]').last().clone().appendTo('#queryparams').attr('data-queryparamsdata', `row${$('[data-queryparamsdata]').length}`)
+                $('[data-queryparamsdata]').last().children().has('input[type=text]').children().val('');
+            })
+            $('[data-queryparamsdata-remove]').click(function () {
+                ($('[data-queryparamsdata]').length == 1) ? $('[data-queryparamsdata-remove]').attr('disabled') : $('[data-queryparamsdata]').last().remove();
+            })
+
+
+        });
+    </script>
+</body>
+
+</html>
