@@ -1,10 +1,11 @@
+
 <!doctype html>
 <html lang="en">
 
 <head>
 
     <meta charset="utf-8" />
-    <title>Home | 3Insys</title>
+    <title>Adapters Configure | 3Insys</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta content="The Cross Integration Suite from 3Insys takes a 360-degree approach to SYSTEM, DATA, and SECURITY" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -276,17 +277,15 @@
 </g>
 </svg>
 
-                                <span data-key="t-dashboard" style="font-size:12px;">
+                                <span data-key="t-dashboard" style="font-size:12px;" onclick="location.href='http://66.45.254.236:91'">
                                     Advanced Integration Manager
                                 </span>
                             </a>
-
                             <ul class="sub-menu mm-collapse" aria-expanded="false" style="">
-                                <li><a data-key="adaptershtml" href="https://xsi.3insys.com:90/workflow-definitions">Process Integrator</a></li>
-                                <li><a data-key="adapters-viewhtml" href="api-integrator.html">API Integrator</a></li>
+                                <li><a data-key="adaptershtml" href="#">Process Integrator</a></li>
+                                <li><a data-key="adapters-viewhtml" href="#">API Integrator</a></li>
                                 <li><a data-key="adapters-viewhtml" href="#">Microservice Integrator</a></li>
                             </ul>
-
                         </li>  <!--Business Process Automation-->
                         <li>
                             <a href="#" class="has-arrow">
@@ -331,18 +330,8 @@
                                 <li><a data-key="adapters-viewhtml" href="adapters-view.html">View Adapters</a></li>
                             </ul>
                         </li>  <!--Adapters-->
-                        <!--<li>
-                            <a href="#" class="has-arrow">
-
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14px" style="fill:#545a6d;"><path d="M8,16.5a1,1,0,1,0,1,1A1,1,0,0,0,8,16.5ZM12,2C8,2,4,3.37,4,6V18c0,2.63,4,4,8,4s8-1.37,8-4V6C20,3.37,16,2,12,2Zm6,16c0,.71-2.28,2-6,2s-6-1.29-6-2V14.73A13.16,13.16,0,0,0,12,16a13.16,13.16,0,0,0,6-1.27Zm0-6c0,.71-2.28,2-6,2s-6-1.29-6-2V8.73A13.16,13.16,0,0,0,12,10a13.16,13.16,0,0,0,6-1.27ZM12,8C8.28,8,6,6.71,6,6s2.28-2,6-2,6,1.29,6,2S15.72,8,12,8ZM8,10.5a1,1,0,1,0,1,1A1,1,0,0,0,8,10.5Z" /></svg>
-                                <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
-                                <span data-key="t-dashboard" style="font-size:12px;">
-                                    Data Sources
-                                </span>
-                            </a>
 
 
-                        </li>-->
 
                         <li>
                             <a href="#" class="has-arrow">
@@ -407,7 +396,7 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-xl-2 col-md-4 col-sm-6" id="databases" data-datasource-filter="database">
+                                        <div class="col-xl-3 col-md-4 col-sm-6" id="databases" data-datasource-filter="database">
                                             <div class="card" onclick="location.href='meter-headend-systems.html'" role="button">
                                                 <div class="card-body">
 
@@ -419,13 +408,13 @@
                                                 </div>
 
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-outline-light text-truncate" onclick="location.href='meter-headend-systems.html'"><i class="uil uil-user me-1"></i>Meter Headend Systems</button>
+                                                    <button type="button" class="btn btn-outline-light" onclick="location.href='meter-headend-systems.html'" style="height: 57px;"><i class="uil uil-user me-1"></i>Meter Headend Systems</button>
 
                                                 </div>
                                             </div>
                                             <!-- end card -->
                                         </div>
-                                        <div class="col-xl-2 col-md-4 col-sm-6 " data-datasource-filter="database">
+                                        <div class="col-xl-3 col-md-4 col-sm-6 " data-datasource-filter="database">
                                             <div class="card" onclick="location.href='geographic-information-system.html'" role="button">
                                                 <div class="card-body">
 
@@ -437,7 +426,7 @@
                                                 </div>
 
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-outline-light text-truncate" onclick="location.href='geographic-information-system.html'">
+                                                    <button type="button" class="btn btn-outline-light" style="height: 57px;" onclick="location.href='geographic-information-system.html'">
                                                         <i class="uil uil-user me-1"></i>Geographic Information System (GIS)
                                                     </button>
 
@@ -445,7 +434,7 @@
                                             </div>
                                             <!-- end card -->
                                         </div>
-                                        <div class="col-xl-2 col-md-4 col-sm-6" data-datasource-filter="database">
+                                        <div class="col-xl-3 col-md-4 col-sm-6" data-datasource-filter="database">
                                             <div class="card" onclick="location.href='scada.html'" role="button">
                                                 <div class="card-body">
 
@@ -457,13 +446,13 @@
                                                 </div>
 
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-outline-light text-truncate" onclick="location.href='scada.html'"><i class="uil uil-user me-1"></i>Scada</button>
+                                                    <button type="button" class="btn btn-outline-light" style="height: 57px;" onclick="location.href='scada.html'"><i class="uil uil-user me-1"></i>Scada</button>
 
                                                 </div>
                                             </div>
                                             <!-- end card -->
                                         </div>
-                                        <div class="col-xl-2 col-md-4 col-sm-6 " data-datasource-filter="database">
+                                        <div class="col-xl-3 col-md-4 col-sm-6 " data-datasource-filter="database">
                                             <div class="card" onclick="location.href='distribution-management-system.html'" role="button">
                                                 <div class="card-body">
 
@@ -475,7 +464,7 @@
                                                 </div>
 
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-outline-light text-truncate" onclick="location.href='distribution-management-system.html'"><i class="uil uil-user me-1"></i>Distribution Management System (DMS)</button>
+                                                    <button type="button" class="btn btn-outline-light" style="height: 57px;" onclick="location.href='distribution-management-system.html'"><i class="uil uil-user me-1"></i>Distribution Management System (DMS)</button>
 
                                                 </div>
                                             </div>
@@ -484,7 +473,7 @@
 
 
 
-                                        <div class="col-xl-2 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
+                                        <div class="col-xl-3 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
                                             <div class="card" onclick="location.href='outage-management-system.html'" role="button">
                                                 <div class="card-body">
 
@@ -496,7 +485,7 @@
                                                 </div>
 
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-outline-light text-truncate" onclick="location.href='outage-management-system.html'">
+                                                    <button type="button" class="btn btn-outline-light" style="height: 57px;" onclick="location.href='outage-management-system.html'">
                                                         <i class="uil uil-user me-1"></i>Outage Management System (OMS)
                                                     </button>
 
@@ -505,7 +494,7 @@
                                             <!-- end card -->
                                         </div>
 
-                                        <div class="col-xl-2 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
+                                        <div class="col-xl-3 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
                                             <div class="card" onclick="location.href='pi-historian.html'" role="button">
                                                 <div class="card-body">
 
@@ -517,7 +506,7 @@
                                                 </div>
 
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-outline-light text-truncate" onclick="location.href='pi-historian.html'" title="Pi Historian">
+                                                    <button type="button" class="btn btn-outline-light" style="height: 57px;" onclick="location.href='pi-historian.html'" title="Pi Historian">
                                                         <i class="uil uil-user me-1"></i>Pi- Historian
                                                     </button>
 
@@ -526,7 +515,7 @@
                                             <!-- end card -->
                                         </div>
 
-                                        <div class="col-xl-2 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
+                                        <div class="col-xl-3 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
                                             <div class="card" onclick="location.href='customer-information-system.html'" role="button">
                                                 <div class="card-body">
 
@@ -538,7 +527,7 @@
                                                 </div>
 
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-outline-light text-truncate" onclick="location.href='customer-information-system.html'"><i class="uil uil-user me-1"></i>Customer Information System (CIS)</button>
+                                                    <button type="button" class="btn btn-outline-light" style="height: 57px;" onclick="location.href='customer-information-system.html'"><i class="uil uil-user me-1"></i>Customer Information System (CIS)</button>
 
                                                 </div>
                                             </div>
@@ -547,7 +536,7 @@
 
 
 
-                                        <div class="col-xl-2 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
+                                        <div class="col-xl-3 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
                                             <div class="card" onclick="location.href='meter-data-management.html'" role="button">
                                                 <div class="card-body">
 
@@ -559,7 +548,7 @@
                                                 </div>
 
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-outline-light text-truncate" onclick="location.href='meter-data-management.html'">
+                                                    <button type="button" class="btn btn-outline-light" style="height: 57px;" onclick="location.href='meter-data-management.html'">
                                                         <i class="uil uil-user me-1"></i>Meter Data Management (MDM)
                                                     </button>
 
@@ -567,7 +556,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="col-xl-2 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
+                                        <div class="col-xl-3 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
                                             <div class="card" onclick="location.href='work-order-management-system.html'" role="button">
                                                 <div class="card-body">
 
@@ -579,7 +568,7 @@
                                                 </div>
 
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-outline-light text-truncate" onclick="location.href='work-order-management-system.html'">
+                                                    <button type="button" class="btn btn-outline-light" style="height: 57px;" onclick="location.href='work-order-management-system.html'">
                                                         <i class="uil uil-user me-1"></i>Work Order Management System (WMS)
                                                     </button>
 
@@ -587,7 +576,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="col-xl-2 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
+                                        <div class="col-xl-3 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
                                             <div class="card" onclick="location.href='distribution-automation-system.html'" role="button">
                                                 <div class="card-body">
 
@@ -599,7 +588,7 @@
                                                 </div>
 
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-outline-light text-truncate" onclick="location.href='distribution-automation-system.html'">
+                                                    <button type="button" class="btn btn-outline-light" style="height: 57px;" onclick="location.href='distribution-automation-system.html'">
                                                         <i class="uil uil-user me-1"></i>Distribution Automation System
                                                     </button>
 
@@ -607,7 +596,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="col-xl-2 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
+                                        <div class="col-xl-3 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
                                             <div class="card" onclick="location.href='data-warehouse.html'" role="button">
                                                 <div class="card-body">
 
@@ -619,7 +608,7 @@
                                                 </div>
 
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-outline-light text-truncate" onclick="location.href='data-warehouse.html'">
+                                                    <button type="button" class="btn btn-outline-light" style="height: 57px;" onclick="location.href='data-warehouse.html'">
                                                         <i class="uil uil-user me-1"></i>Data warehouse
                                                     </button>
 
@@ -627,7 +616,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="col-xl-2 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
+                                        <div class="col-xl-3 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
                                             <div class="card" onclick="location.href='ev.html'" role="button">
                                                 <div class="card-body">
 
@@ -639,7 +628,7 @@
                                                 </div>
 
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-outline-light text-truncate" onclick="location.href='ev'">
+                                                    <button type="button" class="btn btn-outline-light" style="height: 57px;" onclick="location.href='ev'">
                                                         <i class="uil uil-user me-1"></i>EV
                                                     </button>
 
@@ -647,7 +636,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="col-xl-2 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
+                                        <div class="col-xl-3 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
                                             <div class="card" onclick="location.href='electricity-management-system.html'" role="button">
                                                 <div class="card-body">
 
@@ -659,15 +648,15 @@
                                                 </div>
 
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-outline-light text-truncate" onclick="location.href='electricity-management-system.html'">
-                                                        <i class="uil uil-user me-1"></i>Electricity Management System (EMS) 
+                                                    <button type="button" class="btn btn-outline-light" style="height:57px;" onclick="location.href='electricity-management-system.html'">
+                                                        <i class="uil uil-user me-1"></i>Electricity Management System (EMS)
                                                     </button>
 
                                                 </div>
                                             </div>
 
                                         </div>
-                                        <div class="col-xl-2 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
+                                        <div class="col-xl-3 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
                                             <div class="card" onclick="location.href='#'" role="button">
                                                 <div class="card-body">
 
@@ -679,7 +668,7 @@
                                                 </div>
 
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-outline-light text-truncate" onclick="location.href='#'">
+                                                    <button type="button" class="btn btn-outline-light" onclick="location.href='#'"  style="height: 57px;">
                                                         <i class="uil uil-user me-1"></i>Customer Experience
                                                     </button>
 
@@ -687,7 +676,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="col-xl-2 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
+                                        <div class="col-xl-3 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
                                             <div class="card" onclick="location.href='#'" role="button">
                                                 <div class="card-body">
 
@@ -699,7 +688,7 @@
                                                 </div>
 
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-outline-light text-truncate" onclick="location.href='#'">
+                                                    <button type="button" class="btn btn-outline-light " onclick="location.href='#'"  style="height: 57px;">
                                                         <i class="uil uil-user me-1"></i>Customer Experience-1
                                                     </button>
 
@@ -707,7 +696,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="col-xl-2 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
+                                        <div class="col-xl-3 col-md-4 col-sm-6" data-datasource-filter="database" id="databases">
                                             <div class="card" onclick="location.href='#'" role="button">
                                                 <div class="card-body">
 
@@ -719,7 +708,7 @@
                                                 </div>
 
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-outline-light text-truncate" onclick="location.href='#'">
+                                                    <button type="button" class="btn btn-outline-light" onclick="location.href='#'"  style="height: 57px;">
                                                         <i class="uil uil-user me-1"></i>Customer Experience-2
                                                     </button>
 
