@@ -71,19 +71,19 @@
                 </div>
 
                 <!--<div class="row d-flex flex-grow-1" style="">
-            <div class="col-xl-6 col-md-10">
-                <form class="app-search p-3">
-                    <div class="form-group m-0">
-                        <div class="input-group">
+                    <div class="col-xl-6 col-md-10">
+                        <form class="app-search p-3">
+                            <div class="form-group m-0">
+                                <div class="input-group">
 
-                            <input type="search" class="form-control w-100" placeholder="Search ..." aria-label="Search Result">
+                                    <input type="search" class="form-control w-100" placeholder="Search ..." aria-label="Search Result">
 
-                            <button class="btn btn-primary d-sm-inline-block" type="submit"><i data-feather="search" class="icon-lg"></i></button>
-                        </div>
+                                    <button class="btn btn-primary d-sm-inline-block" type="submit"><i data-feather="search" class="icon-lg"></i></button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </form>
-            </div>
-        </div>-->
+                </div>-->
 
                 <div class="d-flex">
 
@@ -194,8 +194,8 @@
                         <div class="dropdown-menu dropdown-menu-end">
                             <!-- item-->
                             <!--<a class="dropdown-item" href="profile-mng.html"><i class="mdi mdi-clipboard-account-outline font-size-16 align-middle me-1"></i> My Account</a>
-                    <a class="dropdown-item" href="credentials-mng.html"><i class="mdi mdi-key-change font-size-16 align-middle me-1"></i> Manage Credentials</a>
-                    <a class="dropdown-item" href="account-rec.html"><i class="mdi mdi-ballot-recount font-size-16 align-middle me-1"></i> Manage Account Recovery</a>-->
+                            <a class="dropdown-item" href="credentials-mng.html"><i class="mdi mdi-key-change font-size-16 align-middle me-1"></i> Manage Credentials</a>
+                            <a class="dropdown-item" href="account-rec.html"><i class="mdi mdi-ballot-recount font-size-16 align-middle me-1"></i> Manage Account Recovery</a>-->
 
                             <a class="dropdown-item" href="index.html"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a>
                         </div>
@@ -334,7 +334,7 @@
                             </ul>
                         </li>  <!--Adapters-->
 
-                        
+
 
                         <li>
                             <a href="#" class="has-arrow">
@@ -386,200 +386,497 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <div class="card" style="height:calc(100vh - 250px)">
+                            <div class="card">
                                 <div class="card-header">
                                     <div class="d-flex">
                                         <h4>View Adapter</h4>
-                                        <div></div>
+
                                     </div>
                                 </div>
                                 <div class="card-body table-responsive">
+                                    <div class="d-flex align-items-center flex-grow-1">
+                                        <div class="d-flex align-items-center mx-1">
+                                            <label class="d-inline-block mx-1">Show</label> 
+                                            <select id="show" class="form-select mx-1">
+                                                <option>10</option>
+                                                <option>25</option>
+                                                <option>50</option>
+                                            </select>
+                                        </div>
 
-                                    <table id="datatable" class="table table-bordered table-sm table-editable  table-nowrap align-middle w-100">
-                                        <thead class="table-light ">
-                                            <tr>
-                                                <th data-classnosorting="no-sort"></th>
-                                                <th>Name</th>
-                                                <th>URL</th>
-                                                <th>Created by</th>
-                                                <th>Created Date</th>
-                                                <th>Last Modified date</th>
-                                                <th style="width:5px" data-class="no-sort" class="dropdown dropstart" data-classnosorting="no-sort">
+                                        <div class="flex-grow-1 mx-1">
+                                            <input type="text" class="form-control" placeholder="Search..." />
+                                        </div>
 
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr data-id="1">
-                                                <td style="width:5%;text-align:center;">
-                                                    <img src="assets/svgicon/itron-logo.svg"   style="width:35px;" />
-                                                </td>
-                                                <td data-field="Data source">
-                                                    <p class="py-0 my-0">Itron Advance Metet Management V4.14</p>
-                                                    <!--<p class="font-size-10 py-0 my-0 text-secondary">CREATED : 2022-03-10</p>-->
-                                                </td>
-
-
-                                                <td data-field="Usage">
-                                                    <p class="py-0 my-0">http://hostname/amm/api</p>
-                                                    <!--<p class="py-0 my-0 font-size-10 text-secondary">Dataset</p>-->
-                                                </td>
-                                                <td data-field="Created by">
-                                                    <p class="py-0 my-0">admin</p>
-                                                    <!--<p class="py-0 my-0 font-size-10 text-secondary">Usage</p>-->
-                                                </td>
-                                                <td data-file="Created Date">
-                                                    <p class="py-0 my-0">2022-03-10 01:05:34</p>
-                                                    <!-- <p class="py-0 my-0 font-size-10 text-secondary">USAGE</p>-->
-
-                                                </td>
-
-                                                <td data-file="Last Modified date">
-                                                    <p class="py-0 my-0">2022-03-10 01:05:34</p>
-
-                                                    <!-- <p class="py-0 my-0 font-size-10 text-secondary">LAST & NEXT SYNC</p>-->
-
-                                                </td>
+                                    </div>
+                                    <div class="table-responsive mt-3">
+                                        <table class="table table-borderless table-nowrap" data-astable="">
+                                            <thead class="table-light" data-asthead="">
+                                                <tr class="" data-tabelrowth="">
+                                                    <th class=""></th>
+                                                    <th class="">Name</th>
+                                                    <th class="">Vendor</th>
+                                                    <th class="">Product</th>
+                                                    <th class="">Sub Product</th>
+                                                    <th class="">Version </th>
 
 
-                                                <td class="">
-                                                    <div class="dropdown">
-                                                        <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                                            <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                    <th class="col-sm-1"></th>
+                                                </tr>
+
+                                            </thead>
+                                            <tbody class="" data-tablebody=data-tablebody>
+                                                <tr class="" data-tablerowtd="data-tablerow-1">
+                                                    <td class="" data-tabletd="1">
+                                                        <a data-bs-toggle="collapse" href="#tablerow1" role="button" aria-expanded="false" aria-controls="AmazonAuroraMySQL" data-arrow-d="change">
+                                                            <span class="border-secondary arrow-d arrow-d-right arrow-d-down" data-arrow-d="arrow-d-down"></span>
                                                         </a>
-                                                        <ul class=" dropdown-menu dropdown-menu-end " id="collapseExample">
-                                                            <li> <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Edit</a></li>
-                                                            <li><a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Test Extraction</a></li>
-                                                            <li>
-                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Clore Setting</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Add to flow</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Delete</a>
-                                                            </li>
+
+                                                    </td>
+
+                                                    <td class="" data-tabletd="2"><div class="d-flex align-items-center"><div style="width:40px"><img src="assets/svgicon/adapters-icon/14-itron-logo.svg" style="width:35px;height:35px;" /></div><div><p class="py-0 my-0">Itron Utility AMM V4.15</p> <p class="text-secondary py-0 my-0">Meter Headend Systems</p></div></div></td>
+                                                    <td class="" data-tabletd="3"><div class="d-flex align-items-center"><div class="d-inline-flex mx-1"></div><div class="d-inline-flex mx-1">Itron</div></div></td>
+
+                                                    <td class="" data-tabletd="5">UIQ</td>
+
+                                                    <td class="" data-tabletd="6">AAM</td>
+                                                    <td class="" data-tabletd="7">4.15</td>
 
 
+                                                    <td class="" data-tabletd="10">
+                                                        <div class="dropdown float-end">
+                                                            <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                                <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-end " id="collapseExample">
+                                                                <a class="dropdown-item" role="button"><i class="mdi mdi-pencil font-size-16 me-2"></i>Edit</a>
+                                                                <!--<a class="dropdown-item" role="button">Clone</a>-->
+                                                                <a class="dropdown-item" role="button"><i class="mdi mdi-trash-can font-size-16 me-2"></i>Delete</a>
+                                                            </div>
+                                                        </div>
 
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr data-id="2">
-                                                <td style="width:5%;text-align:center;">
-                                                    <img src="assets/svgicon/itron-logo.svg" style="width:35px;" />
-                                                </td>
-                                                <td data-field="Data source">
-                                                    <p class="py-0 my-0">Itron Outage Detection System V5.2</p>
-                                                    <!--<p class="font-size-10 py-0 my-0 text-secondary">CREATED : 2022-03-10</p>-->
-                                                </td>
-
-
-                                                <td data-field="Usage">
-                                                    <p class="py-0 my-0">http://hostname/ods/api</p>
-                                                    <!--<p class="py-0 my-0 font-size-10 text-secondary">Dataset</p>-->
-                                                </td>
-                                                <td data-field="Created by">
-                                                    <p class="py-0 my-0">admin</p>
-                                                    <!--<p class="py-0 my-0 font-size-10 text-secondary">Usage</p>-->
-                                                </td>
-                                                <td data-file="Created Date">
-                                                    <p class="py-0 my-0">2022-03-10 01:05:34</p>
-                                                    <!-- <p class="py-0 my-0 font-size-10 text-secondary">USAGE</p>-->
-
-                                                </td>
-
-                                                <td data-file="Last Modified date">
-                                                    <p class="py-0 my-0">2022-03-10 01:05:34</p>
-
-                                                    <!-- <p class="py-0 my-0 font-size-10 text-secondary">LAST & NEXT SYNC</p>-->
-
-                                                </td>
+                                                    </td>
 
 
-                                                <td class="">
-                                                    <div class="dropdown">
-                                                        <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                                            <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                </tr>
+                                                <tr class="collapse show" id="tablerow1" data-collapserow="1">
+
+                                                    <td colspan="9">
+                                                        <div class="card table-responsive">
+                                                            <table class="table table-borderless table-nowrap mx-3 w-auto" data-astable="">
+                                                                <thead class="table-light" data-asthead="">
+                                                                    <tr class="" data-tabelrowth="">
+                                                                        <th class="">EndPoint</th>
+                                                                        <th class="">Created Date</th>
+                                                                        <th class="">Create By</th>
+                                                                        <th class="">Modified Date</th>
+                                                                        <th class="">Modified By</th>
+
+                                                                        <th class=""></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="">
+
+                                                                        <td class="" data-td="1">https://xsi.3insys.com:8081/itron/uiq/amm/v4.15/api/finddevice</td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+                                                                        <td class="" data-td="6">
+                                                                            <div class="dropdown float-end">
+                                                                                <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                                                    <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                                                </a>
+                                                                                <div class="dropdown-menu dropdown-menu-end " id="collapseExample">
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-pencil font-size-16 me-2"></i>Edit</a>
+                                                                                    <!--<a class="dropdown-item" role="button">Clone</a>-->
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-trash-can font-size-16 me-2"></i>Delete</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="">
+
+                                                                        <td class="" data-td="1">https://xsi.3insys.com:8081/itron/uiq/amm/v4.15/api/location/replace</td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+                                                                        <td class="" data-td="6">
+                                                                            <div class="dropdown float-end">
+                                                                                <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                                                    <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                                                </a>
+                                                                                <div class="dropdown-menu dropdown-menu-end " id="collapseExample">
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-pencil font-size-16 me-2"></i>Edit</a>
+                                                                                    <!--<a class="dropdown-item" role="button">Clone</a>-->
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-trash-can font-size-16 me-2"></i>Delete</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="">
+
+                                                                        <td class="" data-td="1">https://xsi.3insys.com:8081/itron/uiq/amm/v4.15/api/location/create</td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+                                                                        <td class="" data-td="6">
+                                                                            <div class="dropdown float-end">
+                                                                                <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                                                    <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                                                </a>
+                                                                                <div class="dropdown-menu dropdown-menu-end " id="collapseExample">
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-pencil font-size-16 me-2"></i>Edit</a>
+                                                                                    <!--<a class="dropdown-item" role="button">Clone</a>-->
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-trash-can font-size-16 me-2"></i>Delete</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="" data-tablerowtd="data-tablerow-1">
+                                                    <td class="" data-tabletd="1">
+                                                        <a data-bs-toggle="collapse" href="#tablerow2" role="button" aria-expanded="false" aria-controls="AmazonAuroraMySQL" data-arrow-d="change">
+                                                            <span class="border-secondary arrow-d arrow-d-right" data-arrow-d="arrow-d-down"></span>
                                                         </a>
-                                                        <ul class=" dropdown-menu dropdown-menu-end " id="collapseExample">
-                                                            <li> <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Edit</a></li>
-                                                            <li><a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Test Extraction</a></li>
-                                                            <li>
-                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Clore Setting</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Add to flow</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Delete</a>
-                                                            </li>
+
+                                                    </td>
+
+                                                    <td class="" data-tabletd="2"><div class="d-flex align-items-center"><div style="width:40px"><img src="assets/svgicon/adapters-icon/6-esri-logo.svg" style="width:35px;height:35px;" /></div><div><p class="py-0 my-0">Esri GIS system</p> <p class="text-secondary py-0 my-0">Geographic Information System</p></div></div></td>
+                                                    <td class="" data-tabletd="3"><div class="d-flex align-items-center"><div class="d-inline-flex mx-1"></div><div class="d-inline-flex mx-1">Esri</div></div></td>
+
+                                                    <td class="" data-tabletd="5">ArcGIS</td>
+
+                                                    <td class="" data-tabletd="6"></td>
+                                                    <td class="" data-tabletd="7">10.5</td>
 
 
+                                                    <td class="" data-tabletd="10">
+                                                        <div class="dropdown float-end">
+                                                            <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                                <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-end " id="collapseExample">
+                                                                <a class="dropdown-item" role="button"><i class="mdi mdi-pencil font-size-16 me-2"></i>Edit</a>
+                                                                <!--<a class="dropdown-item" role="button">Clone</a>-->
+                                                                <a class="dropdown-item" role="button"><i class="mdi mdi-trash-can font-size-16 me-2"></i>Delete</a>
+                                                            </div>
+                                                        </div>
 
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr data-id="3">
-                                                <td style="width:5%;text-align:center;">
-                                                    <img src="assets/svgicon/Pi-Historian.svg" style="width:35px;" />
-                                                </td>
-                                                <td data-field="Data source">
-                                                    <p class="py-0 my-0">OSISoft Pi Historian</p>
-                                                    <!--<p class="font-size-10 py-0 my-0 text-secondary">CREATED : 2022-03-10</p>-->
-                                                </td>
-
-
-                                                <td data-field="Usage">
-                                                    <p class="py-0 my-0">http://hostname/pih/api</p>
-                                                    <!--<p class="py-0 my-0 font-size-10 text-secondary">Dataset</p>-->
-                                                </td>
-                                                <td data-field="Created by">
-                                                    <p class="py-0 my-0">admin</p>
-                                                    <!--<p class="py-0 my-0 font-size-10 text-secondary">Usage</p>-->
-                                                </td>
-                                                <td data-file="Created Date">
-                                                    <p class="py-0 my-0">2022-03-10 01:05:34</p>
-                                                    <!-- <p class="py-0 my-0 font-size-10 text-secondary">USAGE</p>-->
-
-                                                </td>
-
-                                                <td data-file="Last Modified date">
-                                                    <p class="py-0 my-0">2022-03-10 01:05:34</p>
-
-                                                    <!-- <p class="py-0 my-0 font-size-10 text-secondary">LAST & NEXT SYNC</p>-->
-
-                                                </td>
+                                                    </td>
 
 
-                                                <td class="">
-                                                    <div class="dropdown">
-                                                        <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                                            <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                </tr>
+                                                <tr class="collapse " id="tablerow2" data-collapserow="1">
+
+                                                    <td colspan="9">
+                                                        <div class="card table-responsive">
+                                                            <table class="table table-borderless table-nowrap mx-3 w-auto" data-astable="">
+                                                                <thead class="table-light" data-asthead="">
+                                                                    <tr class="" data-tabelrowth="">
+                                                                        <th class="">EndPoint</th>
+                                                                        <th class="">Created Date</th>
+                                                                        <th class="">Create By</th>
+                                                                        <th class="">Modified Date</th>
+                                                                        <th class="">Modified By</th>
+
+                                                                        <th class=""></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="">
+
+                                                                        <td class="" data-td="1">https://xsi.3insys.com:8081/itron/uiq/amm/v4.15/api/finddevice</td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+                                                                        <td class="" data-td="6">
+                                                                            <div class="dropdown float-end">
+                                                                                <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                                                    <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                                                </a>
+                                                                                <div class="dropdown-menu dropdown-menu-end " id="collapseExample">
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-pencil font-size-16 me-2"></i>Edit</a>
+                                                                                    <!--<a class="dropdown-item" role="button">Clone</a>-->
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-trash-can font-size-16 me-2"></i>Delete</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="">
+
+                                                                        <td class="" data-td="1">https://xsi.3insys.com:8081/itron/uiq/amm/v4.15/api/location/replace</td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+                                                                        <td class="" data-td="6">
+                                                                            <div class="dropdown float-end">
+                                                                                <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                                                    <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                                                </a>
+                                                                                <div class="dropdown-menu dropdown-menu-end " id="collapseExample">
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-pencil font-size-16 me-2"></i>Edit</a>
+                                                                                    <!--<a class="dropdown-item" role="button">Clone</a>-->
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-trash-can font-size-16 me-2"></i>Delete</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="">
+
+                                                                        <td class="" data-td="1">https://xsi.3insys.com:8081/itron/uiq/amm/v4.15/api/location/create</td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+                                                                        <td class="" data-td="6">
+                                                                            <div class="dropdown float-end">
+                                                                                <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                                                    <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                                                </a>
+                                                                                <div class="dropdown-menu dropdown-menu-end " id="collapseExample">
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-pencil font-size-16 me-2"></i>Edit</a>
+                                                                                    <!--<a class="dropdown-item" role="button">Clone</a>-->
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-trash-can font-size-16 me-2"></i>Delete</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="" data-tablerowtd="data-tablerow-1">
+                                                    <td class="" data-tabletd="1">
+                                                        <a data-bs-toggle="collapse" href="#tablerow3" role="button" aria-expanded="false" aria-controls="AmazonAuroraMySQL" data-arrow-d="change">
+                                                            <span class="border-secondary arrow-d arrow-d-right" data-arrow-d="arrow-d-down"></span>
                                                         </a>
-                                                        <ul class=" dropdown-menu dropdown-menu-end " id="collapseExample">
-                                                            <li> <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Edit</a></li>
-                                                            <li><a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Test Extraction</a></li>
-                                                            <li>
-                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Clore Setting</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Add to flow</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Delete</a>
-                                                            </li>
-                                                            
-                                                           
-                                                           
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+
+                                                    </td>
+
+                                                    <td class="" data-tabletd="2"><div class="d-flex align-items-center"><div style="width:40px"><img src="assets/svgicon/adapters-icon/21-oracle_logo.svg" style="width:35px;height:35px;" /></div><div><p class="py-0 my-0">Oracle Customer Information system V10.0</p> <p class="text-secondary py-0 my-0">Customer Information system</p></div></div></td>
+                                                    <td class="" data-tabletd="3"><div class="d-flex align-items-center"><div class="d-inline-flex mx-1"></div><div class="d-inline-flex mx-1">Oracle</div></div></td>
+
+                                                    <td class="" data-tabletd="5">CC&B</td>
+
+                                                    <td class="" data-tabletd="6"></td>
+                                                    <td class="" data-tabletd="7">10.5</td>
+
+
+                                                    <td class="" data-tabletd="10">
+                                                        <div class="dropdown float-end">
+                                                            <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                                <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-end " id="collapseExample">
+                                                                <a class="dropdown-item" role="button"><i class="mdi mdi-pencil font-size-16 me-2"></i>Edit</a>
+                                                                <!--<a class="dropdown-item" role="button">Clone</a>-->
+                                                                <a class="dropdown-item" role="button"><i class="mdi mdi-trash-can font-size-16 me-2"></i>Delete</a>
+                                                            </div>
+                                                        </div>
+
+                                                    </td>
+
+
+                                                </tr>
+                                                <tr class="collapse " id="tablerow3" data-collapserow="1">
+
+                                                    <td colspan="9">
+                                                        <div class="card table-responsive">
+                                                            <table class="table table-borderless table-nowrap mx-3 w-auto" data-astable="">
+                                                                <thead class="table-light" data-asthead="">
+                                                                    <tr class="" data-tabelrowth="">
+                                                                        <th class="">EndPoint</th>
+                                                                        <th class="">Created Date</th>
+                                                                        <th class="">Create By</th>
+                                                                        <th class="">Modified Date</th>
+                                                                        <th class="">Modified By</th>
+
+                                                                        <th class=""></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="">
+
+                                                                        <td class="" data-td="1">https://xsi.3insys.com:8081/itron/uiq/amm/v4.15/api/finddevice</td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+                                                                        <td class="" data-td="6">
+                                                                            <div class="dropdown float-end">
+                                                                                <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                                                    <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                                                </a>
+                                                                                <div class="dropdown-menu dropdown-menu-end " id="collapseExample">
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-pencil font-size-16 me-2"></i>Edit</a>
+                                                                                    <!--<a class="dropdown-item" role="button">Clone</a>-->
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-trash-can font-size-16 me-2"></i>Delete</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="">
+
+                                                                        <td class="" data-td="1">https://xsi.3insys.com:8081/itron/uiq/amm/v4.15/api/location/replace</td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+                                                                        <td class="" data-td="6">
+                                                                            <div class="dropdown float-end">
+                                                                                <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                                                    <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                                                </a>
+                                                                                <div class="dropdown-menu dropdown-menu-end " id="collapseExample">
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-pencil font-size-16 me-2"></i>Edit</a>
+                                                                                    <!--<a class="dropdown-item" role="button">Clone</a>-->
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-trash-can font-size-16 me-2"></i>Delete</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="">
+
+                                                                        <td class="" data-td="1">https://xsi.3insys.com:8081/itron/uiq/amm/v4.15/api/location/create</td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">03/03/2022</p>
+                                                                        </td>
+                                                                        <td class="" data-td="2">
+                                                                            <p class="py-1 my-0">Admin</p>
+                                                                        </td>
+
+                                                                        <td class="" data-td="6">
+                                                                            <div class="dropdown float-end">
+                                                                                <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                                                    <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                                                </a>
+                                                                                <div class="dropdown-menu dropdown-menu-end " id="collapseExample">
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-pencil font-size-16 me-2"></i>Edit</a>
+                                                                                    <!--<a class="dropdown-item" role="button">Clone</a>-->
+                                                                                    <a class="dropdown-item" role="button"><i class="mdi mdi-trash-can font-size-16 me-2"></i>Delete</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                        <div class="float-end">
+                                            <ul class="pagination"><li class="paginate_button page-item previous disabled" id="datatable_previous"><a href="#" aria-controls="datatable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="datatable" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item next disabled" id="datatable_next"><a href="#" aria-controls="datatable" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li></ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -648,27 +945,13 @@
 
     <script>
         $(document).ready(function () {
-
             $('[data-countt=follower]').text(`(${$("#datasetfollower > p").length})`);
             $('[data-countt=shares]').text(`(${$("#datasetshares > p").length})`);
 
-            $('[data-PasteConnectionString=active]').click(function () {
-                if (this.checked) {
-                    $('[data-EnterConnectionFieldsManually=show').addClass('d-none')
-                    $('[data-PasteConnectionString=show]').removeClass('d-none')
-                }
+            $('[data-arrow-d=arrow-d-down]').click(function () {
+                $(this).toggleClass('arrow-d-down')
             });
-            $('[data-EnterConnectionFieldsManually=active]').click(function () {
-                if (this.checked) {
-                    $('[data-EnterConnectionFieldsManually=show').removeClass('d-none')
-                    $('[data-PasteConnectionString=show]').addClass('d-none')
-                }
-            });
-
-
-
-            $('[data-through-ssh=switch]').click(function () { if (this.checked) { $('[data-through-ssh=show]').removeClass('d-none') } else { $('[data-through-ssh=show]').addClass('d-none') } });
-            $('[data-through-ssl=switch]').click(function () { if (this.checked) { $('[data-through-ssl=show]').removeClass('d-none') } else { $('[data-through-ssl=show]').addClass('d-none') } });
+            $('[data-tablerowtd-count=all]').append(`(${$('[data-tablerowtd]').length})`);
         });
     </script>
 </body>
