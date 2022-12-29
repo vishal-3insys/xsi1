@@ -791,7 +791,7 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="m-1">
+                            <div class="m-1 mb-2">
                                 <label class="form-label">
                                     API Endpoint*
                                 </label>
@@ -814,97 +814,111 @@
                                             <label class="form-label">
                                                 Description*
                                             </label>
-                                            <input class="form-control" type="text" placeholder="Endpoint Name" />
+                                            <input class="form-control" type="text" placeholder="Description" />
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="my-2">
-                                            <select class="form-select">
-                                                <option>Option1</option>
-                                                <option>Option2</option>
-                                                <option>Option3</option>
-                                            </select>
-                                        </div>
-                                    </div>
+
 
                                 </div>
                                 <div class="row border-2 border-bottom mx-2"></div>
                                 <div class="row">
                                     <div class="col-md-2 "><h6 class="m-2">Ping Job</h6></div>
-                                    
+
                                     <div class="col-md-10">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="m-1 border-2 ">
-                                                    
-                                                    <h6 class="m-1"><label >Ping Option*</label></h6>
+
+                                                    <h6 class="m-1"><label>Ping Option*</label></h6>
                                                     <div class="border">
                                                         <div class="form-check form-check-inline m-2">
                                                             <label class="form-check-label" for="appLevelPing">App Level Ping</label>
-                                                            <input class="form-check-input" type="Radio" name="PingOption" id="appLevelPing" />
+                                                            <input class="form-check-input" type="Radio" data-ping-option="1" name="PingOption" id="appLevelPing" checked />
 
                                                         </div>
                                                         <div class="form-check form-check-inline m-2">
                                                             <label class="form-check-label" for="networkLevelPing">Network Level Ping</label>
-                                                            <input class="form-check-input" type="Radio" name="PingOption" id="networkLevelPing" />
-                                                           
+                                                            <input class="form-check-input data-ping-option"data-ping-option="2" type="Radio" name="PingOption" id="networkLevelPing" />
+
                                                         </div>
                                                         <div class="p-2">
-                                                            <select class="form-select">
-                                                                <option>Option1</option>
-                                                                <option>Option2</option>
-                                                                <option>Option3</option>
+                                                            <select class="form-select " data-ping-option="this">
+                                                                <option>DeviceGroupID</option>
+                                                                <option>DeviceMacID</option>
+                                                                <option>DeviceSearchKey</option>
+                                                                <!-- <option>PerformTraceRoute</option>
+     <option>NumberPings</option>-->
                                                             </select>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
-                                                <div class="m-2 pb-2">
-                                                    <label class="form-label my-2">No. of Retries</label>
-                                                    <input class="form-control" type="text" />
+                                                <div class="mt-2 pb-2 row">
+                                                    <label class="col-sm-3 col-form-label">No. of Retries</label>
+                                                    <div class="col-sm-9">
+                                                        <input class="form-control" type="text" />
+                                                    </div>
 
                                                 </div>
                                             </div>
                                             <div class="col-md-12 ">
                                                 <label class="m-1">Priority</label>
                                                 <div class="m-2 p-2 border ">
-                                                    <div class="my-2 ">
-                                                        <label class="form-label">Name*</label>
-                                                        <input class="form-control" type="text" />
+                                                    <div class="my-2 row">
+                                                        <label class="col-sm-3 col-form-label">Name*</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="text" />
+                                                        </div>
                                                     </div>
-                                                    <div class="my-2 ">
-                                                        <label class="form-label">Localized Value*</label>
-                                                        <input class="form-control" type="text" />
+                                                    <div class="my-2 row">
+                                                        <label class="col-sm-3 col-form-label">Localized Value*</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="text" />
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-12 ">
                                                 <label class="m-2">Push Results</label>
                                                 <div class=" border m-1 ">
-                                                    <div class="my-2 p-2">
-                                                        <label class="form-label">Queue Name*</label>
-                                                        <input class="form-control" type="text" />
+                                                    <div class="my-2 p-2 row">
+                                                        <label class="col-sm-3 col-form-label">Queue Name*</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="text" />
+                                                        </div>
                                                     </div>
 
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                   
-                                   
+
+
                                 </div>
                                 <div class="row border-2 border-bottom m-2"></div>
                                 <div class="row">
                                     <div class="col-md-2"><h6 class="m-2">Schedule</h6></div>
                                     <div class="col-md-10">
                                         <div class="m-1 p-1 border">
-                                            <label class="form-label">Select One</label>
-                                            <select class="form-select">
-                                                <option>Option1</option>
-                                                <option>Option2</option>
-                                                <option>Option3</option>
-                                            </select>
+                                            <div class="row">
+                                                <label class="col-form-label">Select One</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-select">
+                                                        <option>Immediate</option>
+                                                        <option>Future</option>
+                                                        <option>Interval</option>
+                                                        <option>Daily</option>
+                                                        <option>Weekly</option>
+                                                        <option>DayOfMonth</option>
+                                                        <option>WeekdayOfMonth</option>
+                                                        <option>DayOfWeek</option>
+                                                        <option>DayOfYear</option>
+                                                        <option>WeekdayOfYear</option>
+                                                        <option>Billing</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -958,6 +972,7 @@
         //$(document).ready(function () {
         //    $("#modal-customize").modal('show');
         //});
+       
         $(document).ready(function () {
 
             $('[data-countt=follower]').text(`(${$("#datasetfollower > p").length})`);
@@ -1000,6 +1015,31 @@
 
 
         });
+    </script>
+    <script>
+        const data_ping_option1 = document.getElementById('appLevelPing');
+        const data_ping_option2 = document.getElementById('networkLevelPing');
+        const data_ping_option_this = document.querySelector('[data-ping-option="this"]');
+        const data_ping_option_list = ['<option>DeviceGroupID</option>',
+            ' <option>DeviceMacID</option>',
+            ' <option>DeviceSearchKey</option>',
+            '<option>PerformTraceRoute</option>',
+            ' <option>NumberPings</option>'];
+        function dataPingOtp() {
+            var option = '';
+            if (data_ping_option1.checked == false) {
+                data_ping_option_list.forEach((i) => data_ping_option_this.innerHTML = option += i )
+                            }
+            else {
+                for (var i = 0; i < 3; i++) {
+                    data_ping_option_this.innerHTML = option += data_ping_option_list[i] ;
+                   
+                }
+            }
+        }
+        data_ping_option1.addEventListener('click', dataPingOtp);
+        data_ping_option2.addEventListener('click', dataPingOtp);
+
     </script>
 </body>
 
