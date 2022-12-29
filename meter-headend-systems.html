@@ -333,17 +333,17 @@
                             </ul>
                         </li>  <!--Adapters-->
                         <!--<li>
-                    <a href="#" class="has-arrow">
+                            <a href="#" class="has-arrow">
 
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14px" style="fill:#545a6d;"><path d="M8,16.5a1,1,0,1,0,1,1A1,1,0,0,0,8,16.5ZM12,2C8,2,4,3.37,4,6V18c0,2.63,4,4,8,4s8-1.37,8-4V6C20,3.37,16,2,12,2Zm6,16c0,.71-2.28,2-6,2s-6-1.29-6-2V14.73A13.16,13.16,0,0,0,12,16a13.16,13.16,0,0,0,6-1.27Zm0-6c0,.71-2.28,2-6,2s-6-1.29-6-2V8.73A13.16,13.16,0,0,0,12,10a13.16,13.16,0,0,0,6-1.27ZM12,8C8.28,8,6,6.71,6,6s2.28-2,6-2,6,1.29,6,2S15.72,8,12,8ZM8,10.5a1,1,0,1,0,1,1A1,1,0,0,0,8,10.5Z" /></svg>
-                        <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
-                        <span data-key="t-dashboard" style="font-size:12px;">
-                            Data Sources
-                        </span>
-                    </a>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14px" style="fill:#545a6d;"><path d="M8,16.5a1,1,0,1,0,1,1A1,1,0,0,0,8,16.5ZM12,2C8,2,4,3.37,4,6V18c0,2.63,4,4,8,4s8-1.37,8-4V6C20,3.37,16,2,12,2Zm6,16c0,.71-2.28,2-6,2s-6-1.29-6-2V14.73A13.16,13.16,0,0,0,12,16a13.16,13.16,0,0,0,6-1.27Zm0-6c0,.71-2.28,2-6,2s-6-1.29-6-2V8.73A13.16,13.16,0,0,0,12,10a13.16,13.16,0,0,0,6-1.27ZM12,8C8.28,8,6,6.71,6,6s2.28-2,6-2,6,1.29,6,2S15.72,8,12,8ZM8,10.5a1,1,0,1,0,1,1A1,1,0,0,0,8,10.5Z" /></svg>
+                                <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
+                                <span data-key="t-dashboard" style="font-size:12px;">
+                                    Data Sources
+                                </span>
+                            </a>
 
 
-                </li>-->
+                        </li>-->
 
                         <li>
                             <a href="#" class="has-arrow">
@@ -517,13 +517,13 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-6">
+                                            <!--<div class="col-md-6">
                                                 <label for="port" class="form-label mb-0">Port</label>
                                                 <input type="text" class="form-control mb-3" id="port" placeholder="port" required=required />
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
-                                            </div>
+                                            </div>-->
                                         </div>
                                         <div class="row-cols-auto">
                                             <div class="my-2">
@@ -539,30 +539,148 @@
 
                                                     <thead class="table-light">
                                                         <tr>
-                                                            <th>API Name</th>
-                                                            <th>API Description</th>
+                                                            <th>Select</th>
+                                                            <th>Route</th>
+                                                            <th>Description</th>
+                                                            <th></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr><td>adddistnetwork		</td><td>Create distribution network record in UIQ							</td></tr>
-                                                        <tr><td>addlocationnew		</td><td>Create location record in UIQ                                       </td></tr>
-                                                        <tr><td>addservicepoint		</td><td>Create servicepoint record in UIQ                                   </td></tr>
-                                                        <tr><td>replacelocation		</td><td>Associate location record with meter record in UIQ                  </td></tr>
-                                                        <tr><td>finddistnetwork		</td><td>Find distribution network record in UIQ                             </td></tr>
-                                                        <tr><td>findlocation		</td><td>Find location record in UIQ                                         </td></tr>
-                                                        <tr><td>findservicepoint	</td><td>Find servicepoint record in UIQ                                     </td></tr>
-                                                        <tr><td>changeadminstate	</td><td>Change the UTL admin state of a meter in UIQ                        </td></tr>
-                                                        <tr><td>getdevice			</td><td>	Retrieve device record from UIQ                                  </td></tr>
-                                                        <tr><td>jobstatus			</td><td>	Retrieve Job status record from UIQ                              </td></tr>
-                                                        <tr><td>finddevice			</td><td>	Find device record in UIQ                                        </td></tr>
-                                                        <tr><td>odrpqr				</td><td>	Retrieve Power Quality Read data for a set of meters from UIQ    </td></tr>
-                                                        <tr><td>odrirr				</td><td>	Retrieve Instantaneous Register Read for a set of meters from UIQ</td></tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <input type="checkbox" />
+                                                                </div>
+                                                            </td>
+                                                            <td>/device          		</td>
+                                                            <td>Retrieve device record in UIQ</td>
+                                                            <td><a href="#modal-configure" data-bs-toggle="modal"><i class="fas fa-edit"></i></a><a href="#modal-customize" data-bs-toggle="modal"><i class="fas fa-edit"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <input type="checkbox" />
+                                                                </div>
+                                                            </td>
+                                                            <td>/job/status      		</td>
+                                                            <td>Retrieve job status record in UIQ</td>
+                                                            <td><a href="#modal-configure" data-bs-toggle="modal"><i class="fas fa-edit"></i></a><a href="#modal-customize" data-bs-toggle="modal"><i class="fas fa-edit"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <input type="checkbox" />
+                                                                </div>
+                                                            </td>
+                                                            <td>/device/find     		</td>
+                                                            <td>Find device record in UIQ</td>
+                                                            <td><a href="#modal-configure" data-bs-toggle="modal"><i class="fas fa-edit"></i></a><a href="#modal-customize" data-bs-toggle="modal"><i class="fas fa-edit"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <input type="checkbox" />
+                                                                </div>
+                                                            </td>
+                                                            <td>/location/find    		</td>
+                                                            <td>Find location record in UIQ.</td>
+                                                            <td><a href="#modal-configure" data-bs-toggle="modal"><i class="fas fa-edit"></i></a><a href="#modal-customize" data-bs-toggle="modal"><i class="fas fa-edit"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <input type="checkbox" />
+                                                                </div>
+                                                            </td>
+                                                            <td>/location/create  		</td>
+                                                            <td>Create location record in UIQ.</td>
+                                                            <td><a href="#modal-configure" data-bs-toggle="modal"><i class="fas fa-edit"></i></a><a href="#modal-customize" data-bs-toggle="modal"><i class="fas fa-edit"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <input type="checkbox" />
+                                                                </div>
+                                                            </td>
+                                                            <td>/distnetwork/find 		</td>
+                                                            <td>Find distribution network record in UIQ.</td>
+                                                            <td><a href="#modal-configure" data-bs-toggle="modal"><i class="fas fa-edit"></i></a><a href="#modal-customize" data-bs-toggle="modal"><i class="fas fa-edit"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <input type="checkbox" />
+                                                                </div>
+                                                            </td>
+                                                            <td>/location/replace  		</td>
+                                                            <td>Associate location record with meter record in UIQ.</td>
+                                                            <td><a href="#modal-configure" data-bs-toggle="modal"><i class="fas fa-edit"></i></a><a href="#modal-customize" data-bs-toggle="modal"><i class="fas fa-edit"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <input type="checkbox" />
+                                                                </div>
+                                                            </td>
+                                                            <td>/servicepoint/find 		</td>
+                                                            <td>Find servicepoint record in UIQ</td>
+                                                            <td><a href="#modal-configure" data-bs-toggle="modal"><i class="fas fa-edit"></i></a><a href="#modal-customize" data-bs-toggle="modal"><i class="fas fa-edit"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <input type="checkbox" />
+                                                                </div>
+                                                            </td>
+                                                            <td>/distnetwork/create 	</td>
+                                                            <td>Create distribution network record in UIQ.</td>
+                                                            <td><a href="#modal-configure" data-bs-toggle="modal"><i class="fas fa-edit"></i></a><a href="#modal-customize" data-bs-toggle="modal"><i class="fas fa-edit"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <input type="checkbox" />
+                                                                </div>
+                                                            </td>
+                                                            <td>/servicepoint/create 	</td>
+                                                            <td>Create servicepoint record in UIQ</td>
+                                                            <td><a href="#modal-configure" data-bs-toggle="modal"><i class="fas fa-edit"></i></a><a href="#modal-customize" data-bs-toggle="modal"><i class="fas fa-edit"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <input type="checkbox" />
+                                                                </div>
+                                                            </td>
+                                                            <td>/odr/instregisterread 	</td>
+                                                            <td>Retrieve Instantaneous Register Read for a set of meters from UIQ.</td>
+                                                            <td><a href="#modal-configure" data-bs-toggle="modal"><i class="fas fa-edit"></i></a><a href="#modal-customize" data-bs-toggle="modal"><i class="fas fa-edit"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <input type="checkbox" />
+                                                                </div>
+                                                            </td>
+                                                            <td>/odr/powerqualityread 	</td>
+                                                            <td>Retrieve Power Quality Read data for a set of meters from UIQ.</td><td><a href="#modal-configure" data-bs-toggle="modal"><i class="fas fa-edit"></i></a><a href="#modal-customize" data-bs-toggle="modal"><i class="fas fa-edit"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    <input type="checkbox" />
+                                                                </div>
+                                                            </td>
+                                                            <td>/meter/changeadminstate </td>
+                                                            <td>Change the UTL admin state of a meter in UIQ.</td>
+                                                            <td><a href="#modal-configure" data-bs-toggle="modal"><i class="fas fa-edit"></i></a><a href="#modal-customize" data-bs-toggle="modal"><i class="fas fa-edit"></i></a></td>
+                                                        </tr>
 
                                                     </tbody>
                                                 </table>
                                             </div>
                                         </div>
-                                        <div class="col-md-12 d-none" data-product-table="uiqods">
+                                        <!--<div class="col-md-12 d-none" data-product-table="uiqods">
 
                                             <div class="table-responsive">
                                                 <table class="table table-editable table-sm table-nowrap align-middle table-hover table-bordered">
@@ -582,7 +700,7 @@
                                                     </tbody>
                                                 </table>
                                             </div>
-                                        </div>
+                                        </div>-->
 
                                     </div>
                                 </div>
@@ -618,6 +736,66 @@
         <!-- end main content-->
     </div><!-- END layout-wrapper -->
     <!-- Right bar overlay-->
+
+    <div class="modal fade" id="modal-configure" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Configure</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="protocole" class="form-label mb-0">Protocol</label>
+                            <select class="form-select mb-3">
+                                <option>http</option>
+                                <option>https</option>
+                            </select>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="host" class="form-label mb-0">Host</label>
+                            <input type="text" class="form-control mb-3" id="host" placeholder="host" required=required />
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="host" class="form-label mb-0">Port</label>
+                            <input type="text" class="form-control mb-3" id="host" placeholder="Port" required=required />
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-customize" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">customize</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="rightbar-overlay"></div>
 
     <script src="assets/libs/jquery/jquery.min.js"></script>
@@ -672,7 +850,7 @@
             $('[data-through-ssl=switch]').click(function () { if (this.checked) { $('[data-through-ssl=show]').removeClass('d-none') } else { $('[data-through-ssl=show]').addClass('d-none') } });
             $('[data-through-ssh=switch]').click(function () { if (this.checked) { $('[data-through-ssh=show]').removeClass('d-none') } else { $('[data-through-ssh=show]').addClass('d-none') } });
             $('[data-through-ssl=switch]').click(function () { if (this.checked) { $('[data-through-ssl=show]').removeClass('d-none') } else { $('[data-through-ssl=show]').addClass('d-none') } });
-           
+
             $('[data-vendor]').change(function () { ($('[data-vendor]').val() == "Itron") ? $('[data-productshow]').removeClass('d-none') : $('[data-productshow],[data-subproductshow] ').addClass('d-none') })
 
             $('[data-product]').change(function () { ($('[data-product]').val() == "UIQ") ? $('[data-subproductshow]').removeClass('d-none') : $('[data-subproductshow]').addClass('d-none') })
@@ -687,7 +865,7 @@
                 } else { $('[data-product-table]').addClass('d-none') }
             })
 
-          
+
 
         });
     </script>
