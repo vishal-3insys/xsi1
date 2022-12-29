@@ -553,7 +553,7 @@
                                                             </td>
                                                             <td>/device          		</td>
                                                             <td>Retrieve device record in UIQ</td>
-                                                            <td><!--<a href="#modal-configure" data-bs-toggle="modal" class="m-1"><i class="fas fa-user-cog"></i></a>--><a href="#modal-customize" data-bs-toggle="modal" class="m-1"><i class="fas fa-edit"></i></a></td>
+                                                            <td><!--<a href="#modal-configure" data-bs-toggle="modal" class="m-1"><i class="fas fa-user-cog"></i></a>--><a href="#modal-customize" data-bs-toggle="modal" class="m-1"><i class="fas fa-edit" data-bs-toggle="tooltip" title="Customize"></i></a></td>
                                                         </tr>
                                                         <tr>
                                                             <td>
@@ -613,7 +613,7 @@
                                                             </td>
                                                             <td>/location/replace  		</td>
                                                             <td>Associate location record with meter record in UIQ.</td>
-                                                            <td><!--<a href="#modal-configure" data-bs-toggle="modal" class="m-1"><i class="fas fa-user-cog"></i></a>--><a href="#modal-customize" data-bs-toggle="modal" class="m-1"><i class="fas fa-edit"></i></a></td>
+                                                            <td><!--<a href="#modal-configure" data-bs-toggle="modal" class="m-1"><i class="fas fa-user-cog"></i></a>--><a href="#modal-customize" data-bs-toggle="modal" class="m-1"><i class="fas fa-edit" data-bs-toggle="tooltip" title="Customize"></i></a></td>
                                                         </tr>
                                                         <tr>
                                                             <td>
@@ -750,6 +750,7 @@
                         <div class="col-md-12">
                             <label for="protocole" class="form-label mb-0">Protocol</label>
                             <select class="form-select mb-3">
+                                <option>Select</option>
                                 <option>http</option>
                                 <option>https</option>
                             </select>
@@ -759,7 +760,7 @@
                         </div>
                         <div class="col-md-12">
                             <label for="host" class="form-label mb-0">Host</label>
-                            <input type="text" class="form-control mb-3" id="host" placeholder="host" required=required />
+                            <input type="text" class="form-control mb-3" id="host" placeholder="host name" required=required />
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -775,7 +776,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Ok</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
                 </div>
             </div>
         </div>
@@ -827,63 +828,75 @@
                                     </div>
 
                                 </div>
-                                <div class="row border border-bottom mx-2"></div>
+                                <div class="row border-2 border-bottom mx-2"></div>
                                 <div class="row">
+                                    <div class="col-md-2 "><h6 class="m-2">Ping Job</h6></div>
+                                    
+                                    <div class="col-md-10">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="m-1 border-2 ">
+                                                    
+                                                    <h6 class="m-1"><label >Ping Option*</label></h6>
+                                                    <div class="border">
+                                                        <div class="form-check form-check-inline m-2">
+                                                            <label class="form-check-label" for="appLevelPing">App Level Ping</label>
+                                                            <input class="form-check-input" type="Radio" name="PingOption" id="appLevelPing" />
 
-                                    <h6 class="col-md-2 ">Ping Job</h6>
-                                    <div class="row">
-
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="m-1 p-1 border">
-                                            <p class="m-2">Ping Option*</p>
-                                            <div class="form-check form-check-inline m-2">
-                                                <label class="form-check-label" for="appLevelPing">App Level Ping</label>
-                                                <input class="form-check-input" type="Radio" name="PingOption" id="appLevelPing" />
-
+                                                        </div>
+                                                        <div class="form-check form-check-inline m-2">
+                                                            <label class="form-check-label" for="networkLevelPing">Network Level Ping</label>
+                                                            <input class="form-check-input" type="Radio" name="PingOption" id="networkLevelPing" />
+                                                           
+                                                        </div>
+                                                        <div class="p-2">
+                                                            <select class="form-select">
+                                                                <option>Option1</option>
+                                                                <option>Option2</option>
+                                                                <option>Option3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="form-check form-check-inline m-2">
-                                                <label class="form-check-label" for="networkLevelPing">Network Level Ping</label>
-                                                <input class="form-check-input" type="Radio" name="PingOption" id="networkLevelPing" />
+                                            <div class="col-md-12">
+                                                <div class="m-2 pb-2">
+                                                    <label class="form-label my-2">No. of Retries</label>
+                                                    <input class="form-control" type="text" />
 
+                                                </div>
                                             </div>
+                                            <div class="col-md-12 ">
+                                                <label class="m-1">Priority</label>
+                                                <div class="m-2 p-2 border ">
+                                                    <div class="my-2 ">
+                                                        <label class="form-label">Name*</label>
+                                                        <input class="form-control" type="text" />
+                                                    </div>
+                                                    <div class="my-2 ">
+                                                        <label class="form-label">Localized Value*</label>
+                                                        <input class="form-control" type="text" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 ">
+                                                <label class="m-2">Push Results</label>
+                                                <div class=" border m-1 ">
+                                                    <div class="my-2 p-2">
+                                                        <label class="form-label">Queue Name*</label>
+                                                        <input class="form-control" type="text" />
+                                                    </div>
 
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="m-2">
-                                            <label class="form-label m-2">No. of Retries</label>
-                                            <input class="form-control" type="text" />
-
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 ">
-                                        <label class="m-2">Priority</label>
-                                        <div class="border m-2 p-2 ">
-                                            <div class="my-2 ">
-                                                <label class="form-label">Name"</label>
-                                                <input class="form-control" type="text" />
-                                            </div>
-                                            <div class="my-2 ">
-                                                <label class="form-label">Localized Value"</label>
-                                                <input class="form-control" type="text" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 ">
-                                        <label class="m-2">Push Results</label>
-                                        <div class="border m-2 p-2 ">
-                                            <div class="my-2 ">
-                                                <label class="form-label">Queue Name"</label>
-                                                <input class="form-control" type="text" />
-                                            </div>
-
-                                        </div>
-                                    </div>
+                                   
+                                   
                                 </div>
-                                <div class="row border border-bottom mx-2"></div>
+                                <div class="row border-2 border-bottom m-2"></div>
                                 <div class="row">
-                                    <h6 class="col-md-2 m-2">Schedule</h6>
+                                    <div class="col-md-2"><h6 class="m-2">Schedule</h6></div>
                                     <div class="col-md-10">
                                         <div class="m-1 p-1 border">
                                             <label class="form-label">Select One</label>
