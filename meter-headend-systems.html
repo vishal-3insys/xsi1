@@ -25,7 +25,11 @@
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-
+    <!--<style>
+        .data-Opt-10, .data-Opt-9, .data-Opt-8, .data-Opt-7, .data-Opt-6, .data-Opt-5, .data-Opt-4, .data-Opt-3, .data-Opt-2, .data-Opt-11, .data-Opt-1,.data-Opt-0 {
+            display: none;
+        }
+    </style>-->
 </head>
 
 <body data-topbar="dark">
@@ -902,9 +906,10 @@
                                     <div class="col-md-10">
                                         <div class="m-1 p-1 border">
                                             <div class="row">
-                                                <label class="col-form-label">Select One</label>
-                                                <div class="col-sm-10">
-                                                    <select class="form-select">
+                                                
+                                                <div class="col-sm-12">
+                                                    <label class="col-form-label">Select One</label>
+                                                    <select class="form-select" id="selectOneOpt">
                                                         <option>Immediate</option>
                                                         <option>Future</option>
                                                         <option>Interval</option>
@@ -917,6 +922,349 @@
                                                         <option>WeekdayOfYear</option>
                                                         <option>Billing</option>
                                                     </select>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="row my-2 data-Opt-2">
+                                                        <div class="col-md-12">
+                                                            <label for="DateOpt2" class="form-label">Date</label>
+                                                            <input type="date" class="form-control" id="DateOpt2" placeholder="Date" />
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="row my-2 data-Opt-3">
+                                                        <div class="col-md-4">
+                                                            <label for="intervalInSeconds" class="form-label">Interval In Seconds </label>
+                                                            <input type="text" class="form-control" id="intervalInSeconds" placeholder="interval In Seconds" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="StartDate" class="form-label">Start Date </label>
+                                                            <input type="date" class="form-control" id="StartDate" placeholder="Start Date" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="EndDate" class="form-label">End Date</label>
+                                                            <input type="date" class="form-control" id="EndDate" placeholder="End Date" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row my-2 data-Opt-4">
+                                                        <div class="col-md-4">
+                                                            <label for="IntervalInDays" class="form-label">Interval In Days </label>
+                                                            <input type="text" class="form-control" id="IntervalInDays" placeholder="interval In Days" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="HourOpt4" class="form-label">Hour</label>
+                                                            <input type="text" class="form-control" id="HourOpt4" placeholder="Hour" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="MinuteOpt4" class="form-label">Minute</label>
+                                                            <input type="text" class="form-control" id="MinuteOpt4" placeholder="Minute" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="SecondOpt4" class="form-label">Second</label>
+                                                            <input type="text" class="form-control" id="SecondOpt4" placeholder="Second" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="StartDate4" class="form-label">Start Date </label>
+                                                            <input type="date" class="form-control" id="StartDate4" placeholder="Start Date" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="EndDate4" class="form-label">End Date</label>
+                                                            <input type="date" class="form-control" id="EndDate4" placeholder="End Date" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row my-2 data-Opt-5">
+                                                        <div class="col-md-6">
+                                                            <label for="WeekdayOpt5" class="form-label">Weekday*</label>
+                                                            <input type="text" class="form-control" id="WeekdayOpt5" placeholder="Weekday" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="NameOpt5" class="form-label">Name*</label>
+                                                            <input type="text" class="form-control" id="NameOpt5" placeholder="Name" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="LocalizedValueOpt5" class="form-label">Localized Value</label>
+                                                            <input type="text" class="form-control" id="LocalizedValueOpt5" placeholder="LocalizedValue" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="IntervalInWeeksOpt5" class="form-label">Interval In Weeks</label>
+                                                            <input type="text" class="form-control" id="IntervalInWeeksOpt5" placeholder="Interval In Weeks" />
+                                                        </div>
+
+                                                        <div class="col-md-4">
+                                                            <label for="HourOpt5" class="form-label">Hour</label>
+                                                            <input type="text" class="form-control" id="HourOpt5" placeholder="Hour" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="MinuteOpt5" class="form-label">Minute</label>
+                                                            <input type="text" class="form-control" id="MinuteOpt5" placeholder="Minute" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="SecondOpt5" class="form-label">Second</label>
+                                                            <input type="text" class="form-control" id="SecondOpt5" placeholder="Second" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="StartDate5" class="form-label">Start Date </label>
+                                                            <input type="date" class="form-control" id="StartDate5" placeholder="Start Date" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="EndDate5" class="form-label">End Date</label>
+                                                            <input type="date" class="form-control" id="EndDate5" placeholder="End Date" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row my-2 data-Opt-6">
+
+                                                        <div class="col-md-4">
+                                                            <label for="DayOpt6" class="form-label">Days*</label>
+                                                            <input type="text" class="form-control" id="DayOpt6" placeholder="Days" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="NameOpt5" class="form-label">Name*</label>
+                                                            <input type="text" class="form-control" id="NameOpt5" placeholder="Name" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="LocalizedValueOpt6" class="form-label">Localized Value</label>
+                                                            <input type="text" class="form-control" id="LocalizedValueOpt6" placeholder="Localized Value" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="HourOpt5" class="form-label">Hour</label>
+                                                            <input type="text" class="form-control" id="HourOpt5" placeholder="Hour" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="MinuteOpt5" class="form-label">Minute</label>
+                                                            <input type="text" class="form-control" id="MinuteOpt5" placeholder="Minute" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="SecondOpt5" class="form-label">Second</label>
+                                                            <input type="text" class="form-control" id="SecondOpt5" placeholder="Second" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="StartDate5" class="form-label">Start Date </label>
+                                                            <input type="date" class="form-control" id="StartDate5" placeholder="Start Date" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="EndDate5" class="form-label">End Date</label>
+                                                            <input type="date" class="form-control" id="EndDate5" placeholder="End Date" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row my-2 data-Opt-7">
+                                                        <div class="col-md-4">
+                                                            <label for="WeekDayOpt7" class="form-label">WeekDays*</label>
+                                                            <input type="text" class="form-control" id="WeekDayOpt7" placeholder="WeekDays" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="NameOpt9" class="form-label">Name*</label>
+                                                            <input type="text" class="form-control" id="NameOpt9" placeholder="Name" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="LocalizedValueOpt9" class="form-label">Localized Value</label>
+                                                            <input type="text" class="form-control" id="LocalizedValueOpt9" placeholder="Localized Value" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="PositionOpt9" class="form-label">Position*</label>
+                                                            <input type="text" class="form-control" id="PositionOpt9" placeholder="Position" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="NameOpt9" class="form-label">Name*</label>
+                                                            <input type="text" class="form-control" id="NameOpt9" placeholder="Name" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="LocalizedValueOpt9" class="form-label">Localized Value</label>
+                                                            <input type="text" class="form-control" id="LocalizedValueOpt9" placeholder="Localized Value" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="HourOpt9" class="form-label">Hour</label>
+                                                            <input type="text" class="form-control" id="HourOpt9" placeholder="Hour" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="MinuteOpt9" class="form-label">Minute</label>
+                                                            <input type="text" class="form-control" id="MinuteOpt9" placeholder="Minute" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="SecondOpt9" class="form-label">Second</label>
+                                                            <input type="text" class="form-control" id="SecondOpt4" placeholder="Second" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="StartDate4" class="form-label">Start Date </label>
+                                                            <input type="date" class="form-control" id="StartDate9" placeholder="Start Date" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="EndDate9" class="form-label">End Date</label>
+                                                            <input type="date" class="form-control" id="EndDate9" placeholder="End Date" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row my-2 data-Opt-8">
+                                                        <div class="col-md-4">
+                                                            <label for="WeekDayOpt10" class="form-label">WeekDays*</label>
+                                                            <input type="text" class="form-control" id="DayOpt10" placeholder="Week Days" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="NameOpt10" class="form-label">Name*</label>
+                                                            <input type="text" class="form-control" id="NameOpt10" placeholder="Name" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="LocalizedValueOpt10" class="form-label">Localized Value</label>
+                                                            <input type="text" class="form-control" id="LocalizedValueOpt10" placeholder="Localized Value" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="HourOpt10" class="form-label">Hour</label>
+                                                            <input type="text" class="form-control" id="HourOpt10" placeholder="Hour" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="MinuteOpt10" class="form-label">Minute</label>
+                                                            <input type="text" class="form-control" id="MinuteOpt10" placeholder="Minute" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="SecondOpt10" class="form-label">Second</label>
+                                                            <input type="text" class="form-control" id="SecondOpt10" placeholder="Second" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="StartDate10" class="form-label">Start Date </label>
+                                                            <input type="date" class="form-control" id="StartDate10" placeholder="Start Date" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="EndDate10" class="form-label">End Date</label>
+                                                            <input type="date" class="form-control" id="EndDate10" placeholder="End Date" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row my-2 data-Opt-9">
+
+                                                        <div class="col-md-4">
+                                                            <label for="MonthOpt7" class="form-label">Month*</label>
+                                                            <input type="text" class="form-control" id="MonthOpt6" placeholder="Month" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="NameOpt7" class="form-label">Name*</label>
+                                                            <input type="text" class="form-control" id="NameOpt7" placeholder="Name" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="LocalizedValueOpt7" class="form-label">Localized Value</label>
+                                                            <input type="text" class="form-control" id="LocalizedValueOpt7" placeholder="Localized Value" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="DayOpt8" class="form-label">Days*</label>
+                                                            <input type="text" class="form-control" id="DayOpt8" placeholder="Days" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="NameOpt8" class="form-label">Name*</label>
+                                                            <input type="text" class="form-control" id="NameOpt8" placeholder="Name" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="LocalizedValueOpt8" class="form-label">Localized Value</label>
+                                                            <input type="text" class="form-control" id="LocalizedValueOpt8" placeholder="Localized Value" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="HourOpt7" class="form-label">Hour</label>
+                                                            <input type="text" class="form-control" id="HourOpt7" placeholder="Hour" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="MinuteOpt7" class="form-label">Minute</label>
+                                                            <input type="text" class="form-control" id="MinuteOpt7" placeholder="Minute" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="SecondOpt7" class="form-label">Second</label>
+                                                            <input type="text" class="form-control" id="SecondOpt7" placeholder="Second" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="StartDate7" class="form-label">Start Date </label>
+                                                            <input type="date" class="form-control" id="StartDate7" placeholder="Start Date" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="EndDate7" class="form-label">End Date</label>
+                                                            <input type="date" class="form-control" id="EndDate7" placeholder="End Date" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row my-2 data-Opt-10">
+                                                        <div class="col-md-4">
+                                                            <label for="MonthOpt7" class="form-label">Month*</label>
+                                                            <input type="text" class="form-control" id="MonthOpt6" placeholder="Month" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="NameOpt7" class="form-label">Name*</label>
+                                                            <input type="text" class="form-control" id="NameOpt7" placeholder="Name" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="LocalizedValueOpt7" class="form-label">Localized Value</label>
+                                                            <input type="text" class="form-control" id="LocalizedValueOpt7" placeholder="Localized Value" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="WeekDayOpt10" class="form-label">WeekDays*</label>
+                                                            <input type="text" class="form-control" id="DayOpt10" placeholder="Week Days" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="NameOpt10" class="form-label">Name*</label>
+                                                            <input type="text" class="form-control" id="NameOpt10" placeholder="Name" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="LocalizedValueOpt10" class="form-label">Localized Value</label>
+                                                            <input type="text" class="form-control" id="LocalizedValueOpt10" placeholder="Localized Value" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="PositionOpt9" class="form-label">Position*</label>
+                                                            <input type="text" class="form-control" id="PositionOpt9" placeholder="Position" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="NameOpt8" class="form-label">Name*</label>
+                                                            <input type="text" class="form-control" id="NameOpt8" placeholder="Name" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="LocalizedValueOpt8" class="form-label">Localized Value</label>
+                                                            <input type="text" class="form-control" id="LocalizedValueOpt8" placeholder="Localized Value" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="HourOpt8" class="form-label">Hour</label>
+                                                            <input type="text" class="form-control" id="HourOpt8" placeholder="Hour" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="MinuteOpt8" class="form-label">Minute</label>
+                                                            <input type="text" class="form-control" id="MinuteOpt8" placeholder="Minute" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="SecondOpt8" class="form-label">Second</label>
+                                                            <input type="text" class="form-control" id="SecondOpt8" placeholder="Second" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="StartDate8" class="form-label">Start Date </label>
+                                                            <input type="date" class="form-control" id="StartDate8" placeholder="Start Date" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="EndDate8" class="form-label">End Date</label>
+                                                            <input type="date" class="form-control" id="EndDate8" placeholder="End Date" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row my-2 data-Opt-11">
+                                                        <div class="col-md-4">
+                                                            <label for="BillingCycleNum" class="form-label">Billing CycleNum*</label>
+                                                            <input type="text" class="form-control" id="BillingCycleNum" placeholder="Billing CycleNum" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="BillingCycleOffsetInDays" class="form-label">Billing Cycle Offset InDays</label>
+                                                            <input type="text" class="form-control" id="BillingCycleOffsetInDays" placeholder="Billing Cycle Offset In Days" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="LocalizedValueOpt8" class="form-label">Localized Value</label>
+                                                            <input type="text" class="form-control" id="LocalizedValueOpt8" placeholder="Localized Value" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="HourOpt8" class="form-label">Hour</label>
+                                                            <input type="text" class="form-control" id="HourOpt8" placeholder="Hour" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="MinuteOpt8" class="form-label">Minute</label>
+                                                            <input type="text" class="form-control" id="MinuteOpt8" placeholder="Minute" />
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="SecondOpt8" class="form-label">Second</label>
+                                                            <input type="text" class="form-control" id="SecondOpt8" placeholder="Second" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="StartDate8" class="form-label">Start Date </label>
+                                                            <input type="date" class="form-control" id="StartDate8" placeholder="Start Date" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="EndDate8" class="form-label">End Date</label>
+                                                            <input type="date" class="form-control" id="EndDate8" placeholder="End Date" />
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -972,7 +1320,7 @@
         //$(document).ready(function () {
         //    $("#modal-customize").modal('show');
         //});
-       
+        const selectOneOpt = document.getElementById('selectOneOpt');
         $(document).ready(function () {
 
             $('[data-countt=follower]').text(`(${$("#datasetfollower > p").length})`);
@@ -1011,9 +1359,82 @@
                     $('[data-product-table=uiqamm]').addClass('d-none')
                 } else { $('[data-product-table]').addClass('d-none') }
             })
+            
+            $('.data-Opt-1,.data-Opt-2,.data-Opt-3,.data-Opt-4,.data-Opt-5,.data-Opt-6,.data-Opt-7,.data-Opt-8,.data-Opt-9,.data-Opt-10,.data-Opt-11').addClass('d-none');
+            $('.data-Opt-1,.data-Opt-2,.data-Opt-3,.data-Opt-4,.data-Opt-5,.data-Opt-6,.data-Opt-7,.data-Opt-8,.data-Opt-9,.data-Opt-10,.data-Opt-11').change(function () {
+                if (selectOneOpt== '1') {                   
+                        $('.data-Opt-1,.data-Opt-2,.data-Opt-3,.data-Opt-4,.data-Opt-5,.data-Opt-6,.data-Opt-7,.data-Opt-8,.data-Opt-9,.data-Opt-10,.data-Opt-11').addClass('d-none');
+                    
+                    $('.data-Opt-1').removeClass('d-none')
 
+                    console.log(1);
+                }
+                else if (selectOneOpt == '2') {
+                    $('.data-Opt-1,.data-Opt-2,.data-Opt-3,.data-Opt-4,.data-Opt-5,.data-Opt-6,.data-Opt-7,.data-Opt-8,.data-Opt-9,.data-Opt-10,.data-Opt-11').addClass('d-none');
 
+                    $('.data-Opt-2').removeClass('d-none')
+                    console.log(2);
+                }
+                else if (selectOneOpt.selectedIndex == '3') {
 
+                    $('.data-Opt-1,.data-Opt-2,.data-Opt-3,.data-Opt-4,.data-Opt-5,.data-Opt-6,.data-Opt-7,.data-Opt-8,.data-Opt-9,.data-Opt-10,.data-Opt-11').addClass('d-none');
+
+                    $('.data-Opt-3').removeClass('d-none')
+                    console.log(3);
+                }
+                else if (selectOneOpt.selectedIndex == '4') {
+
+                    $('.data-Opt-1,.data-Opt-2,.data-Opt-3,.data-Opt-4,.data-Opt-5,.data-Opt-6,.data-Opt-7,.data-Opt-8,.data-Opt-9,.data-Opt-10,.data-Opt-11').addClass('d-none');
+
+                    $('.data-Opt-4').removeClass('d-none')
+                    console.log(4);
+                }
+                else if (selectOneOpt.selectedIndex == '5') {
+
+                    $('.data-Opt-1,.data-Opt-2,.data-Opt-3,.data-Opt-4,.data-Opt-5,.data-Opt-6,.data-Opt-7,.data-Opt-8,.data-Opt-9,.data-Opt-10,.data-Opt-11').addClass('d-none');
+
+                    $('.data-Opt-5').removeClass('d-none')
+                    console.log(5);
+                }
+                else if (selectOneOpt.selectedIndex == '6') {
+
+                    $('.data-Opt-1,.data-Opt-2,.data-Opt-3,.data-Opt-4,.data-Opt-5,.data-Opt-6,.data-Opt-7,.data-Opt-8,.data-Opt-9,.data-Opt-10,.data-Opt-11').addClass('d-none');
+
+                    $('.data-Opt-6').removeClass('d-none')
+                    console.log(6);
+                }
+                else if (selectOneOpt.selectedIndex == '7') {
+                    $('.data-Opt-1,.data-Opt-2,.data-Opt-3,.data-Opt-4,.data-Opt-5,.data-Opt-6,.data-Opt-7,.data-Opt-8,.data-Opt-9,.data-Opt-10,.data-Opt-11').addClass('d-none');
+
+                    $('.data-Opt-7').removeClass('d-none')
+                    console.log(7);
+                }
+                else if (selectOneOpt.selectedIndex == '8') {
+
+                    $('.data-Opt-1,.data-Opt-2,.data-Opt-3,.data-Opt-4,.data-Opt-5,.data-Opt-6,.data-Opt-7,.data-Opt-8,.data-Opt-9,.data-Opt-10,.data-Opt-11').addClass('d-none');
+
+                    $('.data-Opt-8').removeClass('d-none')
+                    console.log(8);
+                }
+                else if (selectOneOpt.selectedIndex == '9') {
+                    $('.data-Opt-1,.data-Opt-2,.data-Opt-3,.data-Opt-4,.data-Opt-5,.data-Opt-6,.data-Opt-7,.data-Opt-8,.data-Opt-9,.data-Opt-10,.data-Opt-11').addClass('d-none');
+
+                    $('.data-Opt-9').removeClass('d-none')
+                    console.log(9);
+                }
+                else if (selectOneOpt.selectedIndex == '10') {
+                    $('.data-Opt-1,.data-Opt-2,.data-Opt-3,.data-Opt-4,.data-Opt-5,.data-Opt-6,.data-Opt-7,.data-Opt-8,.data-Opt-9,.data-Opt-10,.data-Opt-11').addClass('d-none');
+
+                    $('.data-Opt-10').removeClass('d-none')
+                    console.log(10);
+                }
+                else if (selectOneOpt.selectedIndex == '11') {
+                    $('.data-Opt-1,.data-Opt-2,.data-Opt-3,.data-Opt-4,.data-Opt-5,.data-Opt-6,.data-Opt-7,.data-Opt-8,.data-Opt-9,.data-Opt-10,.data-Opt-11').addClass('d-none');
+
+                    $('.data-Opt-11').removeClass('d-none')
+                    console.log(11);
+                }
+            })
         });
     </script>
     <script>
@@ -1037,9 +1458,91 @@
                 }
             }
         }
+        const dataHour = ` <div class="col-md-4">
+                                                            <label for="HourOpt10" class="form-label">Hour</label>
+                                                            <input type="text" class="form-control" id="HourOpt10" placeholder="Hour" />
+                                                        </div>`
+        const dataMinute =` <div class="col-md-4">
+                                                            <label for="MinuteOpt10" class="form-label">Minute</label>
+                                                            <input type="text" class="form-control" id="MinuteOpt10" placeholder="Minute" />
+                                                        </div>`
+        const dataSecond = ` <div class="col-md-4">
+                                                            <label for="SecondOpt10" class="form-label">Second</label>
+                                                            <input type="text" class="form-control" id="SecondOpt10" placeholder="Second" />
+                                                        </div>`;
+        const dataStartDate = `<div class="col-md-6">
+                                                            <label for="StartDate10" class="form-label">Start Date </label>
+                                                            <input type="date" class="form-control" id="StartDate10" placeholder="Start Date" />
+                                                        </div>`;
+        const dataEndDate = ` <div class="col-md-6">
+                                                            <label for="EndDate10" class="form-label">End Date</label>
+                                                            <input type="date" class="form-control" id="EndDate10" placeholder="End Date" />
+                                                        </div>`;
         data_ping_option1.addEventListener('click', dataPingOtp);
         data_ping_option2.addEventListener('click', dataPingOtp);
+        
+document.querySelectorAll()
+        selectOneOpt.addEventListener('change', function () {
 
+           /* if (selectOneOpt.selectedIndex == '1') {console.log(0);}*/
+            if (selectOneOpt.selectedIndex == '1') {
+               
+                document.getElementsByClassName('data-Opt-1')[0].style.display = 'flex';
+                
+                console.log(1);
+            }
+            else if (selectOneOpt.selectedIndex == '2') {
+              
+                document.getElementsByClassName('data-Opt-2')[0].style.display = 'flex';
+                console.log(2);
+            }
+            else if (selectOneOpt.selectedIndex == '3') {
+               
+                document.getElementsByClassName('data-Opt-3')[0].style.display = 'flex';
+                console.log(3);
+            }
+            else if (selectOneOpt.selectedIndex == '4') {
+               
+                document.getElementsByClassName('data-Opt-4')[0].style.display = 'flex';
+                console.log(4);
+            }
+            else if (selectOneOpt.selectedIndex == '5') {
+              
+                document.getElementsByClassName('data-Opt-5')[0].style.display = 'flex';
+                console.log(5);
+            }
+            else if (selectOneOpt.selectedIndex == '6') {
+               
+                document.getElementsByClassName('data-Opt-6')[0].style.display = 'flex';
+                console.log(6);
+            }
+            else if (selectOneOpt.selectedIndex == '7') {
+                var i = 0;
+                
+                document.getElementsByClassName('data-Opt-7')[0].style.display = 'flex';
+                console.log(7);
+            }
+            else if (selectOneOpt.selectedIndex == '8') {
+               
+                document.getElementsByClassName('data-Opt-8')[0].style.display = 'flex';
+                console.log(8);
+            }
+            else if (selectOneOpt.selectedIndex == '9') {
+               
+                document.getElementsByClassName('data-Opt-9')[0].style.display = 'flex';
+                console.log(9);
+            }
+            else if (selectOneOpt.selectedIndex == '10') {
+               
+                document.getElementsByClassName('data-Opt-10')[0].style.display = 'flex';
+                console.log(10);
+            }
+            else if (selectOneOpt.selectedIndex == '11') {
+               
+                document.getElementsByClassName('data-Opt-11')[0].style.display = 'flex';
+                console.log(11);
+            }
+        });
     </script>
 </body>
 
