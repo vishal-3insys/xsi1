@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Outage Management System</title>
+    <title>Itron AMM | Adapter</title>
     <meta name="viewPort" content="width=device-width, initial-scale=1.0" />
     <meta content="The Cross Integration Suite from 3Insys takes a 360-degree approach to SYSTEM, DATA, and SECURITY" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -25,6 +25,9 @@
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -277,18 +280,16 @@
 </g>
 </svg>
 
-                                <span data-key="t-dashboard" style="font-size:12px;">
+                                <span data-key="t-dashboard" style="font-size:12px;" onclick="location.href='http://66.45.254.236:91'">
                                     Advanced Integration Manager
                                 </span>
                             </a>
-
                             <ul class="sub-menu mm-collapse" aria-expanded="false" style="">
-                                <li><a data-key="adaptershtml" href="https://xsi.3insys.com:90/workflow-definitions">Process Integrator</a></li>
-                                <li><a data-key="adapters-viewhtml" href="api-integrator.html">API Integrator</a></li>
+                                <li><a data-key="adaptershtml" href="#">Process Integrator</a></li>
+                                <li><a data-key="adapters-viewhtml" href="#">API Integrator</a></li>
                                 <li><a data-key="adapters-viewhtml" href="#">Microservice Integrator</a></li>
                             </ul>
-
-                        </li>  <!--Business Process Automation-->
+                        </li>  <!--Advanced Integration Manager-->
                         <li>
                             <a href="#" class="has-arrow">
 
@@ -332,18 +333,8 @@
                                 <li><a data-key="adapters-viewhtml" href="adapters-view.html">View Adapters</a></li>
                             </ul>
                         </li>  <!--Adapters-->
-                        <!--<li>
-                    <a href="#" class="has-arrow">
 
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14px" style="fill:#545a6d;"><path d="M8,16.5a1,1,0,1,0,1,1A1,1,0,0,0,8,16.5ZM12,2C8,2,4,3.37,4,6V18c0,2.63,4,4,8,4s8-1.37,8-4V6C20,3.37,16,2,12,2Zm6,16c0,.71-2.28,2-6,2s-6-1.29-6-2V14.73A13.16,13.16,0,0,0,12,16a13.16,13.16,0,0,0,6-1.27Zm0-6c0,.71-2.28,2-6,2s-6-1.29-6-2V8.73A13.16,13.16,0,0,0,12,10a13.16,13.16,0,0,0,6-1.27ZM12,8C8.28,8,6,6.71,6,6s2.28-2,6-2,6,1.29,6,2S15.72,8,12,8ZM8,10.5a1,1,0,1,0,1,1A1,1,0,0,0,8,10.5Z" /></svg>
-                        <span class="badge rounded-pill bg-soft-success text-success float-end"></span>
-                        <span data-key="t-dashboard" style="font-size:12px;">
-                            Data Sources
-                        </span>
-                    </a>
-
-
-                </li>-->
+                        
 
                         <li>
                             <a href="#" class="has-arrow">
@@ -386,180 +377,239 @@
 
                                 <ol class="breadcrumb m-0">
                                     <li class="breadcrumb-item"><a href="home.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="adapters.html">Adapters</a></li>
-                                    <li class="breadcrumb-item active">Outage Management System</li>
+                                    <li class="breadcrumb-item"><a href="adapters.html">Adapter</a></li>
+                                    <li class="breadcrumb-item active">View Adapter</li>
                                 </ol>
 
                             </div>
                         </div>
                     </div>
-
                     <div class="row">
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-header my-0 py-2">
-                                    <h4 class="title">Outage Management System</h4>
-                                </div>
-
-                                <div class="card-footer">
-                                    <div class="row">
-                                        <div class="col d-sm-flex justify-content-between">
-                                            <div class="w-auto">
-                                                                                                <button class="btn btn-outline-primary me-1 mb-1" onclick="location.href='adapters.html'">Cancel</button>
-
-                                                <!---->
-                                            </div>
-                                            <div class="input-group" style="width:60%;">
-                                                <input type="text" class="form-control border-0 border-bottom border-2 w-auto" placeholder="Your Source Label" /><button class="input-group-text bg-transparent border-0 border-bottom border-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="17.999" height="17.999" viewBox="0 0 17.999 17.999">
-                                                        <path id="edit" d="M0,14.249,11.062,3.187l3.75,3.75L3.75,18H0ZM17.718,4.031,15.89,5.859l-3.75-3.75L13.968.281a1.018,1.018,0,0,1,1.406,0l2.344,2.344a.954.954,0,0,1,.281.7.954.954,0,0,1-.281.7Z" fill="#757575" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                            <div class="w-auto">
-                                                <button class="btn btn-outline-primary float-end">Save  </button>
-                                            </div>
-                                        </div>
+                        <div class="col-12">
+                            <div class="card" style="height:calc(100vh - 250px)">
+                                <div class="card-header">
+                                    <div class="d-flex">
+                                        <h4>View Adapter</h4>
+                                        <div></div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="m-1"><img src="assets/svgicon/Outage-Management-System.svg" alt="LinkedIn Ads" style="width:50px; " /></div>
-                                        <div class="m-1"> Outage Management System</div>
-                                    </div>
+                                <div class="card-body table-responsive">
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="card">
-                                <!--<div class="card-header">
-                                    <div class="alert alert-warning" role="alert">
-                                        Network setup required. Please make sure to allow incoming connection to your server from <strong>52.17.68.150, 52.30.37.137, 52.214.115.147.</strong>
-                                    </div>
-                                </div>-->
-                                <div class="card-body">
-                                    <form class="needs-validation" novalidate=novalidate action="#">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label for="protocole" class="form-label mb-0">Vendor</label>
-                                                <select class="form-select mb-3" data-vendor>
-                                                    <option>Select Vendor</option>
-                                                    <option>CGI</option>
-                                                    <option>OSI International</option>
-                                                    <option>ABB</option>
-                                                    <option>GE</option>
-                                                    <option>Schneider</option>
-                                                    <option>Siemens</option>
-                                                </select>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                            </div>
+                                    <table id="datatable" class="table table-bordered table-sm table-editable  table-nowrap align-middle w-100">
+                                        <thead class="table-light ">
+                                            <tr>
+                                                <th data-classnosorting="no-sort"></th>
+                                                <th>Name</th>
+                                                <th>URL</th>
+                                                <th>Created by</th>
+                                                <th>Created Date</th>
+                                                <th>Last Modified date</th>
+                                                <th style="width:5px" data-class="no-sort" class="dropdown dropstart" data-classnosorting="no-sort">
 
-                                            <!--<div class="col-md-3">
-                                                <label for="protocole" class="form-label mb-0">Product</label>
-                                                <select class="form-select mb-3">
-                                                    <option>Select Product</option>
-                                                    <option>UIQ</option>
-                                                    <option>Openway</option>
-                                                </select>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                            </div>-->
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr data-id="1">
+                                                <td style="width:5%;text-align:center;">
+                                                    <img src="assets/svgicon/itron-logo.svg"   style="width:35px;" />
+                                                </td>
+                                                <td data-field="Data source">
+                                                    <p class="py-0 my-0">Itron Advance Metet Management V4.14</p>
+                                                    <!--<p class="font-size-10 py-0 my-0 text-secondary">CREATED : 2022-03-10</p>-->
+                                                </td>
 
-                                            <!--<div class="col-md-3">
-                                                <label for="protocole" class="form-label mb-0">Sub Product</label>
-                                                <select class="form-select mb-3">
-                                                    <option>Select Sub Product</option>
-                                                    <option>AMM</option>
-                                                    <option>ODS</option>
-                                                    <option>Gridscape</option>
-                                                </select>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                            </div>-->
-                                            <div class="col-md-6">
-                                                <label for="protocole" class="form-label mb-0">Version</label>
-                                                <select class="form-select mb-3">
-                                                    <option>Select</option>
-                                                   
-                                                   
-                                                </select>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="protocole" class="form-label mb-0">Protocol</label>
-                                                <select class="form-select mb-3">
-                                                    <option>http</option>
-                                                    <option>https</option>
-                                                </select>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="host" class="form-label mb-0">Host</label>
-                                                <input type="text" class="form-control mb-3" id="host" placeholder="host"  required=required />
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                            </div>
 
-                                            <div class="col-md-6">
-                                                <label for="port" class="form-label mb-0">Port</label>
-                                                <input type="text" class="form-control mb-3" id="port" placeholder="port"  required=required />
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row-cols-auto">
-                                            <div class="my-2">
-                                                <button class="btn btn-sm btn-primary" type="submit">Test Connection</button>
-                                            </div>
-                                        </div>
-                                    </form>
+                                                <td data-field="Usage">
+                                                    <p class="py-0 my-0">http://hostname/amm/api</p>
+                                                    <!--<p class="py-0 my-0 font-size-10 text-secondary">Dataset</p>-->
+                                                </td>
+                                                <td data-field="Created by">
+                                                    <p class="py-0 my-0">admin</p>
+                                                    <!--<p class="py-0 my-0 font-size-10 text-secondary">Usage</p>-->
+                                                </td>
+                                                <td data-file="Created Date">
+                                                    <p class="py-0 my-0">2022-03-10 01:05:34</p>
+                                                    <!-- <p class="py-0 my-0 font-size-10 text-secondary">USAGE</p>-->
+
+                                                </td>
+
+                                                <td data-file="Last Modified date">
+                                                    <p class="py-0 my-0">2022-03-10 01:05:34</p>
+
+                                                    <!-- <p class="py-0 my-0 font-size-10 text-secondary">LAST & NEXT SYNC</p>-->
+
+                                                </td>
+
+
+                                                <td class="">
+                                                    <div class="dropdown">
+                                                        <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                            <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                        </a>
+                                                        <ul class=" dropdown-menu dropdown-menu-end " id="collapseExample">
+                                                            <li> <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Edit</a></li>
+                                                            <li><a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Test Extraction</a></li>
+                                                            <li>
+                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Clore Setting</a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Add to flow</a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Delete</a>
+                                                            </li>
+
+
+
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr data-id="2">
+                                                <td style="width:5%;text-align:center;">
+                                                    <img src="assets/svgicon/itron-logo.svg" style="width:35px;" />
+                                                </td>
+                                                <td data-field="Data source">
+                                                    <p class="py-0 my-0">Itron Outage Detection System V5.2</p>
+                                                    <!--<p class="font-size-10 py-0 my-0 text-secondary">CREATED : 2022-03-10</p>-->
+                                                </td>
+
+
+                                                <td data-field="Usage">
+                                                    <p class="py-0 my-0">http://hostname/ods/api</p>
+                                                    <!--<p class="py-0 my-0 font-size-10 text-secondary">Dataset</p>-->
+                                                </td>
+                                                <td data-field="Created by">
+                                                    <p class="py-0 my-0">admin</p>
+                                                    <!--<p class="py-0 my-0 font-size-10 text-secondary">Usage</p>-->
+                                                </td>
+                                                <td data-file="Created Date">
+                                                    <p class="py-0 my-0">2022-03-10 01:05:34</p>
+                                                    <!-- <p class="py-0 my-0 font-size-10 text-secondary">USAGE</p>-->
+
+                                                </td>
+
+                                                <td data-file="Last Modified date">
+                                                    <p class="py-0 my-0">2022-03-10 01:05:34</p>
+
+                                                    <!-- <p class="py-0 my-0 font-size-10 text-secondary">LAST & NEXT SYNC</p>-->
+
+                                                </td>
+
+
+                                                <td class="">
+                                                    <div class="dropdown">
+                                                        <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                            <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                        </a>
+                                                        <ul class=" dropdown-menu dropdown-menu-end " id="collapseExample">
+                                                            <li> <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Edit</a></li>
+                                                            <li><a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Test Extraction</a></li>
+                                                            <li>
+                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Clore Setting</a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Add to flow</a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Delete</a>
+                                                            </li>
+
+
+
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr data-id="3">
+                                                <td style="width:5%;text-align:center;">
+                                                    <img src="assets/svgicon/Pi-Historian.svg" style="width:35px;" />
+                                                </td>
+                                                <td data-field="Data source">
+                                                    <p class="py-0 my-0">OSISoft Pi Historian</p>
+                                                    <!--<p class="font-size-10 py-0 my-0 text-secondary">CREATED : 2022-03-10</p>-->
+                                                </td>
+
+
+                                                <td data-field="Usage">
+                                                    <p class="py-0 my-0">http://hostname/pih/api</p>
+                                                    <!--<p class="py-0 my-0 font-size-10 text-secondary">Dataset</p>-->
+                                                </td>
+                                                <td data-field="Created by">
+                                                    <p class="py-0 my-0">admin</p>
+                                                    <!--<p class="py-0 my-0 font-size-10 text-secondary">Usage</p>-->
+                                                </td>
+                                                <td data-file="Created Date">
+                                                    <p class="py-0 my-0">2022-03-10 01:05:34</p>
+                                                    <!-- <p class="py-0 my-0 font-size-10 text-secondary">USAGE</p>-->
+
+                                                </td>
+
+                                                <td data-file="Last Modified date">
+                                                    <p class="py-0 my-0">2022-03-10 01:05:34</p>
+
+                                                    <!-- <p class="py-0 my-0 font-size-10 text-secondary">LAST & NEXT SYNC</p>-->
+
+                                                </td>
+
+
+                                                <td class="">
+                                                    <div class="dropdown">
+                                                        <a class="link-secondary" data-bs-toggle="dropdown" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                            <i class=" mdi mdi-dots-vertical font-size-18"></i>
+                                                        </a>
+                                                        <ul class=" dropdown-menu dropdown-menu-end " id="collapseExample">
+                                                            <li> <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Edit</a></li>
+                                                            <li><a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Test Extraction</a></li>
+                                                            <li>
+                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Clore Setting</a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Add to flow</a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="dropdown-item btn btn-sm btn-outline-primary border-0 d-block" role="button">Delete</a>
+                                                            </li>
+                                                            
+                                                           
+                                                           
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+            <!-- container-fluid -->
         </div>
-    </div>
-    <!-- container-fluid -->
-    </div>
-    <!-- End Page-content -->
-    </div>
+        <!-- End Page-content -->
 
 
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-6">
-                    <p>2022 © XSI.</p><p>
-                    </p>
-                </div>
-                <div class="col-sm-6">
-                    <div class="text-sm-end d-none d-sm-block">
-                        Design & Develop by <a href="https://www.3insys.com/" target="_blank" class="text-decoration-underline">3Insys</a>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>2022 © XSI.</p><p>
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="text-sm-end d-none d-sm-block">
+                            Design & Develop by <a href="https://www.3insys.com/" target="_blank" class="text-decoration-underline">3Insys</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- end main content-->
+        </footer>
+        <!-- end main content-->
     </div><!-- END layout-wrapper -->
     <!-- Right bar overlay-->
     <div class="rightbar-overlay"></div>
@@ -591,6 +641,11 @@
     <script src="assets/js/app.js"></script>
     <!--<script src="assets/js/pages/swalt.js"></script>-->
     <script src="assets/js/pages/form-validation.init.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/pages/datatables.init.js"></script>
+
     <script>
         $(document).ready(function () {
 
@@ -614,7 +669,6 @@
 
             $('[data-through-ssh=switch]').click(function () { if (this.checked) { $('[data-through-ssh=show]').removeClass('d-none') } else { $('[data-through-ssh=show]').addClass('d-none') } });
             $('[data-through-ssl=switch]').click(function () { if (this.checked) { $('[data-through-ssl=show]').removeClass('d-none') } else { $('[data-through-ssl=show]').addClass('d-none') } });
-            $('[data-vendor]').change(function () { $('[data-productshow]').removeClass('d-none') })
         });
     </script>
 </body>

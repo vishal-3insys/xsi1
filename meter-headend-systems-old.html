@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Outage Management System</title>
+    <title>Meter Headend Systems</title>
     <meta name="viewPort" content="width=device-width, initial-scale=1.0" />
     <meta content="The Cross Integration Suite from 3Insys takes a 360-degree approach to SYSTEM, DATA, and SECURITY" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -68,19 +68,19 @@
                 </div>
 
                 <!--<div class="row d-flex flex-grow-1" style="">
-            <div class="col-xl-6 col-md-10">
-                <form class="app-search p-3">
-                    <div class="form-group m-0">
-                        <div class="input-group">
+                    <div class="col-xl-6 col-md-10">
+                        <form class="app-search p-3">
+                            <div class="form-group m-0">
+                                <div class="input-group">
 
-                            <input type="search" class="form-control w-100" placeholder="Search ..." aria-label="Search Result">
+                                    <input type="search" class="form-control w-100" placeholder="Search ..." aria-label="Search Result">
 
-                            <button class="btn btn-primary d-sm-inline-block" type="submit"><i data-feather="search" class="icon-lg"></i></button>
-                        </div>
+                                    <button class="btn btn-primary d-sm-inline-block" type="submit"><i data-feather="search" class="icon-lg"></i></button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </form>
-            </div>
-        </div>-->
+                </div>-->
 
                 <div class="d-flex">
 
@@ -191,8 +191,8 @@
                         <div class="dropdown-menu dropdown-menu-end">
                             <!-- item-->
                             <!--<a class="dropdown-item" href="profile-mng.html"><i class="mdi mdi-clipboard-account-outline font-size-16 align-middle me-1"></i> My Account</a>
-                    <a class="dropdown-item" href="credentials-mng.html"><i class="mdi mdi-key-change font-size-16 align-middle me-1"></i> Manage Credentials</a>
-                    <a class="dropdown-item" href="account-rec.html"><i class="mdi mdi-ballot-recount font-size-16 align-middle me-1"></i> Manage Account Recovery</a>-->
+                            <a class="dropdown-item" href="credentials-mng.html"><i class="mdi mdi-key-change font-size-16 align-middle me-1"></i> Manage Credentials</a>
+                            <a class="dropdown-item" href="account-rec.html"><i class="mdi mdi-ballot-recount font-size-16 align-middle me-1"></i> Manage Account Recovery</a>-->
 
                             <a class="dropdown-item" href="index.html"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a>
                         </div>
@@ -387,7 +387,7 @@
                                 <ol class="breadcrumb m-0">
                                     <li class="breadcrumb-item"><a href="home.html">Home</a></li>
                                     <li class="breadcrumb-item"><a href="adapters.html">Adapters</a></li>
-                                    <li class="breadcrumb-item active">Outage Management System</li>
+                                    <li class="breadcrumb-item active">Meter Headend Systems</li>
                                 </ol>
 
                             </div>
@@ -398,14 +398,14 @@
                         <div class="col">
                             <div class="card">
                                 <div class="card-header my-0 py-2">
-                                    <h4 class="title">Outage Management System</h4>
+                                    <h4 class="title">Meter Headend Systems</h4>
                                 </div>
 
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col d-sm-flex justify-content-between">
                                             <div class="w-auto">
-                                                                                                <button class="btn btn-outline-primary me-1 mb-1" onclick="location.href='adapters.html'">Cancel</button>
+                                                <button class="btn btn-outline-primary me-1 mb-1" onclick="location.href='adapters.html'">Cancel</button>
 
                                                 <!---->
                                             </div>
@@ -430,8 +430,8 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
-                                        <div class="m-1"><img src="assets/svgicon/Outage-Management-System.svg" alt="LinkedIn Ads" style="width:50px; " /></div>
-                                        <div class="m-1"> Outage Management System</div>
+                                        <div class="m-1"><img src="assets/svgicon/Meter-Headend-Systems.svg" alt="LinkedIn Ads" style="width:50px; " /></div>
+                                        <div class="m-1"> Meter Headend Systems</div>
                                     </div>
 
                                 </div>
@@ -449,23 +449,22 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label for="protocole" class="form-label mb-0">Vendor</label>
-                                                <select class="form-select mb-3" data-vendor>
-                                                    <option>Select Vendor</option>
-                                                    <option>CGI</option>
-                                                    <option>OSI International</option>
-                                                    <option>ABB</option>
-                                                    <option>GE</option>
-                                                    <option>Schneider</option>
-                                                    <option>Siemens</option>
+                                                <select class="form-select mb-3" data-vendor=data-vendor>
+                                                    <option> Select Vendor </option>
+                                                    <option>Itron</option>
+                                                    <option>Aclara</option>
+                                                    <option>Sensus</option>
+                                                    <option>Landis & Gyr</option>
+                                                    <option>Trilliant</option>
                                                 </select>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
                                             </div>
 
-                                            <!--<div class="col-md-3">
+                                            <div class="col-md-3 d-none" data-productshow=data-productshow>
                                                 <label for="protocole" class="form-label mb-0">Product</label>
-                                                <select class="form-select mb-3">
+                                                <select class="form-select mb-3" data-product="">
                                                     <option>Select Product</option>
                                                     <option>UIQ</option>
                                                     <option>Openway</option>
@@ -473,11 +472,11 @@
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
-                                            </div>-->
+                                            </div>
 
-                                            <!--<div class="col-md-3">
+                                            <div class="col-md-3 d-none" data-subproductshow=data-subproductshow>
                                                 <label for="protocole" class="form-label mb-0">Sub Product</label>
-                                                <select class="form-select mb-3">
+                                                <select class="form-select mb-3" data-subproduct="">
                                                     <option>Select Sub Product</option>
                                                     <option>AMM</option>
                                                     <option>ODS</option>
@@ -486,13 +485,15 @@
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
-                                            </div>-->
+                                            </div>
                                             <div class="col-md-6">
                                                 <label for="protocole" class="form-label mb-0">Version</label>
                                                 <select class="form-select mb-3">
                                                     <option>Select</option>
-                                                   
-                                                   
+                                                    <option>
+                                                        5.1
+                                                    </option>
+
                                                 </select>
                                                 <div class="valid-feedback">
                                                     Looks good!
@@ -510,7 +511,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <label for="host" class="form-label mb-0">Host</label>
-                                                <input type="text" class="form-control mb-3" id="host" placeholder="host"  required=required />
+                                                <input type="text" class="form-control mb-3" id="host" placeholder="host" required=required />
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -518,7 +519,7 @@
 
                                             <div class="col-md-6">
                                                 <label for="port" class="form-label mb-0">Port</label>
-                                                <input type="text" class="form-control mb-3" id="port" placeholder="port"  required=required />
+                                                <input type="text" class="form-control mb-3" id="port" placeholder="port" required=required />
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -526,40 +527,95 @@
                                         </div>
                                         <div class="row-cols-auto">
                                             <div class="my-2">
-                                                <button class="btn btn-sm btn-primary" type="submit">Test Connection</button>
+                                                <button class="btn btn-sm btn-primary" type="button" data-tableshow=data-tableshow>Test Connection</button>
                                             </div>
                                         </div>
                                     </form>
+                                    <div class="row">
+                                        <div class="col-md-12 d-none" data-product-table="uiqamm">
+
+                                            <div class="table-responsive">
+                                                <table class="table table-editable table-sm table-nowrap align-middle table-hover table-bordered">
+
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th>API Name</th>
+                                                            <th>API Description</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr><td>adddistnetwork		</td><td>Create distribution network record in UIQ							</td></tr>
+                                                        <tr><td>addlocationnew		</td><td>Create location record in UIQ                                       </td></tr>
+                                                        <tr><td>addservicepoint		</td><td>Create servicepoint record in UIQ                                   </td></tr>
+                                                        <tr><td>replacelocation		</td><td>Associate location record with meter record in UIQ                  </td></tr>
+                                                        <tr><td>finddistnetwork		</td><td>Find distribution network record in UIQ                             </td></tr>
+                                                        <tr><td>findlocation		</td><td>Find location record in UIQ                                         </td></tr>
+                                                        <tr><td>findservicepoint	</td><td>Find servicepoint record in UIQ                                     </td></tr>
+                                                        <tr><td>changeadminstate	</td><td>Change the UTL admin state of a meter in UIQ                        </td></tr>
+                                                        <tr><td>getdevice			</td><td>	Retrieve device record from UIQ                                  </td></tr>
+                                                        <tr><td>jobstatus			</td><td>	Retrieve Job status record from UIQ                              </td></tr>
+                                                        <tr><td>finddevice			</td><td>	Find device record in UIQ                                        </td></tr>
+                                                        <tr><td>odrpqr				</td><td>	Retrieve Power Quality Read data for a set of meters from UIQ    </td></tr>
+                                                        <tr><td>odrirr				</td><td>	Retrieve Instantaneous Register Read for a set of meters from UIQ</td></tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 d-none" data-product-table="uiqods">
+
+                                            <div class="table-responsive">
+                                                <table class="table table-editable table-sm table-nowrap align-middle table-hover table-bordered">
+
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th>API Name</th>
+                                                            <th>API Description</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr><td>pingrequest				</td><td>Ping set of meters from ODS            </td></tr>
+                                                        <tr><td>pingmsgconsumer	Listen 	</td><td>to ping result messages from ODS       </td></tr>
+                                                        <tr><td>unsolictedmsgconsumer	</td><td>Listen to unsolicited messages from ODS</td></tr>
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- container-fluid -->
+        <!-- End Page-content -->
+        <!--  -->
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>2022 © XSI.</p><p>
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="text-sm-end d-none d-sm-block">
+                            Design & Develop by <a href="https://www.3insys.com/" target="_blank" class="text-decoration-underline">3Insys</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- container-fluid -->
-    </div>
-    <!-- End Page-content -->
-    </div>
-
-
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-6">
-                    <p>2022 © XSI.</p><p>
-                    </p>
-                </div>
-                <div class="col-sm-6">
-                    <div class="text-sm-end d-none d-sm-block">
-                        Design & Develop by <a href="https://www.3insys.com/" target="_blank" class="text-decoration-underline">3Insys</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- end main content-->
+        </footer>
+        <!-- end main content-->
     </div><!-- END layout-wrapper -->
     <!-- Right bar overlay-->
     <div class="rightbar-overlay"></div>
@@ -614,7 +670,25 @@
 
             $('[data-through-ssh=switch]').click(function () { if (this.checked) { $('[data-through-ssh=show]').removeClass('d-none') } else { $('[data-through-ssh=show]').addClass('d-none') } });
             $('[data-through-ssl=switch]').click(function () { if (this.checked) { $('[data-through-ssl=show]').removeClass('d-none') } else { $('[data-through-ssl=show]').addClass('d-none') } });
-            $('[data-vendor]').change(function () { $('[data-productshow]').removeClass('d-none') })
+            $('[data-through-ssh=switch]').click(function () { if (this.checked) { $('[data-through-ssh=show]').removeClass('d-none') } else { $('[data-through-ssh=show]').addClass('d-none') } });
+            $('[data-through-ssl=switch]').click(function () { if (this.checked) { $('[data-through-ssl=show]').removeClass('d-none') } else { $('[data-through-ssl=show]').addClass('d-none') } });
+           
+            $('[data-vendor]').change(function () { ($('[data-vendor]').val() == "Itron") ? $('[data-productshow]').removeClass('d-none') : $('[data-productshow],[data-subproductshow] ').addClass('d-none') })
+
+            $('[data-product]').change(function () { ($('[data-product]').val() == "UIQ") ? $('[data-subproductshow]').removeClass('d-none') : $('[data-subproductshow]').addClass('d-none') })
+
+            $('[data-tableshow]').on('click', function () {
+                if ($('[data-subproduct]').val() == "AMM") {
+                    $('[data-product-table=uiqamm]').removeClass('d-none')
+                    $('[data-product-table=uiqods]').addClass('d-none')
+                } else if ($('[data-subproduct]').val() == "ODS") {
+                    $('[data-product-table=uiqods]').removeClass('d-none')
+                    $('[data-product-table=uiqamm]').addClass('d-none')
+                } else { $('[data-product-table]').addClass('d-none') }
+            })
+
+          
+
         });
     </script>
 </body>

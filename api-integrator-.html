@@ -417,7 +417,7 @@
                                 <ol class="breadcrumb m-0">
                                     <li class="breadcrumb-item"><a href="home.html">Home</a></li>
 
-                                    <li class="breadcrumb-item active">API Integrator</li>
+                                    <li class="breadcrumb-item active">Integrator</li>
                                 </ol>
 
                             </div>
@@ -435,7 +435,7 @@
 
 
                                 </div>
-                                <div class="card-body mb-0">
+                                <div class="card-body">
 
 
                                     <div class="row py-1 my-1">
@@ -463,13 +463,13 @@
                                             <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body" role="button">
-                                                        <h5>CC&B Meter Data API</h5>
-                                                        <p class="mb-0"><a href="">testuser@3insys.com</a></p>
+                                                        <h5>CCB Management API</h5>
+                                                        <p class="mb-0"><a href="">aras@dwp.com</a></p>
                                                         <p class="font-size-10 text-muted mb-3">Provider</p>
 
                                                         <p class="mb-0">v1.0.0</p>
                                                         <p class="font-size-10 text-muted mb-3">Version</p>
-                                                        <p class="mb-0">/ccb-meterapi</p><p class="font-size-10 text-muted mb-3">Context</p>
+                                                        <p class="mb-0">/t/dwp.com/ccb-management </p><p class="font-size-10 text-muted mb-3">Context</p>
                                                         <p class="mb-0">Published</p><p class="font-size-10 text-muted">State</p>
                                                     </div>
                                                 </div>
@@ -477,37 +477,13 @@
                                             <div class="col-sm-3">
                                                 <div class="card">
                                                     <div class="card-body" role="button">
-                                                        <h5>
-                                                            NOS Data API
-                                                        </h5>
-                                                        <p class="mb-0"><a href="">
-    testuser@3insys.com
-   
-</a></p>
+                                                        <h5>GIS Location API</h5>
+                                                        <p class="mb-0"><a href="">aras@dwp.com</a></p>
                                                         <p class="font-size-10 text-muted mb-3">Provider</p>
 
                                                         <p class="mb-0">v1.0.0</p>
                                                         <p class="font-size-10 text-muted mb-3">Version</p>
-                                                        <p class="mb-0">/ nosdata-api</p><p class="font-size-10 text-muted mb-3">Context</p>
-                                                        <p class="mb-0">Published</p><p class="font-size-10 text-muted">State</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="card">
-                                                    <div class="card-body" role="button">
-                                                        <h5>
-                                                            GIS Data API
-                                                        </h5>
-                                                        <p class="mb-0"><a href="">
-    testuser@3insys.com
-
-</a></p>
-                                                        <p class="font-size-10 text-muted mb-3">Provider</p>
-
-                                                        <p class="mb-0">v1.0.0</p>
-                                                        <p class="font-size-10 text-muted mb-3">Version</p>
-                                                        <p class="mb-0">/gis-location-api</p><p class="font-size-10 text-muted mb-3">Context</p>
+                                                        <p class="mb-0">/t/dwp.com/gis-location</p><p class="font-size-10 text-muted mb-3">Context</p>
                                                         <p class="mb-0">Published</p><p class="font-size-10 text-muted">State</p>
                                                     </div>
                                                 </div>
@@ -713,7 +689,7 @@
 
                                                 </div><!--tab-pane--- end-->
 
-                                                <div class="tab-pane" id="Headers" role="tabpanel">
+                                                <div class="tab-pane" id="headers" role="tabpanel">
                                                     <div class="row my-2" data-headerdata="row1">
 
 
@@ -733,7 +709,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane" id="Queryparams" role="tabpanel">
+                                                <div class="tab-pane" id="queryparams" role="tabpanel">
                                                     <div class="row my-2" data-repeater-item="data-repeater-item" data-queryparamsdata="row1">
 
                                                         <div class="col-md-3">
@@ -768,7 +744,7 @@
                                                     <div class="my-2 border border-1 ">
                                                         <div class="d-flex align-items-center  py-2 mt-3 mb-2">
                                                             <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                                                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" data-dataroot="active" checked/>
+                                                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" data-dataroot="active" />
                                                                 <label class="btn btn-sm btn-outline-primary border-0" for="btncheck1"><i class="mdi mdi-compass-outline font-size-24"></i></label>
 
 
@@ -784,7 +760,7 @@
                                                             </div>
 
                                                         </div>
-                                                        <div class="s" data-dataroot="show">
+                                                        <div class=" d-none" data-dataroot="show">
                                                             <div class="my-2 mx-3">
                                                                 <label class="form-label" for="datarootinput">Data Root</label>
                                                                 <div class="input-group">
@@ -794,7 +770,7 @@
                                                                 </div>
                                                                 <p class="mt-3">Path to the element from which you want to ingest the data. Retrieve this from the API reponse. Example.&amp;.data.<a href="#"> Need Help ?</a> </p>
                                                             </div>
-                                                            <div class="my-2 d-none">
+                                                            <div class="my-2">
                                                                 <div class="card">
                                                                     <div class="card-header my-2 py-2 shadow">
                                                                         <p class="d-inline-flex">Sample Response form API</p>
@@ -869,7 +845,7 @@
 
                                                         </div>
 
-                                                        <div class="row " data-pagination="showsession">
+                                                        <div class="row d-none" data-pagination="showsession">
                                                             <div class="col-12">
                                                                 <div class="mb-3">
                                                                     <div class="form-check form-switch">
@@ -1033,12 +1009,12 @@
 
 
                                 </div>
-                                <!--<div class="row my-2">
-                                    <div class="col">-->
-                                        <!--<button class="btn btn-primary m-2" type="submit" >Test Connection</button>-->
+                                <div class="row my-2">
+                                    <div class="col">
+                                        <button class="btn btn-primary m-2" type="submit" >Test Connection</button>
                                         <!--<button class="btn btn-primary btn-sm" type="submit">Test & Continue </button>-->
-                                    <!--</div>
-                                </div>-->
+                                    </div>
+                                </div>
 
 
 
@@ -1046,14 +1022,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer justify-content-between">
-                    <div>
-                        <button class="btn btn-primary m-2" type="submit">Test Connection</button>
-                    </div>
-                    <div>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary">Save</button>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Save</button>
                 </div>
             </div>
         </div>
@@ -1111,87 +1082,87 @@
         });
     </script>
     <script>
-        //$(document).ready(function () {
+        $(document).ready(function () {
 
 
-        //    $('[data-countt=follower]').text(`(${$("#datasetfollower > p").length})`);
-        //    $('[data-countt=shares]').text(`(${$("#datasetshares > p").length})`);
+            $('[data-countt=follower]').text(`(${$("#datasetfollower > p").length})`);
+            $('[data-countt=shares]').text(`(${$("#datasetshares > p").length})`);
 
-        //    $('[data-through-ssh=switch]').click(function () { if (this.checked) { $('[data-through-ssh=show]').removeClass('d-none') } else { $('[data-through-ssh=show]').addClass('d-none') } });
-        //    $('[data-through-ssl=switch]').click(function () { if (this.checked) { $('[data-through-ssl=show]').removeClass('d-none') } else { $('[data-through-ssl=show]').addClass('d-none') } });
+            $('[data-through-ssh=switch]').click(function () { if (this.checked) { $('[data-through-ssh=show]').removeClass('d-none') } else { $('[data-through-ssh=show]').addClass('d-none') } });
+            $('[data-through-ssl=switch]').click(function () { if (this.checked) { $('[data-through-ssl=show]').removeClass('d-none') } else { $('[data-through-ssl=show]').addClass('d-none') } });
 
-        //    $('[data-nextpageurl=active]').click(function () { if (this.checked) { $('[data-nextpageurl=show]').removeClass('d-none') } else { $('[data-nextpageurl=show]').addClass('d-none') } });
+            $('[data-nextpageurl=active]').click(function () { if (this.checked) { $('[data-nextpageurl=show]').removeClass('d-none') } else { $('[data-nextpageurl=show]').addClass('d-none') } });
 
-        //    $('[data-dataroot=active]').click(function () { if (this.checked) { $('[data-dataroot=show]').removeClass('d-none') } else { $('[ data-dataroot=show]').addClass('d-none') } });
+            $('[data-dataroot=active]').click(function () { if (this.checked) { $('[data-dataroot=show]').removeClass('d-none') } else { $('[ data-dataroot=show]').addClass('d-none') } });
 
-        //    $('[data-extractfromlastrecord=active]').click(function () { if (this.checked) { $('[data-extractfromlastrecord=show]').removeClass('d-none') } else { $('[data-extractfromlastrecord=show]').addClass('d-none') } });
+            $('[data-extractfromlastrecord=active]').click(function () { if (this.checked) { $('[data-extractfromlastrecord=show]').removeClass('d-none') } else { $('[data-extractfromlastrecord=show]').addClass('d-none') } });
 
-        //    $('[data-pagination=nopagination]').click(function () {
-        //        if (this.checked) {
-        //            $('[data-pagination=showsession]').addClass('d-none');
-        //            $('[data-pagination=showoffsetandlimit]').addClass('d-none');
-        //            $('[data-pagination=showpagenumber]').addClass('d-none');
-        //        }
-        //    });
-        //    $('[data-pagination=session]').click(function () {
-        //        if (this.checked) {
-        //            $('[data-pagination=showsession]').removeClass('d-none');
-        //            $('[data-pagination=showoffsetandlimit]').addClass('d-none');
-        //            $('[data-pagination=showpagenumber]').addClass('d-none');
-        //        }
-        //    });
-        //    $('[data-pagination=pagenumber]').click(function () {
-        //        if (this.checked) {
-        //            $('[data-pagination=showpagenumber]').removeClass('d-none');
-        //            $('[data-pagination=showoffsetandlimit]').addClass('d-none');
-        //            $('[data-pagination=showsession]').addClass('d-none');
+            $('[data-pagination=nopagination]').click(function () {
+                if (this.checked) {
+                    $('[data-pagination=showsession]').addClass('d-none');
+                    $('[data-pagination=showoffsetandlimit]').addClass('d-none');
+                    $('[data-pagination=showpagenumber]').addClass('d-none');
+                }
+            });
+            $('[data-pagination=session]').click(function () {
+                if (this.checked) {
+                    $('[data-pagination=showsession]').removeClass('d-none');
+                    $('[data-pagination=showoffsetandlimit]').addClass('d-none');
+                    $('[data-pagination=showpagenumber]').addClass('d-none');
+                }
+            });
+            $('[data-pagination=pagenumber]').click(function () {
+                if (this.checked) {
+                    $('[data-pagination=showpagenumber]').removeClass('d-none');
+                    $('[data-pagination=showoffsetandlimit]').addClass('d-none');
+                    $('[data-pagination=showsession]').addClass('d-none');
 
-        //        }
-        //    });
-            //$('[data-pagination=offsetandlimit]').click(function () {
-            //    if (this.checked) {
-            //        $('[data-pagination=showoffsetandlimit]').removeClass('d-none');
-            //        $('[data-pagination=showpagenumber]').addClass('d-none');
-            //        $('[data-pagination=showsession]').addClass('d-none');
+                }
+            });
+            $('[data-pagination=offsetandlimit]').click(function () {
+                if (this.checked) {
+                    $('[data-pagination=showoffsetandlimit]').removeClass('d-none');
+                    $('[data-pagination=showpagenumber]').addClass('d-none');
+                    $('[data-pagination=showsession]').addClass('d-none');
 
-            //    }
-            //});
+                }
+            });
 
-            //$('[data-GeneralConnectionSettings=basicauth]').click(function () {
-            //    if (this.checked) {
-            //        $('[data-GeneralConnectionSettings=showbasicauth]').removeClass('d-none');
-            //        $('[data-GeneralConnectionSettings=showoauth]').addClass('d-none');
+            $('[data-GeneralConnectionSettings=basicauth]').click(function () {
+                if (this.checked) {
+                    $('[data-GeneralConnectionSettings=showbasicauth]').removeClass('d-none');
+                    $('[data-GeneralConnectionSettings=showoauth]').addClass('d-none');
 
-            //    }
-            //});
+                }
+            });
 
-            //$('[data-GeneralConnectionSettings=oauth]').click(function () {
-            //    if (this.checked) {
-            //        $('[data-GeneralConnectionSettings=showbasicauth]').addClass('d-none');
-            //        $('[data-GeneralConnectionSettings=showoauth]').removeClass('d-none');
+            $('[data-GeneralConnectionSettings=oauth]').click(function () {
+                if (this.checked) {
+                    $('[data-GeneralConnectionSettings=showbasicauth]').addClass('d-none');
+                    $('[data-GeneralConnectionSettings=showoauth]').removeClass('d-none');
 
-            //    }
-            //});
+                }
+            });
 
-            //$('[data-headerdata-add]').click(function () {
+            $('[data-headerdata-add]').click(function () {
 
-            //    $('[data-headerdata]').last().clone().appendTo('#headers').attr('data-headerdata', `row${$('[data-headerdata]').length}`)
-            //    $('[data-headerdata]').last().children().has('input[type=text]').children().val('');
-            //})
-            //$('[data-headerdata-remove]').click(function () {
-            //    ($('[data-headerdata]').length == 1) ? $('[data-headerdata-remove]').attr('disabled') : $('[data-headerdata]').last().remove();
-            //})
-            //$('[data-queryparamsdata-add]').click(function () {
+                $('[data-headerdata]').last().clone().appendTo('#headers').attr('data-headerdata', `row${$('[data-headerdata]').length}`)
+                $('[data-headerdata]').last().children().has('input[type=text]').children().val('');
+            })
+            $('[data-headerdata-remove]').click(function () {
+                ($('[data-headerdata]').length == 1) ? $('[data-headerdata-remove]').attr('disabled') : $('[data-headerdata]').last().remove();
+            })
+            $('[data-queryparamsdata-add]').click(function () {
 
-            //    $('[data-queryparamsdata]').last().clone().appendTo('#queryparams').attr('data-queryparamsdata', `row${$('[data-queryparamsdata]').length}`)
-            //    $('[data-queryparamsdata]').last().children().has('input[type=text]').children().val('');
-            //})
-            //$('[data-queryparamsdata-remove]').click(function () {
-            //    ($('[data-queryparamsdata]').length == 1) ? $('[data-queryparamsdata-remove]').attr('disabled') : $('[data-queryparamsdata]').last().remove();
-            //})
+                $('[data-queryparamsdata]').last().clone().appendTo('#queryparams').attr('data-queryparamsdata', `row${$('[data-queryparamsdata]').length}`)
+                $('[data-queryparamsdata]').last().children().has('input[type=text]').children().val('');
+            })
+            $('[data-queryparamsdata-remove]').click(function () {
+                ($('[data-queryparamsdata]').length == 1) ? $('[data-queryparamsdata-remove]').attr('disabled') : $('[data-queryparamsdata]').last().remove();
+            })
 
 
-     /*   });*/
+        });
     </script>
 </body>
 
