@@ -71,19 +71,19 @@
                 </div>
 
                 <!--<div class="row d-flex flex-grow-1" style="">
-                    <div class="col-xl-6 col-md-10">
-                        <form class="app-search p-3">
-                            <div class="form-group m-0">
-                                <div class="input-group">
+                <div class="col-xl-6 col-md-10">
+                    <form class="app-search p-3">
+                        <div class="form-group m-0">
+                            <div class="input-group">
 
-                                    <input type="search" class="form-control w-100" placeholder="Search ..." aria-label="Search Result">
+                                <input type="search" class="form-control w-100" placeholder="Search ..." aria-label="Search Result">
 
-                                    <button class="btn btn-primary d-sm-inline-block" type="submit"><i data-feather="search" class="icon-lg"></i></button>
-                                </div>
+                                <button class="btn btn-primary d-sm-inline-block" type="submit"><i data-feather="search" class="icon-lg"></i></button>
                             </div>
-                        </form>
-                    </div>
-                </div>-->
+                        </div>
+                    </form>
+                </div>
+            </div>-->
 
                 <div class="d-flex">
 
@@ -194,8 +194,8 @@
                         <div class="dropdown-menu dropdown-menu-end">
                             <!-- item-->
                             <!--<a class="dropdown-item" href="profile-mng.html"><i class="mdi mdi-clipboard-account-outline font-size-16 align-middle me-1"></i> My Account</a>
-                            <a class="dropdown-item" href="credentials-mng.html"><i class="mdi mdi-key-change font-size-16 align-middle me-1"></i> Manage Credentials</a>
-                            <a class="dropdown-item" href="account-rec.html"><i class="mdi mdi-ballot-recount font-size-16 align-middle me-1"></i> Manage Account Recovery</a>-->
+                        <a class="dropdown-item" href="credentials-mng.html"><i class="mdi mdi-key-change font-size-16 align-middle me-1"></i> Manage Credentials</a>
+                        <a class="dropdown-item" href="account-rec.html"><i class="mdi mdi-ballot-recount font-size-16 align-middle me-1"></i> Manage Account Recovery</a>-->
 
                             <a class="dropdown-item" href="index.html"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a>
                         </div>
@@ -394,23 +394,24 @@
                                     </div>
                                 </div>
                                 <div class="card-body table-responsive">
-                                    <div class="d-flex align-items-center flex-grow-1">
-                                        <div class="d-flex align-items-center mx-1">
-                                            <label class="d-inline-block mx-1">Show</label> 
-                                            <select id="show" class="form-select mx-1">
-                                                <option>10</option>
-                                                <option>25</option>
-                                                <option>50</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="flex-grow-1 mx-1">
-                                            <input type="text" class="form-control" placeholder="Search..." />
-                                        </div>
-
-                                    </div>
+                                   
                                     <div class="table-responsive mt-3">
-                                        <table class="table table-borderless table-nowrap table-striped" >
+                                        <div class="d-flex align-items-center flex-grow-1">
+                                            <div class="d-flex align-items-center mx-1">
+                                                <label class="d-inline-block mx-1">Show</label>
+                                                <select id="show" class="form-select mx-1">
+                                                    <option>10</option>
+                                                    <option>25</option>
+                                                    <option>50</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="flex-grow-1 mx-1">
+                                                <input type="text" class="form-control" placeholder="Search..." />
+                                            </div>
+
+                                        </div>
+                                        <table class="table table-borderless table-nowrap table-striped">
                                             <thead class="table-light">
                                                 <tr>
                                                     <th>Task Id</th>
@@ -422,13 +423,13 @@
                                                     <th>Completed Date</th>
                                                     <th>Completed By</th>
                                                 </tr>
-                                                 
+
 
                                             </thead>
                                             <tbody class="" data-tablebody=data-tablebody>
                                                 <tr>
 
-                                                    <td><a href="#">828814</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal">828814</a></td>
                                                     <td>Update GIS Location</td>
 
                                                     <td>Meter Provisioning</td>
@@ -439,7 +440,7 @@
                                                     <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#">828813</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal">828813</a></td>
                                                     <td>AMM Meter Status</td>
                                                     <td>Meter Provisioning</td>
                                                     <td><span class="badge bg-primary">InProgress</span></td>
@@ -449,10 +450,11 @@
                                                     <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#">828812</a></td>
+                                                    <td><a href="#taskModal">828812</a></td>
                                                     <td>Update GIS Location</td>
-                                                    
-                                                    <td>Meter Provisioning</td><td><span class="badge bg-warning">Pending</span></td>
+
+                                                    <td>Meter Provisioning</td>
+                                                    <td><span class="badge bg-warning">Pending</span></td>
                                                     <td>12/29/2022 5:22 AM</td>
                                                     <td></td>
                                                     <td></td>
@@ -460,7 +462,7 @@
 
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#">828811</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal">828811</a></td>
                                                     <td>AMM Meter Status</td>
                                                     <td>Meter Provisioning</td>
                                                     <td><span class="badge bg-success">Completed</span></td>
@@ -470,7 +472,7 @@
                                                     <td>Test User 2</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#">828810</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal">828810</a></td>
                                                     <td>Update GIS Location</td>
                                                     <td>Meter Provisioning</td>
                                                     <td><span class="badge bg-success">Completed</span></td>
@@ -480,7 +482,7 @@
                                                     <td>Test User 1</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#">828809</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal">828809</a></td>
                                                     <td>AMM DistNetwork Fault</td>
                                                     <td>Meter Provisioning</td>
                                                     <td><span class="badge bg-success">Completed</span></td>
@@ -491,19 +493,20 @@
                                                 </tr>
                                                 <tr>
 
-                                                    <td><a href="#">828808</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal">828808</a></td>
                                                     <td>Update GIS Location</td>
 
-                                                    
+
                                                     <td>Meter Provisioning</td>
-                                                    <td><span class="badge bg-success">Completed</span></td><td>12/23/2022 6:12 AM</td>
+                                                    <td><span class="badge bg-success">Completed</span></td>
+                                                    <td>12/23/2022 6:12 AM</td>
                                                     <td>12/22/2022 9:02 PM</td>
                                                     <td>12/23/2022 6:13 AM</td>
                                                     <td>Test User 1</td>
 
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#">828807</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal">828807</a></td>
                                                     <td>AMM Meter Status</td>
                                                     <td>Meter Provisioning</td>
                                                     <td><span class="badge bg-success">Completed</span></td>
@@ -513,7 +516,7 @@
                                                     <td>Test User 2</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#">828806</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal">828806</a></td>
                                                     <td>Update GIS Location</td>
                                                     <td>Meter Provisioning</td>
                                                     <td><span class="badge bg-success">Completed</span></td>
@@ -523,7 +526,7 @@
                                                     <td>Test User 1</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#">828805</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal">828805</a></td>
                                                     <td>Update GIS Location</td>
                                                     <td>Meter Provisioning</td>
                                                     <td><span class="badge bg-success">Completed</span></td>
@@ -550,7 +553,155 @@
         </div>
         <!-- End Page-content -->
 
+        <div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Task : <span>828814</span></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="" id="">
+                            <h6>Job Data</h6>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p class="mb-1 fw-bold">Type</p>
+                                    <p class="mb-1 ">GIS Location Update</p>
+                                   
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="mb-1 fw-bold">Process Id</p>
+                                    <p class="mb-1 ">d50b34e22bcala26be6b39c6b6bfe65c</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="mb-1 fw-bold">Started Date</p>
+                                    <p class="mb-1 "></p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="mb-1 fw-bold">Process</p>
+                                    <p class="mb-1 ">Meter Provisioning</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="mb-1 fw-bold">Created Date</p>
+                                    <p class="mb-1 ">12/29/2022 10:20 AM</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="mb-1 fw-bold">Completed Date</p>
+                                    <p class="mb-1 "></p>
+                                </div>
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">
+                                    <p class="mb-1 fw-bold">Retry Count</p>
+                                    <p class="mb-1 ">1</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="mb-1 fw-bold">Completed By</p>
+                                    <p class="mb-1 "></p>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="">
+                            <h6>Input</h6>
+                            <div class="table-responsive">
+                                <div class="d-flex align-items-center flex-grow-1">
+                                    <div class="d-flex align-items-center mx-1">
+                                        <label class="d-inline-block mx-1">Show</label>
+                                        <select id="show" class="form-select mx-1">
+                                            <option>10</option>
+                                            <option>25</option>
+                                            <option>50</option>
+                                        </select>
+                                    </div>
 
+                                    <div class="flex-grow-1 mx-1">
+                                        <input type="text" class="form-control" placeholder="Search..." />
+                                    </div>
+
+                                </div>
+                                <table class="table table-borderless table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Parameter</th>
+                                            <th>Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Premise Id</td>
+                                            <td>Premise</td>
+                                            <td>1089638862</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="float-end">
+                                    <ul class="pagination"><li class="paginate_button page-item previous disabled" id="datatable_previous"><a href="#" aria-controls="datatable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="datatable" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item next disabled" id="datatable_next"><a href="#" aria-controls="datatable" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li></ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="">
+                            <h6>OUTPUT</h6>
+                            <div class="table-responsive">
+                                <div class="d-flex align-items-center flex-grow-1">
+                                    <div class="d-flex align-items-center mx-1">
+                                        <label class="d-inline-block mx-1">Show</label>
+                                        <select id="show" class="form-select mx-1">
+                                            <option>10</option>
+                                            <option>25</option>
+                                            <option>50</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="flex-grow-1 mx-1">
+                                        <input type="text" class="form-control" placeholder="Search..." />
+                                    </div>
+
+                                </div>
+                                <table class="table table-borderless table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Parameter</th>
+                                            <th>Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Lat</td>
+                                            <td>Lat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Longitude</td>
+                                            <td>Long</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sub station Id</td>
+                                            <td>SubStafond</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Feeder Id</td>
+                                            <td>Feederld</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Relay Transformer</td>
+                                            <td>Relay TransformerGISID</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="float-end">
+                                    <ul class="pagination"><li class="paginate_button page-item previous disabled" id="datatable_previous"><a href="#" aria-controls="datatable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="datatable" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item next disabled" id="datatable_next"><a href="#" aria-controls="datatable" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer class="footer">
             <div class="container-fluid">
