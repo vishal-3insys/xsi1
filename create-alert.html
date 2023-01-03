@@ -460,7 +460,7 @@
                                                             <option value="">Network</option>
                                                         </select>
                                                     </div>
-                                                    <div class="my-2  row border rounded rounded-3 ">
+                                                    <div class="my-2 mx-1 row border rounded rounded-3 ">
                                                         <label class="col-sm-3 col-form-label">Resource Type</label>
                                                         <div class="col-sm-9 my-1">
                                                             <select class="form-select">
@@ -480,8 +480,9 @@
 
                                                 </div>
                                             </div>
-                                            <h6>Action</h6>
-                                            <div class="container-fluid border m-1">
+
+                                            <div class="container-fluid border rounded rounded-3 m-1">
+                                                <h5 class="my-2 border-0 border-bottom  pb-2">Action</h5>
                                                 <div class="row my-2">
                                                     <label class="col-sm-2 col-form-label">Notification Type</label>
                                                     <div class="col-sm-10">
@@ -492,53 +493,132 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="row my-2">
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" id="typeActionwebhook1" value="" name="alerttype" />
-                                                        <label class="form-check-label" for="typeActionwebhook1">Define endpoint bt URL</label>
+                                                <div class="" id="actionWebhook">
+                                                    <div class="row my-2">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" id="typeActionwebhook1" value="" name="alerttype" />
+                                                            <label class="form-check-label" for="typeActionwebhook1">Define endpoint bt URL</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row my-2">
+                                                        <label class="col-sm-2 col-form-label">Webhook URL</label>
+                                                        <div class="col-sm-10">
+                                                            <input class="form-control" type="text" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row my-2">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" id="typeActionwebhook2" value="" name="alerttype" />
+                                                            <label class="form-check-label" for="typeActionwebhook2">Define wndpoint by custom attributes Url</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-sm-2 col-form-label">Type</label>
+                                                        <div class="col-sm-10">
+                                                            <select class="form-select">
+                                                                <option value="">HTTP</option>
+                                                                <option value="">HTTPS</option>
+                                                            </select>
+                                                        </div>
+                                                        <label class="col-sm-2 col-form-label">Host</label>
+                                                        <div class="col-sm-10">
+                                                            <input class="form-control my-2" type="text" />
+                                                        </div>
+                                                        <label class="col-sm-2 col-form-label">Port</label>
+                                                        <div class="col-sm-10">
+                                                            <input class="form-control my-2" type="text" />
+                                                        </div>
+                                                        <label class="col-sm-2 col-form-label">Path</label>
+                                                        <div class="col-sm-10">
+                                                            <input class="form-control my-2" type="text" />
+                                                        </div>
+                                                        <div class="col-sm-12">Query Parameters</div>
+                                                        <div class="col-md-4 my-2">
+                                                            <label class="form-label">Key</label>
+                                                            <input class="form-control " type="text" />
+                                                        </div>
+                                                        <div class="col-md-4 my-2">
+                                                            <label class="form-label">Value</label>
+                                                            <input class="form-control " type="text" />
+                                                        </div>
+                                                        <div class="col-md-4 d-flex my-2">
+
+                                                            <a class="btn btn-primary align-self-end " href="javascript:void(0);">Remove Parameter</a>
+                                                        </div>
+                                                        <div class="col-md-4 d-flex my-2">
+
+                                                            <a class="btn btn-primary align-self-end " href="javascript:void(0);">Add Parameter</a>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="my-2 border-0 border-bottom pb-2">Method Section</h5>
+                                                    <div class="row">
+                                                        <label class="col-sm-2 col-form-label">Path</label>
+                                                        <div class="col-sm-10">
+                                                            <select class="form-select">
+                                                                <option>POST</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="my-2 border-0 border-bottom pb-2">Header Information</h5>
+                                                    <div class="row">
+                                                        <label class="col-sm-2 col-form-label">Path</label>
+                                                        <div class="col-sm-10">
+                                                            <select class="form-select">
+                                                                <option>POST</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4 my-2">
+                                                            <label class="form-label">Key</label>
+                                                            <input class="form-control " type="text" />
+                                                        </div>
+                                                        <div class="col-md-4 my-2">
+                                                            <label class="form-label">Value</label>
+                                                            <input class="form-control " type="text" />
+                                                        </div>
+                                                        <div class="col-md-4 d-flex my-2">
+
+                                                            <a class="btn btn-primary align-self-end " href="javascript:void(0);">Remove Header</a>
+                                                        </div>
+                                                        <div class="col-md-4 d-flex my-2">
+
+                                                            <a class="btn btn-primary align-self-end " href="javascript:void(0);">Add Header</a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="row my-2">
-                                                    <label class="col-sm-2 col-form-label">Webhook URL</label>
-                                                    <div class="col-sm-10">
-                                                       <input class="form-control" type="text" />
+                                                <div class="" id="actionEmail">
+                                                    <div class="row my-2">
+                                                        <label class="col-sm-2 col-form-label">Sender Name</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-select">
+                                                                <option value="">Select</option>
+                                                                
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <a class="btn btn-primary" href="javascript:0;">Manage Senders</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row my-2">
+                                                        <label class="col-sm-2 col-form-label">Recipient(s)</label>
+                                                        <div class="col-sm-6">
+                                                            <select class="form-select">
+                                                                <option value="">Select</option>
+                                                                
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-4">
+    <a class="btn btn-primary" href="javascript:0;">Manage Email Groups Senders</a>
+</div>
                                                     </div>
                                                 </div>
-                                                <div class="row my-2">
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" id="typeActionwebhook2" value="" name="alerttype" />
-                                                        <label class="form-check-label" for="typeActionwebhook2">Define wndpoint by custom attributes Url</label>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="col-sm-2 col-form-label">Type</label>
-                                                    <div class="col-sm-10">
-                                                        <input class="form-control" type="text" />
-                                                    </div>
-                                                    <label class="col-sm-2 col-form-label">Host</label>
-                                                    <div class="col-sm-10">
-                                                        <input class="form-control" type="text" />
-                                                    </div>
-                                                    <label class="col-sm-2 col-form-label">Port</label>
-                                                    <div class="col-sm-10">
-                                                        <input class="form-control" type="text" />
-                                                    </div>
-                                                    <label class="col-sm-2 col-form-label">Path</label>
-                                                    <div class="col-sm-10">
-                                                        <input class="form-control" type="text" />
-                                                    </div>
-                                                    <div class="col-sm-12">Query Parameters</div>
-                                                    <div class="col-md-4">
-                                                        <label class="form-label">Key</label>
-                                                        <input class="form-control" type="text" />
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <label class="form-label">Value</label>
-                                                        <input class="form-control" type="text" />
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                      
-                                                        <a class="btn btn-primary align-self-end" href="javascript:void(0);">Remove Parameter</a>
+                                                <div class="" id="actionSlack">
+                                                    <div class="row my-2">
+                                                        <label class="col-sm-2 col-form-label">Recipient(s)</label>
+                                                        <div class="col-sm-10">
+                                                           <input class="form-control" type="text" placeholder="URL" />
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
