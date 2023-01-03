@@ -755,7 +755,7 @@
                                                     <div class="col-md-12">
                                                         <label class="form-label">Encryption method</label>
                                                         <select class="form-select">
-                                                            <option>Select</option>
+                                                            <!--<option>Select</option>-->
                                                             <option selected=selected>None</option>
                                                         </select>
                                                         <span class="">SSL or TLS is recommended for security. SSL and TLS requires validation by adding the following fields to the Opensearch keystore: plugins.alerting.destination.email.[sender name].username plugins.alerting.destination.email.[sender name].password</span>
@@ -853,18 +853,7 @@
             const alertlist1 = [`<option value="">Process failures</option>`];
             const alertlist2 = [`<option >Resource</option>`, `<option >Service</option>`, `<option >Network</option>`];
 
-            function dataalertOtp() {
-                var option = '';
-                if (data_ping_option1.checked == false) {
-                    data_ping_option_list.forEach((i) => data_ping_option_this.innerHTML = option += i)
-                }
-                else {
-                    for (var i = 0; i < 3; i++) {
-                        data_ping_option_this.innerHTML = option += data_ping_option_list[i];
-
-                    }
-                }
-            }
+           
             $(document).ready(function () {
                 $('#typeSystem').change(function () {
                     var option = '';
