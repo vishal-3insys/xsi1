@@ -426,7 +426,7 @@
                                                 <label class="col-sm-2">Type</label>
                                                 <div class="col-sm-10">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" id="typeSystem" value="" name="alerttype" />
+                                                        <input class="form-check-input" type="radio" id="typeSystem" value="" name="alerttype" checked/>
                                                         <label class="form-check-label" for="typeSystem">System</label>
                                                     </div>
                                                     <div class="form-check form-check-inline">
@@ -441,7 +441,7 @@
                                                     <select class="form-select">
                                                         <option value="">Select</option>
                                                         <option value="critical">Critical</option>
-                                                        <option value="height">Height</option>
+                                                        <option value="height" selected>Height</option>
                                                         <option value="medium">Medium</option>
                                                         <option value="Low">Low</option>
                                                     </select>
@@ -464,7 +464,8 @@
                                                         <label class="col-sm-3 col-form-label">Resource Type</label>
                                                         <div class="col-sm-9 my-1">
                                                             <select class="form-select">
-                                                                <option>CPU Memory</option>
+                                                                <option>CPU</option>
+                                                                <option>Memory</option>
                                                             </select>
                                                         </div>
                                                         <label class="col-sm-3 col-form-label">Threshold Type</label>
@@ -484,35 +485,35 @@
                                             <div class="container-fluid border rounded rounded-3 m-1">
                                                 <h5 class="my-2 border-0 border-bottom  pb-2">Action</h5>
                                                 <div class="row my-2">
-                                                    <label class="col-sm-2 col-form-label">Notification Type</label>
-                                                    <div class="col-sm-10">
+                                                    <label class="col-sm-2 col-form-label gx-0">Notification Type</label>
+                                                    <div class="col-sm-9">
                                                         <select class="form-select">
-                                                            <option value="email">Email</option>
+                                                            <option value="email" >Email</option>
                                                             <option value="slack">Slack</option>
-                                                            <option value="Customwebhook">Custom Webhook</option>
+                                                            <option value="Customwebhook" selected>Custom Webhook</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="" id="actionWebhook">
                                                     <div class="row my-2">
                                                         <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" id="typeActionwebhook1" value="" name="alerttype" />
+                                                            <input class="form-check-input" type="radio" id="typeActionwebhook1" value="" name="alertactiontype" checked/>
                                                             <label class="form-check-label" for="typeActionwebhook1">Define endpoint bt URL</label>
                                                         </div>
                                                     </div>
                                                     <div class="row my-2">
                                                         <label class="col-sm-2 col-form-label">Webhook URL</label>
                                                         <div class="col-sm-10">
-                                                            <input class="form-control" type="text" />
+                                                            <input class="form-control" type="text" checked/>
                                                         </div>
                                                     </div>
-                                                    <div class="row my-2">
+                                                    <div class="row my-2" >
                                                         <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" id="typeActionwebhook2" value="" name="alerttype" />
-                                                            <label class="form-check-label" for="typeActionwebhook2">Define wndpoint by custom attributes Url</label>
+                                                            <input class="form-check-input" type="radio" id="typeActionwebhook2" value="" name="alertactiontype" />
+                                                            <label class="form-check-label" for="typeActionwebhook2">Define endpoint by custom attributes URL</label>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
+                                                    <div class="row my-2" id="webhook2">
                                                         <label class="col-sm-2 col-form-label">Type</label>
                                                         <div class="col-sm-10">
                                                             <select class="form-select">
@@ -552,7 +553,7 @@
                                                     </div>
                                                     <h5 class="my-2 border-0 border-bottom pb-2">Method Section</h5>
                                                     <div class="row">
-                                                        <label class="col-sm-2 col-form-label">Path</label>
+                                                        <label class="col-sm-2 col-form-label">Method</label>
                                                         <div class="col-sm-10">
                                                             <select class="form-select">
                                                                 <option>POST</option>
@@ -560,14 +561,7 @@
                                                         </div>
                                                     </div>
                                                     <h5 class="my-2 border-0 border-bottom pb-2">Header Information</h5>
-                                                    <div class="row">
-                                                        <label class="col-sm-2 col-form-label">Path</label>
-                                                        <div class="col-sm-10">
-                                                            <select class="form-select">
-                                                                <option>POST</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
+                                                    
                                                     <div class="row">
                                                         <div class="col-md-4 my-2">
                                                             <label class="form-label">Key</label>
@@ -593,11 +587,11 @@
                                                         <div class="col-sm-6">
                                                             <select class="form-select">
                                                                 <option value="">Select</option>
-                                                                
+
                                                             </select>
                                                         </div>
                                                         <div class="col-sm-4">
-                                                            <a class="btn btn-primary" href="javascript:0;">Manage Senders</a>
+                                                            <a class="btn btn-primary" href="#emailSenderModal" data-bs-toggle="modal">Manage Senders</a>
                                                         </div>
                                                     </div>
                                                     <div class="row my-2">
@@ -605,19 +599,19 @@
                                                         <div class="col-sm-6">
                                                             <select class="form-select">
                                                                 <option value="">Select</option>
-                                                                
+
                                                             </select>
                                                         </div>
                                                         <div class="col-sm-4">
-    <a class="btn btn-primary" href="javascript:0;">Manage Email Groups Senders</a>
-</div>
+                                                            <a class="btn btn-primary" href="#manageEmailGroupsModal" data-bs-toggle="modal">Manage Email Groups Senders</a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="" id="actionSlack">
                                                     <div class="row my-2">
-                                                        <label class="col-sm-2 col-form-label">Recipient(s)</label>
+                                                        <label class="col-sm-2 col-form-label">Webhook URL</label>
                                                         <div class="col-sm-10">
-                                                           <input class="form-control" type="text" placeholder="URL" />
+                                                            <input class="form-control" type="text" placeholder="URL" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -636,7 +630,167 @@
             <!-- End Page-content -->
 
 
+            <div class="modal fade" id="emailSenderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Manage Email Sender</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="">
+                                <div class="row">
+                                    <div class="col-auto flex-grow-1">
+                                        <a class=""><span class="border-secondary arrow-d arrow-d-right" data-arrow-d="arrow-d-down"></span><span class="ms-2">Vasu</span></a>
+                                        <div class="collapse" id="collapseExample">
+                                            <div class="card card-body">
 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto float-end">
+                                        <a class="btn btn-secondary" href="javascript:0;">Remove Sender</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                            <div class=""><button type="button" class="btn btn-primary float-start" data-bs-toggle="modal" data-bs-target="#newEmailSenderModal">Add Sender</button></div>
+                            <div class="">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="manageEmailGroupsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Manage Email Groups</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="">
+                                <div class="row">
+                                    <div class="col-auto flex-grow-1">
+                                        <a class="" data-arrow-d="arrow-d-down"><span class="border-secondary arrow-d arrow-d-right"></span><span class="ms-2">System Alery</span></a>
+                                        <div class="collapse" id="collapseExample">
+                                            <div class="card card-body">
+                                                <div class="row">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto float-end">
+                                        <a class="btn btn-secondary" href="javascript:0;">Remove Sender</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                            <div class=""><button type="button" class="btn btn-primary float-start" data-bs-toggle="modal" data-bs-target="#">Add Sender</button></div>
+                            <div class="">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="newEmailSenderModal" tabindex="-1" aria-labelledby="newEmailSenderModal" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Manage Email Senders</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="">
+
+
+                                <div class="row my-2">
+                                    <div class="col-auto flex-grow-1">
+
+                                        <a class="" href="#newSenderCollapse" data-arrow-d="arrow-d-down" data-bs-toggle="collapse"><span class="border-secondary arrow-d arrow-d-right arrow-d-down"></span><span class="ms-2">New Sender</span></a>
+                                    </div>
+                                    <div class="col-auto float-end">
+                                        <a class="btn btn-secondary" href="javascript:0;">Remove Sender</a>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="collapse show" id="newSenderCollapse">
+                                            <div class="card card-body">
+                                                <div class="row my-2">
+                                                    <label class="col-sm-2 col-form-label">Sender Name</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" placeholder="Sender Name" />
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                        <span class=""> A unique and descriptive name that is easy to search. Valid characters are upper and lowercase a-z, 0-9, and _ (underscore).</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row my-2">
+                                                    <div class="col-sm-4">
+                                                        <label class="form-label">Email Address</label>
+                                                        <input type="text" class="form-control" placeholder="username@xxx.com"/>                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <label class="form-label">Host</label>
+                                                        <input type="text" class="form-control" placeholder="smtp.xxx.com" />
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <label class="form-label">Port</label>
+                                                        <input type="text" class="form-control" placeholder="25"/>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <label class="form-label">Port</label>
+                                                       <select class="form-select">
+                                                           <option>Select</option>
+                                                       </select>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                       
+                                                            <span class=""> A unique and descriptive name that is easy to search. Valid characters are upper and lowercase a-z, 0-9, and _ (underscore).</span>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row my-2">
+
+                                    <div class="col-auto flex-grow-1">
+                                        <a class="" data-arrow-d="arrow-d-down" data-bs-toggle="collapse" href="#"><span class="border-secondary arrow-d arrow-d-right"></span><span class="ms-2">Vasu</span></a>
+                                        <div class="collapse" id="newSenderCollapse">
+                                            <div class="card card-body">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto float-end">
+                                        <a class="btn btn-secondary" href="javascript:0;">Remove Sender</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-between">
+
+
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
             <footer class="footer">
                 <div class="container-fluid">
                     <div class="row">
@@ -696,6 +850,7 @@
 
                 $('[data-arrow-d=arrow-d-down]').click(function () {
                     $(this).toggleClass('arrow-d-down')
+                    $(this).children().toggleClass('arrow-d-down')
                 });
                 $('[data-tablerowtd-count=all]').append(`(${$('[data-tablerowtd]').length})`);
             });
