@@ -460,14 +460,14 @@
                                                         </select>
                                                     </div>
                                                     <div class="my-2 mx-1 row border rounded rounded-3 " id="alertTypeFailures">
-                                                        <label class="col-sm-3 col-form-label">Resource Type</label>
-                                                        <div class="col-sm-9 my-1">
+                                                        <label class="col-sm-3 col-form-label data-alert-type" id="alertTypelabel1">Resource Type</label>
+                                                        <div class="col-sm-9 my-1 data-alert-type">
                                                             <select class="form-select">
                                                                 <option>CPU</option>
                                                                 <option>Memory</option>
                                                             </select>
                                                         </div>
-                                                        <label class="col-sm-3 col-form-label">Threshold Type</label>
+                                                        <label class="col-sm-3 col-form-label" id="alertTypelabel2">Threshold Type</label>
                                                         <div class="col-sm-9">
                                                             <input type="text" class="form-control my-1 " id="thresholdType1" placeholder="Percentage" />
                                                             <select class="form-select my-1 d-none" id="thresholdType2">
@@ -907,24 +907,24 @@
                 $('#alertType').change(function () {
                     if ($('#alertType').val() == 'Resource') {
                         $('#thresholdType1, #thresholdType2, #thresholdType3').addClass('d-none');
-
-                        $('#thresholdType1').removeClass('d-none')
+                        $('#alertTypelabel2').text('Threshold Type');
+                        $('#thresholdType1, .data-alert-type').removeClass('d-none')
                     } else if ($('#alertType').val() == 'Service') {
-                        $('#thresholdType1,#thresholdType2,#thresholdType3').addClass('d-none');
-
+                        $('#thresholdType1,#thresholdType2,#thresholdType3, .data-alert-type').addClass('d-none');
+                        $('#alertTypelabel2').text('State');
                         $('#thresholdType2').removeClass('d-none')
                     } else if ($('#alertType').val() == 'Network') {
                         $('#thresholdType1,#thresholdType2,#thresholdType3').addClass('d-none');
-
+                        $('#alertTypelabel2').text('State');
                         $('#thresholdType3').removeClass('d-none')
                     } else if ($('#alertType').val() == 'Process failures') {
-                        $('#thresholdType1,#thresholdType2,#thresholdType3, #alertTypeFailures').addClass('d-none');
-
+                        $('#thresholdType1,#thresholdType2,#thresholdType3, #alertTypeFailures, .data-alert-type').addClass('d-none');
+                        
                        /* $('#thresholdType3').removeClass('d-none')*/
                     } else {
                         $('#thresholdType1,#thresholdType2,#thresholdType3').addClass('d-none');
-
-                        $('#thresholdType1').removeClass('d-none')
+                        $('#alertTypelabel2').text('Threshold Type');
+                        $('#thresholdType1,.data-alert-type').removeClass('d-none')
                     }
                 })
                 if ($('#alertType').val() == 'Process failures') {
