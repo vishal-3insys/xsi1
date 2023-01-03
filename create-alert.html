@@ -426,11 +426,11 @@
                                                 <label class="col-sm-2">Type</label>
                                                 <div class="col-sm-10">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" id="typeSystem" value="" name="alerttype" checked/>
+                                                        <input class="form-check-input" type="radio" id="typeSystem" value="" name="alerttype" />
                                                         <label class="form-check-label" for="typeSystem">System</label>
                                                     </div>
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" id="typeInstance" value="" name="alerttype" />
+                                                        <input class="form-check-input" type="radio" id="typeInstance" value="" name="alerttype" checked/>
                                                         <label class="form-check-label" for="typeInstance">Instance</label>
                                                     </div>
                                                 </div>
@@ -487,10 +487,10 @@
                                                 <div class="row my-2">
                                                     <label class="col-sm-2 col-form-label gx-0">Notification Type</label>
                                                     <div class="col-sm-9">
-                                                        <select class="form-select">
+                                                        <select class="form-select" id="notificationType">
                                                             <option value="email" >Email</option>
                                                             <option value="slack">Slack</option>
-                                                            <option value="Customwebhook" selected>Custom Webhook</option>
+                                                            <option value="customwebhook" selected>Custom Webhook</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -513,7 +513,7 @@
                                                             <label class="form-check-label" for="typeActionwebhook2">Define endpoint by custom attributes URL</label>
                                                         </div>
                                                     </div>
-                                                    <div class="row my-2" id="webhook2">
+                                                    <div class="row my-2" id="webhook1">
                                                         <label class="col-sm-2 col-form-label">Type</label>
                                                         <div class="col-sm-10">
                                                             <select class="form-select">
@@ -845,6 +845,22 @@
 
         <script>
             $(document).ready(function () {
+                $('#actionWebhook, #actionSlack, #actionEmail,#webhook1').addClass('d-none');
+                $('#actionWebhook').removeClass('d-none');
+                $('#notificationType').change(function () {
+                    if ($('#notificationType').val() == "email") {
+                        $('#actionWebhook, #actionSlack, #actionEmail').addClass('d-none');
+                        $('#actionEmail').removeClass('d-none');
+                    } else if ($('#notificationType').val() == "slack") {
+                        $('#actionWebhook, #actionSlack, #actionEmail').addClass('d-none');
+                        $('#actionSlack').removeClass('d-none');
+                    } else {
+                        $('#actionWebhook, #actionSlack, #actionEmail').addClass('d-none');
+                        $('#actionWebhook').removeClass('d-none');
+                    }
+                });
+                $('#typeActionwebhook1').click(function () { if (this.checked) { $('#webhook1').addClass('d-none') } else { $('#webhook1').removeClass('d-none') } });
+                $('#typeActionwebhook2').click(function () { if (this.checked) { $('#webhook1').removeClass('d-none') } else { $('#webhook1').addClass('d-none') } });
                 $('[data-countt=follower]').text(`(${$("#datasetfollower > p").length})`);
                 $('[data-countt=shares]').text(`(${$("#datasetshares > p").length})`);
 
