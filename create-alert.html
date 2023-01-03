@@ -459,7 +459,7 @@
                                                             <option>Network</option>
                                                         </select>
                                                     </div>
-                                                    <div class="my-2 mx-1 row border rounded rounded-3 ">
+                                                    <div class="my-2 mx-1 row border rounded rounded-3 " id="alertTypeFailures">
                                                         <label class="col-sm-3 col-form-label">Resource Type</label>
                                                         <div class="col-sm-9 my-1">
                                                             <select class="form-select">
@@ -859,16 +859,20 @@
                     var option = '';
                     if ($('#typeSystem').checked) {
                         alertlist1.forEach((i) => $('#alertType').html(option += i))
+                        $('#alertTypeFailures').addClass('d-none')
                     } else {
                         $('#alertType').html(alertlist1)
+                        $('#alertTypeFailures').addClass('d-none')
                     }
                 })
                 $('#typeInstance').change(function () {
                     var option = '';
                     if ($('#typeInstance').checked) {
                         alertlist2.forEach((i) => $('#alertType').html(option += i))
+                        $('#alertTypeFailures').removeClass('d-none')
                     } else {
                         $('#alertType').html(alertlist2)
+                        $('#alertTypeFailures').removeClass('d-none')
                     }
                 })
                 $('#actionWebhook, #actionSlack, #actionEmail,#webhook2').addClass('d-none');
@@ -913,12 +917,20 @@
                         $('#thresholdType1,#thresholdType2,#thresholdType3').addClass('d-none');
 
                         $('#thresholdType3').removeClass('d-none')
+                    } else if ($('#alertType').val() == 'Process failures') {
+                        $('#thresholdType1,#thresholdType2,#thresholdType3, #alertTypeFailures').addClass('d-none');
+
+                       /* $('#thresholdType3').removeClass('d-none')*/
                     } else {
                         $('#thresholdType1,#thresholdType2,#thresholdType3').addClass('d-none');
 
                         $('#thresholdType1').removeClass('d-none')
                     }
                 })
+                if ($('#alertType').val() == 'Process failures') {
+                    $('#alertTypeFailures').addClass('d-none');
+
+                }
                 $('[data-countt=follower]').text(`(${$("#datasetfollower > p").length})`);
                 $('[data-countt=shares]').text(`(${$("#datasetshares > p").length})`);
 
