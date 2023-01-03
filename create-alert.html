@@ -430,7 +430,7 @@
                                                         <label class="form-check-label" for="typeSystem">System</label>
                                                     </div>
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" id="typeInstance" value="" name="alerttype" checked/>
+                                                        <input class="form-check-input" type="radio" id="typeInstance" value="" name="alerttype" checked=checked />
                                                         <label class="form-check-label" for="typeInstance">Instance</label>
                                                     </div>
                                                 </div>
@@ -441,7 +441,7 @@
                                                     <select class="form-select">
                                                         <option value="">Select</option>
                                                         <option value="critical">Critical</option>
-                                                        <option value="height" selected>Height</option>
+                                                        <option value="high" selected=selected>High</option>
                                                         <option value="medium">Medium</option>
                                                         <option value="Low">Low</option>
                                                     </select>
@@ -451,13 +451,12 @@
                                                 <label class="col-sm-2 col-form-label">Alert</label>
                                                 <div class="col-sm-10 ">
                                                     <div class="">
-                                                        <select class="form-select">
-                                                            <option value="">Sytstem Alert</option>
-                                                            <option value="">Process failures</option>
-                                                            <option value="">Instance Alert</option>
-                                                            <option value="">Resource</option>
-                                                            <option value="">Service</option>
-                                                            <option value="">Network</option>
+                                                        <select class="form-select" id="alertType">
+
+                                                            <!--<option value="">Process failures</option>-->
+                                                            <option>Resource</option>
+                                                            <option>Service</option>
+                                                            <option>Network</option>
                                                         </select>
                                                     </div>
                                                     <div class="my-2 mx-1 row border rounded rounded-3 ">
@@ -476,6 +475,11 @@
                                                                 <option>Crashed</option>
                                                                 <option>Faulted</option>
                                                             </select>
+                                                            <select class="form-select my-1 d-none" id="thresholdType3">
+                                                                <option>Down</option>
+                                                                <option>Fault</option>
+
+                                                            </select>
                                                         </div>
                                                     </div>
 
@@ -488,32 +492,32 @@
                                                     <label class="col-sm-2 col-form-label gx-0">Notification Type</label>
                                                     <div class="col-sm-9">
                                                         <select class="form-select" id="notificationType">
-                                                            <option value="email" >Email</option>
+                                                            <option value="email">Email</option>
                                                             <option value="slack">Slack</option>
-                                                            <option value="customwebhook" selected>Custom Webhook</option>
+                                                            <option value="customwebhook" selected=selected>Custom Webhook</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="" id="actionWebhook">
                                                     <div class="row my-2">
                                                         <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" id="typeActionwebhook1" value="" name="alertactiontype" checked/>
+                                                            <input class="form-check-input" type="radio" id="typeActionwebhook1" value="" name="alertactiontype" checked=checked />
                                                             <label class="form-check-label" for="typeActionwebhook1">Define endpoint bt URL</label>
                                                         </div>
                                                     </div>
-                                                    <div class="row my-2">
+                                                    <div class="row my-2" id="webhook1">
                                                         <label class="col-sm-2 col-form-label">Webhook URL</label>
                                                         <div class="col-sm-10">
-                                                            <input class="form-control" type="text" checked/>
+                                                            <input class="form-control" type="text" checked=checked />
                                                         </div>
                                                     </div>
-                                                    <div class="row my-2" >
+                                                    <div class="row my-2">
                                                         <div class="form-check form-check-inline">
                                                             <input class="form-check-input" type="radio" id="typeActionwebhook2" value="" name="alertactiontype" />
                                                             <label class="form-check-label" for="typeActionwebhook2">Define endpoint by custom attributes URL</label>
                                                         </div>
                                                     </div>
-                                                    <div class="row my-2" id="webhook1">
+                                                    <div class="row my-2" id="webhook2">
                                                         <label class="col-sm-2 col-form-label">Type</label>
                                                         <div class="col-sm-10">
                                                             <select class="form-select">
@@ -532,8 +536,9 @@
                                                         <label class="col-sm-2 col-form-label">Path</label>
                                                         <div class="col-sm-10">
                                                             <input class="form-control my-2" type="text" />
+                                                            <lable>Query Parameters</lable>
                                                         </div>
-                                                        <div class="col-sm-12">Query Parameters</div>
+
                                                         <div class="col-md-4 my-2">
                                                             <label class="form-label">Key</label>
                                                             <input class="form-control " type="text" />
@@ -561,15 +566,15 @@
                                                         </div>
                                                     </div>
                                                     <h5 class="my-2 border-0 border-bottom pb-2">Header Information</h5>
-                                                    
+
                                                     <div class="row">
                                                         <div class="col-md-4 my-2">
                                                             <label class="form-label">Key</label>
-                                                            <input class="form-control " type="text" />
+                                                            <input class="form-control " type="text" placeholder="Content-Type" />
                                                         </div>
                                                         <div class="col-md-4 my-2">
                                                             <label class="form-label">Value</label>
-                                                            <input class="form-control " type="text" />
+                                                            <input class="form-control " type="text" placeholder="application/json" />
                                                         </div>
                                                         <div class="col-md-4 d-flex my-2">
 
@@ -603,7 +608,7 @@
                                                             </select>
                                                         </div>
                                                         <div class="col-sm-4">
-                                                            <a class="btn btn-primary" href="#manageEmailGroupsModal" data-bs-toggle="modal">Manage Email Groups Senders</a>
+                                                            <a class="btn btn-primary" href="#manageEmailGroupsModal" data-bs-toggle="modal">Manage Email Groups</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -634,7 +639,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Manage Email Sender</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Manage Email Senders</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -657,7 +662,7 @@
                         <div class="modal-footer justify-content-between">
                             <div class=""><button type="button" class="btn btn-primary float-start" data-bs-toggle="modal" data-bs-target="#newEmailSenderModal">Add Sender</button></div>
                             <div class="">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
                             </div>
 
@@ -676,7 +681,7 @@
                             <div class="">
                                 <div class="row">
                                     <div class="col-auto flex-grow-1">
-                                        <a class="" data-arrow-d="arrow-d-down"><span class="border-secondary arrow-d arrow-d-right"></span><span class="ms-2">System Alery</span></a>
+                                        <a class="" data-arrow-d="arrow-d-down"><span class="border-secondary arrow-d arrow-d-right"></span><span class="ms-2">Systemalerts</span></a>
                                         <div class="collapse" id="collapseExample">
                                             <div class="card card-body">
                                                 <div class="row">
@@ -686,15 +691,15 @@
                                         </div>
                                     </div>
                                     <div class="col-auto float-end">
-                                        <a class="btn btn-secondary" href="javascript:0;">Remove Sender</a>
+                                        <a class="btn btn-secondary" href="javascript:0;">Remove email group</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer justify-content-between">
-                            <div class=""><button type="button" class="btn btn-primary float-start" data-bs-toggle="modal" data-bs-target="#">Add Sender</button></div>
+                            <div class=""><button type="button" class="btn btn-primary float-start" data-bs-toggle="modal" data-bs-target="#">Add email Group</button></div>
                             <div class="">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
                             </div>
 
@@ -727,38 +732,35 @@
                                                 <div class="row my-2">
                                                     <label class="col-sm-2 col-form-label">Sender Name</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" placeholder="Sender Name" />
+                                                        <input type="text" class="form-control" placeholder="Sender Name" /> <span class=""> A unique and descriptive name that is easy to search. Valid characters are upper and lowercase a-z, 0-9, and _ (underscore).</span>
                                                     </div>
-                                                    <div class="col-sm-12">
-                                                        <span class=""> A unique and descriptive name that is easy to search. Valid characters are upper and lowercase a-z, 0-9, and _ (underscore).</span>
-                                                    </div>
+
                                                 </div>
                                                 <div class="row my-2">
                                                     <div class="col-sm-4">
                                                         <label class="form-label">Email Address</label>
-                                                        <input type="text" class="form-control" placeholder="username@xxx.com"/>                                                    </div>
+                                                        <input type="text" class="form-control" placeholder="username@xxx.com" />
+                                                    </div>
                                                     <div class="col-sm-4">
                                                         <label class="form-label">Host</label>
                                                         <input type="text" class="form-control" placeholder="smtp.xxx.com" />
                                                     </div>
                                                     <div class="col-sm-4">
                                                         <label class="form-label">Port</label>
-                                                        <input type="text" class="form-control" placeholder="25"/>
+                                                        <input type="text" class="form-control" placeholder="25" />
                                                     </div>
-                                                    
+
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <label class="form-label">Port</label>
-                                                       <select class="form-select">
-                                                           <option>Select</option>
-                                                       </select>
+                                                        <label class="form-label">Encryption method</label>
+                                                        <select class="form-select">
+                                                            <option>Select</option>
+                                                            <option selected=selected>None</option>
+                                                        </select>
+                                                        <span class="">SSL or TLS is recommended for security. SSL and TLS requires validation by adding the following fields to the Opensearch keystore: plugins.alerting.destination.email.[sender name].username plugins.alerting.destination.email.[sender name].password</span>
                                                     </div>
-                                                    <div class="col-md-12">
-                                                       
-                                                            <span class=""> A unique and descriptive name that is easy to search. Valid characters are upper and lowercase a-z, 0-9, and _ (underscore).</span>
-                                                       
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -768,22 +770,25 @@
 
                                     <div class="col-auto flex-grow-1">
                                         <a class="" data-arrow-d="arrow-d-down" data-bs-toggle="collapse" href="#"><span class="border-secondary arrow-d arrow-d-right"></span><span class="ms-2">Vasu</span></a>
-                                        <div class="collapse" id="newSenderCollapse">
+
+                                    </div>
+                                    <div class="col-auto float-end">
+                                        <a class="btn btn-secondary" href="javascript:0;">Remove Sender</a>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="collapse" id="newSenderCollapse2">
                                             <div class="card card-body">
 
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-auto float-end">
-                                        <a class="btn btn-secondary" href="javascript:0;">Remove Sender</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer justify-content-between">
+                        <div class="modal-footer ">
 
 
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                             <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
 
 
@@ -844,8 +849,40 @@
         <script src="assets/js/pages/datatables.init.js"></script>
 
         <script>
+
+            const alertlist1 = [`<option value="">Process failures</option>`];
+            const alertlist2 = [`<option >Resource</option>`, `<option >Service</option>`, `<option >Network</option>`];
+
+            function dataalertOtp() {
+                var option = '';
+                if (data_ping_option1.checked == false) {
+                    data_ping_option_list.forEach((i) => data_ping_option_this.innerHTML = option += i)
+                }
+                else {
+                    for (var i = 0; i < 3; i++) {
+                        data_ping_option_this.innerHTML = option += data_ping_option_list[i];
+
+                    }
+                }
+            }
             $(document).ready(function () {
-                $('#actionWebhook, #actionSlack, #actionEmail,#webhook1').addClass('d-none');
+                $('#typeSystem').change(function () {
+                    var option = '';
+                    if ($('#typeSystem').checked) {
+                        alertlist1.forEach((i) => $('#alertType').html(option += i))
+                    } else {
+                        $('#alertType').html(alertlist1)
+                    }
+                })
+                $('#typeInstance').change(function () {
+                    var option = '';
+                    if ($('#typeInstance').checked) {
+                        alertlist2.forEach((i) => $('#alertType').html(option += i))
+                    } else {
+                        $('#alertType').html(alertlist2)
+                    }
+                })
+                $('#actionWebhook, #actionSlack, #actionEmail,#webhook2').addClass('d-none');
                 $('#actionWebhook').removeClass('d-none');
                 $('#notificationType').change(function () {
                     if ($('#notificationType').val() == "email") {
@@ -859,8 +896,40 @@
                         $('#actionWebhook').removeClass('d-none');
                     }
                 });
-                $('#typeActionwebhook1').click(function () { if (this.checked) { $('#webhook1').addClass('d-none') } else { $('#webhook1').removeClass('d-none') } });
-                $('#typeActionwebhook2').click(function () { if (this.checked) { $('#webhook1').removeClass('d-none') } else { $('#webhook1').addClass('d-none') } });
+                $('#typeActionwebhook1').click(function () {
+                    if (this.checked) {
+                        $('#webhook2').addClass('d-none')
+                        $('#webhook1').removeClass('d-none')
+                    }
+
+                });
+                $('#typeActionwebhook2').click(function () {
+                    if (this.checked) {
+                        $('#webhook1').addClass('d-none')
+                        $('#webhook2').removeClass('d-none')
+                    }
+
+                });
+
+                $('#alertType').change(function () {
+                    if ($('#alertType').val() == 'Resource') {
+                        $('#thresholdType1, #thresholdType2, #thresholdType3').addClass('d-none');
+
+                        $('#thresholdType1').removeClass('d-none')
+                    } else if ($('#alertType').val() == 'Service') {
+                        $('#thresholdType1,#thresholdType2,#thresholdType3').addClass('d-none');
+
+                        $('#thresholdType2').removeClass('d-none')
+                    } else if ($('#alertType').val() == 'Network') {
+                        $('#thresholdType1,#thresholdType2,#thresholdType3').addClass('d-none');
+
+                        $('#thresholdType3').removeClass('d-none')
+                    } else {
+                        $('#thresholdType1,#thresholdType2,#thresholdType3').addClass('d-none');
+
+                        $('#thresholdType1').removeClass('d-none')
+                    }
+                })
                 $('[data-countt=follower]').text(`(${$("#datasetfollower > p").length})`);
                 $('[data-countt=shares]').text(`(${$("#datasetshares > p").length})`);
 
