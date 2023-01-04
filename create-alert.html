@@ -397,7 +397,7 @@
                                     <div class="row border-0 border-bottom pb-3">
                                         <div class="col d-sm-flex justify-content-between">
                                             <div class="w-auto">
-                                                <button class="btn btn-outline-primary me-1 mb-1" onclick="location.href='#'">Cancel</button>
+                                                <button class="btn btn-outline-primary me-1 mb-1" >Cancel</button>
                                                 <!--                       <!--<button class="btn btn-outline-primary me-1 mb-1" onclick="location.href='datasource-create-view1.html'">Back</button>-->
                                             </div>
                                             <div class="input-group" style="width:60%;">
@@ -538,24 +538,30 @@
                                                             <input class="form-control my-2" type="text" />
                                                             <lable>Query Parameters</lable>
                                                         </div>
+                                                        <div class="col-sm-12" id="parameter_Ar_sec">
+                                                            <div class="row" id="parameter_Sec_1">
+                                                                <div class="col-md-4 my-2" id="parameter_Key_1">
+                                                                    <label class="form-label">Key</label>
+                                                                    <input class="form-control " type="text" />
+                                                                </div>
+                                                                <div class="col-md-4 my-2" id="parameter_Value_1">
+                                                                    <label class="form-label">Value</label>
+                                                                    <input class="form-control " type="text" />
+                                                                </div>
+                                                                <div class="col-md-4 d-flex my-2" id="parameter_Rbtn_1">
 
-                                                        <div class="col-md-4 my-2">
-                                                            <label class="form-label">Key</label>
-                                                            <input class="form-control " type="text" />
-                                                        </div>
-                                                        <div class="col-md-4 my-2">
-                                                            <label class="form-label">Value</label>
-                                                            <input class="form-control " type="text" />
-                                                        </div>
-                                                        <div class="col-md-4 d-flex my-2">
+                                                                    <a class="btn btn-primary align-self-end parameter_Rbtn_Click" id="parameter_Rbtn_Click_1" href="javascript:void(0);">Remove Parameter</a>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                            <div class="col-sm-12 d-flex my-2 order-12" id="parameter_Abtn_1">
 
-                                                            <a class="btn btn-primary align-self-end " href="javascript:void(0);">Remove Parameter</a>
+                                                                <a class="btn btn-primary align-self-end" id="parameter_Abtn_Click_1" >Add Parameter</a>
+                                                            </div>
                                                         </div>
-                                                        <div class="col-md-4 d-flex my-2">
-
-                                                            <a class="btn btn-primary align-self-end " href="javascript:void(0);">Add Parameter</a>
-                                                        </div>
+                                                        
                                                     </div>
+
                                                     <h5 class="my-2 border-0 border-bottom pb-2">Method Section</h5>
                                                     <div class="row">
                                                         <label class="col-sm-2 col-form-label">Method</label>
@@ -566,25 +572,28 @@
                                                         </div>
                                                     </div>
                                                     <h5 class="my-2 border-0 border-bottom pb-2">Header Information</h5>
+                                                    <div class="" id="header_Ar_sec">
+                                                        <div class="row" id="header_Sec_1">
+                                                            <div class="col-md-4 my-2" id="header_Key_1">
+                                                                <label class="form-label">Key</label>
+                                                                <input class="form-control " type="text" placeholder="Content-Type" />
+                                                            </div>
+                                                            <div class="col-md-4 my-2" id="header_Value_1">
+                                                                <label class="form-label">Value</label>
+                                                                <input class="form-control " type="text" placeholder="application/json" />
+                                                            </div>
+                                                            <div class="col-md-4 d-flex my-2" id="parameter_Rbtn_1">
 
-                                                    <div class="row">
-                                                        <div class="col-md-4 my-2">
-                                                            <label class="form-label">Key</label>
-                                                            <input class="form-control " type="text" placeholder="Content-Type" />
-                                                        </div>
-                                                        <div class="col-md-4 my-2">
-                                                            <label class="form-label">Value</label>
-                                                            <input class="form-control " type="text" placeholder="application/json" />
-                                                        </div>
-                                                        <div class="col-md-4 d-flex my-2">
+                                                                <a class="btn btn-primary align-self-end header_Rbtn_Click" id="header_Rbtn_Click_1" href="javascript:void(0);">Remove Header</a>
+                                                            </div>
 
-                                                            <a class="btn btn-primary align-self-end " href="javascript:void(0);">Remove Header</a>
                                                         </div>
-                                                        <div class="col-md-4 d-flex my-2">
+                                                        <div class="col-md-12 d-flex my-2" id="header_Abtn_1">
 
-                                                            <a class="btn btn-primary align-self-end " href="javascript:void(0);">Add Header</a>
+                                                            <a class="btn btn-primary align-self-end" id="header_Abtn_Click_1" href="javascript:void(0);">Add Header</a>
                                                         </div>
                                                     </div>
+                                                    
                                                 </div>
                                                 <div class="" id="actionEmail">
                                                     <div class="row my-2">
@@ -939,8 +948,80 @@
                     $(this).children().toggleClass('arrow-d-down')
                 });
                 $('[data-tablerowtd-count=all]').append(`(${$('[data-tablerowtd]').length})`);
+
+                //--add remove row--//
+                var parameter_text = ` <div class="row" id="parameter_Sec_1">
+        <div class="col-md-4 my-2" id="parameter_Key_1">
+            <label class="form-label">Key</label>
+            <input class="form-control " type="text" />
+        </div>
+        <div class="col-md-4 my-2" id="parameter_Value_1">
+            <label class="form-label">Value</label>
+            <input class="form-control " type="text" />
+        </div>
+        <div class="col-md-4 d-flex my-2" id="parameter_Rbtn_1">
+
+            <a class="btn btn-primary align-self-end .parameter_Rbtn_Click" id="parameter_Rbtn_Click_1" href="javascript:void(0);">Remove Parameter</a>
+        </div>
+
+    </div>`;
+                //var ids = $('#parameter_ar_sec').children().attr('id').split('_');
+                $('#parameter_Ar_sec').on('click', '#parameter_Abtn_Click_1', function () {
+                    var i = $('#parameter_ar_sec').children().length;
+                    
+                    $('#parameter_Abtn_1').before(` <div class="row" id="parameter_Sec_${i}">
+        <div class="col-md-4 my-2" id="parameter_Key_${i}">
+            <label class="form-label">Key</label>
+            <input class="form-control " type="text" />
+        </div>
+        <div class="col-md-4 my-2" id="parameter_Value_${i}">
+            <label class="form-label">Value</label>
+            <input class="form-control " type="text" />
+        </div>
+        <div class="col-md-4 d-flex my-2" id="parameter_Rbtn_${i}">
+
+            <a class="btn btn-primary align-self-end parameter_Rbtn_Click" id="parameter_Rbtn_Click_${i}">Remove Parameter</a>
+        </div>
+
+    </div>`)
+                   
+                })
+                $('#parameter_Ar_sec').on('click', '.parameter_Rbtn_Click', function () {
+                    /*console.log($('#parameter_Ar_sec').length);*/
+                    if ($('.parameter_Rbtn_Click').length > 1) { $(this).parent().parent().remove() }
+                })
+
+                $('#header_Ar_sec').on('click', '#header_Abtn_Click_1', function (i = 1) {
+                   $('#header_Abtn_1')
+                    $('#header_Abtn_1').before(` <div class="" id="header_Ar_sec">
+    <div class="row" id="header_Sec_${i}">
+        <div class="col-md-4 my-2" id="header_Key_${i}">
+            <label class="form-label">Key</label>
+            <input class="form-control " type="text" placeholder="Content-Type" />
+        </div>
+        <div class="col-md-4 my-2" id="header_Value_${i}">
+            <label class="form-label">Value</label>
+            <input class="form-control " type="text" placeholder="application/json" />
+        </div>
+        <div class="col-md-4 d-flex my-2" id="parameter_Rbtn_${i}">
+
+            <a class="btn btn-primary align-self-end header_Rbtn_Click" id="header_Rbtn_Click_${i}" href="javascript:void(0);">Remove Header</a>
+        </div>
+
+    </div>
+   
+</div>`)
+                   
+                })
+                $('#header_Ar_sec').on('click', '.header_Rbtn_Click', function () {
+                    console.log($('#header_Ar_sec').length);
+                    if ($('.header_Rbtn_Click').length > 1) { $(this).parent().parent().remove()}
+                })
+                
+                
             });
         </script>
+        
     </div>
 </body>
 
