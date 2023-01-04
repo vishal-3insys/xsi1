@@ -429,7 +429,7 @@
                                             <tbody class="" data-tablebody=data-tablebody>
                                                 <tr>
 
-                                                    <td><a href="#taskModal" data-bs-toggle="modal">828814</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal" data-bs-whatever="828814_Update GIS Location">828814</a></td>
                                                     <td>Update GIS Location</td>
 
                                                     <td>Meter Provisioning</td>
@@ -440,7 +440,7 @@
                                                     <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#taskModal" data-bs-toggle="modal">828813</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal" data-bs-whatever="828813_AMM Meter Status">828813</a></td>
                                                     <td>AMM Meter Status</td>
                                                     <td>Meter Provisioning</td>
                                                     <td><span class="badge bg-primary">InProgress</span></td>
@@ -450,7 +450,7 @@
                                                     <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#taskModal">828812</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal"  data-bs-whatever="828812_Update GIS Location">828812</a></td>
                                                     <td>Update GIS Location</td>
 
                                                     <td>Meter Provisioning</td>
@@ -462,7 +462,7 @@
 
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#taskModal" data-bs-toggle="modal">828811</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal" data-bs-whatever="828811_AMM Meter Status">828811</a></td>
                                                     <td>AMM Meter Status</td>
                                                     <td>Meter Provisioning</td>
                                                     <td><span class="badge bg-success">Completed</span></td>
@@ -472,7 +472,7 @@
                                                     <td>Test User 2</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#taskModal" data-bs-toggle="modal">828810</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal" data-bs-whatever="828810_Update GIS Location">828810</a></td>
                                                     <td>Update GIS Location</td>
                                                     <td>Meter Provisioning</td>
                                                     <td><span class="badge bg-success">Completed</span></td>
@@ -482,7 +482,7 @@
                                                     <td>Test User 1</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#taskModal" data-bs-toggle="modal">828809</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal" data-bs-whatever="828809_AMM DistNetwork Fault">828809</a></td>
                                                     <td>AMM DistNetwork Fault</td>
                                                     <td>Meter Provisioning</td>
                                                     <td><span class="badge bg-success">Completed</span></td>
@@ -493,7 +493,7 @@
                                                 </tr>
                                                 <tr>
 
-                                                    <td><a href="#taskModal" data-bs-toggle="modal">828808</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal" data-bs-whatever="828808_Update GIS Location">828808</a></td>
                                                     <td>Update GIS Location</td>
 
 
@@ -506,7 +506,7 @@
 
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#taskModal" data-bs-toggle="modal">828807</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal" data-bs-whatever="828807_AMM Meter Status">828807</a></td>
                                                     <td>AMM Meter Status</td>
                                                     <td>Meter Provisioning</td>
                                                     <td><span class="badge bg-success">Completed</span></td>
@@ -516,7 +516,7 @@
                                                     <td>Test User 2</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#taskModal" data-bs-toggle="modal">828806</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal" data-bs-whatever="828806_Update GIS Location">828806</a></td>
                                                     <td>Update GIS Location</td>
                                                     <td>Meter Provisioning</td>
                                                     <td><span class="badge bg-success">Completed</span></td>
@@ -526,7 +526,7 @@
                                                     <td>Test User 1</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#taskModal" data-bs-toggle="modal">828805</a></td>
+                                                    <td><a href="#taskModal" data-bs-toggle="modal" data-bs-whatever="828805_Update GIS Location">828805</a></td>
                                                     <td>Update GIS Location</td>
                                                     <td>Meter Provisioning</td>
                                                     <td><span class="badge bg-success">Completed</span></td>
@@ -557,7 +557,7 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Task : <span>828814</span></h5>
+                        <h5 class="modal-title">Task : <span id="taskModalLabel">828814</span></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -566,7 +566,7 @@
                             <div class="row mx-2 border rounded rounded-3">
                                 <div class="col-md-3">
                                     <p class="mb-1 fw-bold">Type</p>
-                                    <p class="mb-1 ">GIS Location Update</p>
+                                    <p class="mb-1 " id="taskTypeLabel">GIS Location Update</p>
                                    
                                 </div>
                                 <div class="col-md-5">
@@ -771,6 +771,24 @@
             });
             $('[data-tablerowtd-count=all]').append(`(${$('[data-tablerowtd]').length})`);
         });
+    </script>
+    <script>
+        var exampleModal = document.getElementById('taskModal')
+        exampleModal.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            var recipient = button.getAttribute('data-bs-whatever')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var modalTitle = exampleModal.querySelector('#taskModalLabel')
+            var modalBodyInput = exampleModal.querySelector('#taskTypeLabel')
+
+            modalTitle.textContent = recipient.split('_')[0]
+            modalBodyInput.textContent = recipient.split('_')[1]
+        })
     </script>
 </body>
 
